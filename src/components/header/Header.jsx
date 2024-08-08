@@ -41,7 +41,6 @@ export default function Header({ isVisible, toggleMenu }) {
   return (
     <H.HeaderContainer>
       <H.Logo onClick={() => navigate('/')}>WISCOM</H.Logo>{' '}
-      {/* Logo navigation */}
       <H.MenuContainer onClick={toggleMenu}>
         <H.MENU>{isVisible ? 'CLOSE' : 'MENU'}</H.MENU>
         <H.HamburgerIcon isVisible={isVisible} />

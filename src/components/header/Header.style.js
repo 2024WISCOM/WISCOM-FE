@@ -3,42 +3,69 @@ import styled, { keyframes } from 'styled-components';
 export const HeaderContainer = styled.div`
   width: 100%;
   height: 100px;
-  background: #000000;
   color: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   font-family: 'PlayfiarDisplay';
+
+  @media (max-width: 1024px) {
+    /* Tablet and smaller */
+    padding: 0 30px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    padding: 0 20px;
+    height: 80px;
+  }
 `;
 
 export const Logo = styled.div`
   font-size: 35px;
   font-weight: bold;
-  margin: 0px;
+  margin: 0;
   padding-left: 20px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    font-size: 20px;
+    padding-left: 0px;
+  }
 `;
 
 export const MenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3px;
+  margin: 0px;
   gap: 10px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    gap: 8px;
+  }
 `;
 
 export const MENU = styled.div`
   font-size: 25px;
   position: relative;
   top: -2px;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    font-size: 16px;
+    top: -0.4px;
+  }
 `;
 
 export const HamburgerIcon = styled.div`
   width: 24px;
   height: 2px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
 
@@ -78,6 +105,52 @@ export const HamburgerIcon = styled.div`
       transform: rotate(90deg);
     }
   `}
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    width: 15px;
+    height: 2px;
+    background-color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+
+    ${({ isVisible }) =>
+      isVisible &&
+      `
+    transform: rotate(45deg);
+
+    &::before, &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(-90deg);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  `}
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -91,9 +164,14 @@ export const NavMenu = styled.div`
   top: 100px;
   left: 0;
   padding: 20px 0 0 20px;
-  background-color: #000;
-  color: #fff;
-  z-index: 1000;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    gap: 50px;
+    padding: 10px 0 0 10px;
+    top: 80px;
+  }
 `;
 
 const slideInFromLeft = keyframes`
@@ -149,4 +227,24 @@ export const NavItem = styled.div`
     0.3s ease forwards;
   animation-delay: ${({ index }) => index * 0.1}s;
   opacity: 0;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 50px;
+    margin-left: 60px;
+
+    &::first-letter {
+      font-size: 70px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    font-size: 50px;
+    margin-left: 20px;
+
+    &::first-letter {
+      font-size: 50px;
+    }
+  }
 `;
