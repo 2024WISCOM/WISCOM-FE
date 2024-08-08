@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'PlayfiarDisplay';
+  src: url('/PlayfairDisplaySC-Bold.ttf');
+}
+
 * {
   margin: 0 auto;
   padding: 0;
