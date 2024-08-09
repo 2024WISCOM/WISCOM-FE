@@ -1,5 +1,5 @@
 import * as L from './LeftContent.style';
-import Image from './Image';
+import Image from '../image/Image';
 export default function LeftContent() {
   return (
     <L.LeftContentContainer>

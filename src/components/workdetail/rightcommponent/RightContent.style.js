@@ -135,27 +135,6 @@ export const ViewSiteImage = styled.div`
   }
 `;
 
-export const Discription = styled.div`
-  font-size: 25px;
-  line-height: 1.5;
-  margin: 0;
-  font-family: 'Pretendard-Medium';
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-
-  @media (max-width: 1200px) {
-    font-size: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 768px) {
-  }
-`;
-
 export const Line = styled.div`
   border: 1px solid #999999;
   margin: 0.1px 0;

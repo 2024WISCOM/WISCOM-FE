@@ -1,25 +1,14 @@
 import * as R from './RightContent.style';
-import viewSiteImage from '../../../assets/img/view_site.png';
+import viewSiteImage from '../../../assets/img/viewsite_black.png';
+import WorkTitle from '../worktitle/WorkTitle';
 import Instagram from '../../../assets/img/instagram.png';
 import Github from '../../../assets/img/github.png';
-import Developer from './Developer';
+import Developer from '../developer/Developer';
 
 export default function RightComponent() {
   return (
     <R.RightContentContainer>
-      <R.TitleWrapper>
-        <R.WorkTitle>폭신폭신</R.WorkTitle>
-        <R.VisitSite>
-          Visit Site
-          <R.ViewSiteImage>
-            <img src={viewSiteImage} alt="viewSite" />
-          </R.ViewSiteImage>
-        </R.VisitSite>
-      </R.TitleWrapper>
-      <R.Discription>
-        당신의 안전을 지키는 건강한 연애의 시작이제목이지만 아주 긴 제목을
-        만들어봐요
-      </R.Discription>
+      <WorkTitle src={viewSiteImage} />
       <R.Line />
       <R.TeamWrapper>
         <R.TeamItem>
