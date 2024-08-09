@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const LeftContentContainer = styled.div`
+export const RightContentContainer = styled.div`
   position: absolute;
-  width: 46%;
-  height: 92.1%;
-  top: 3.9%;
-  left: 0%;
+  width: 47.25%;
+  height: 94%;
+  top: 3.1%;
+  left: 52.7%;
   background-color: #ffffff;
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin: 0px;
+  text-align: left;
 `;
