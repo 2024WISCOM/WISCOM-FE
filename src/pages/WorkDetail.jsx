@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import cdCaseImage from '../assets/img/cd_case.png';
+import cdCaseImage from '../assets/img/detail_cd_case.svg';
 import RightButton from '../components/workdetail/RightButton';
 import CdCase from '../components/workdetail/CdCase';
 import LeftButton from '../components/workdetail/LeftButton';
