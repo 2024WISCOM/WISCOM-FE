@@ -38,8 +38,6 @@ export const ButtonImage = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
-    width: 25px;
-    height: 25px;
   }
 
   @media (max-width: 768px) {

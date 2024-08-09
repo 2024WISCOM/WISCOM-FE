@@ -4,7 +4,7 @@ export const WorkTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   width: 100%;
 
@@ -27,6 +27,7 @@ export const WorkTitle = styled.div`
   font-size: 35px;
   margin: 0px;
   font-family: 'Pretendard-ExtraBold';
+  text-align: left;
 
   @media (max-width: 1200px) {
     /* Desktop */

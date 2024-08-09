@@ -38,8 +38,6 @@ export const RightContentContainer = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 20px;
-    gap: 20px;
   }
 
   @media (max-width: 768px) {
@@ -63,12 +61,10 @@ export const WorkTitle = styled.div`
 
   @media (max-width: 1200px) {
     /* Desktop */
-    font-size: 30px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 28px;
   }
 
   @media (max-width: 768px) {
@@ -86,13 +82,10 @@ export const VisitSite = styled.div`
 
   @media (max-width: 1200px) {
     /* Desktop */
-    font-size: 22px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 18px;
-    gap: 10px;
   }
 
   @media (max-width: 768px) {
@@ -110,14 +103,10 @@ export const ViewSiteImage = styled.div`
 
   @media (max-width: 1200px) {
     /* Desktop */
-    width: 30px;
-    height: 30px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    width: 25px;
-    height: 25px;
   }
 
   @media (max-width: 768px) {
@@ -150,12 +139,10 @@ export const TeamWrapper = styled.div`
 
   @media (max-width: 1200px) {
     /* Desktop */
-    gap: 40px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    gap: 30px;
   }
 
   @media (max-width: 768px) {
@@ -174,12 +161,10 @@ export const TeamItem = styled.div`
 
   @media (max-width: 1200px) {
     /* Desktop */
-    gap: 30px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    gap: 20px;
   }
 
   @media (max-width: 768px) {
@@ -195,12 +180,10 @@ export const TeamTitle = styled.div`
 
   @media (max-width: 1300px) {
     /* Desktop */
-    font-size: 24px;
   }
 
   @media (max-width: 1700px) {
     /* Tablet */
-    font-size: 20px;
   }
 
   @media (max-width: 768px) {
@@ -222,16 +205,10 @@ export const LinkTo = styled.div`
 
   @media (max-width: 1300px) {
     /* Desktop */
-    img {
-      height: 35px;
-    }
   }
 
   @media (max-width: 1700px) {
     /* Tablet */
-    img {
-      height: 30px;
-    }
   }
 
   @media (max-width: 768px) {
@@ -250,12 +227,10 @@ export const DeveloperWrapper = styled.div`
 
   @media (max-width: 1300px) {
     /* Desktop */
-    gap: 42px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    gap: 30px;
   }
 
   @media (max-width: 768px) {
@@ -273,12 +248,10 @@ export const DetailDescription = styled.div`
 
   @media (max-width: 1300px) {
     /* Desktop */
-    font-size: 20px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 17px;
   }
 
   @media (max-width: 768px) {
