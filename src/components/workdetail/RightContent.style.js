@@ -35,6 +35,16 @@ export const RightContentContainer = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 20px;
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -50,6 +60,15 @@ export const WorkTitle = styled.div`
   font-size: 35px;
   margin: 0px;
   font-family: 'Pretendard-ExtraBold';
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const VisitSite = styled.div`
@@ -59,21 +78,60 @@ export const VisitSite = styled.div`
   margin: 0px;
   align-items: center;
   font-size: 25px;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const ViewSiteImage = styled.div`
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  padding-top: 4px;
+  position: relative;
   font-family: 'Pretendard-Medium';
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    width: 25px;
+    height: 25px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 `;
 
 export const Discription = styled.div`
   font-size: 25px;
   margin: 0px;
   font-family: 'Pretendard-Medium';
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const Line = styled.div`
@@ -88,6 +146,15 @@ export const TeamWrapper = styled.div`
   justify-content: center;
   text-align: left;
   margin: 0px;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const TeamItem = styled.div`
@@ -98,6 +165,15 @@ export const TeamItem = styled.div`
   align-items: center;
   text-align: left;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const TeamTitle = styled.div`
@@ -105,6 +181,15 @@ export const TeamTitle = styled.div`
   font-size: 28px;
   margin: 0px;
   font-family: 'Pretendard-Bold';
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const LinkTo = styled.div`
@@ -118,6 +203,17 @@ export const LinkTo = styled.div`
     height: 40px;
     cursor: pointer;
   }
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    img {
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const DeveloperWrapper = styled.div`
@@ -128,6 +224,15 @@ export const DeveloperWrapper = styled.div`
   align-items: flex-start;
   text-align: left;
   margin: 0px;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const DetailDescription = styled.div`
@@ -136,6 +241,15 @@ export const DetailDescription = styled.div`
   line-height: 1.6;
   word-wrap: break-word;
   font-family: 'Pretendard-Regular';
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 17px;
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+  }
 `;
 
 export const Spacer = styled.div`
