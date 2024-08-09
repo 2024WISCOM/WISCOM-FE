@@ -11,7 +11,7 @@ export const RightContentContainer = styled.div`
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   text-align: left;
   overflow-y: auto;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@ export const RightContentContainer = styled.div`
   @media (max-width: 1024px) {
     /* Tablet */
     font-size: 20px;
-    gap: 30px;
+    gap: 20px;
   }
 
   @media (max-width: 768px) {
@@ -61,6 +61,11 @@ export const WorkTitle = styled.div`
   margin: 0px;
   font-family: 'Pretendard-ExtraBold';
 
+  @media (max-width: 1200px) {
+    /* Desktop */
+    font-size: 30px;
+  }
+
   @media (max-width: 1024px) {
     /* Tablet */
     font-size: 28px;
@@ -78,6 +83,11 @@ export const VisitSite = styled.div`
   margin: 0px;
   align-items: center;
   font-size: 25px;
+
+  @media (max-width: 1200px) {
+    /* Desktop */
+    font-size: 22px;
+  }
 
   @media (max-width: 1024px) {
     /* Tablet */
@@ -97,6 +107,12 @@ export const ViewSiteImage = styled.div`
   position: relative;
   font-family: 'Pretendard-Medium';
   cursor: pointer;
+
+  @media (max-width: 1200px) {
+    /* Desktop */
+    width: 30px;
+    height: 30px;
+  }
 
   @media (max-width: 1024px) {
     /* Tablet */
@@ -121,16 +137,22 @@ export const ViewSiteImage = styled.div`
 
 export const Discription = styled.div`
   font-size: 25px;
-  margin: 0px;
+  line-height: 1.5;
+  margin: 0;
   font-family: 'Pretendard-Medium';
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
 
   @media (max-width: 1024px) {
-    /* Tablet */
     font-size: 18px;
   }
 
   @media (max-width: 768px) {
-    /* Mobile */
   }
 `;
 
@@ -146,6 +168,11 @@ export const TeamWrapper = styled.div`
   justify-content: center;
   text-align: left;
   margin: 0px;
+
+  @media (max-width: 1200px) {
+    /* Desktop */
+    gap: 40px;
+  }
 
   @media (max-width: 1024px) {
     /* Tablet */
@@ -166,6 +193,11 @@ export const TeamItem = styled.div`
   text-align: left;
   width: 100%;
 
+  @media (max-width: 1200px) {
+    /* Desktop */
+    gap: 30px;
+  }
+
   @media (max-width: 1024px) {
     /* Tablet */
     gap: 20px;
@@ -182,7 +214,12 @@ export const TeamTitle = styled.div`
   margin: 0px;
   font-family: 'Pretendard-Bold';
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
+    /* Desktop */
+    font-size: 24px;
+  }
+
+  @media (max-width: 1700px) {
     /* Tablet */
     font-size: 20px;
   }
@@ -204,7 +241,14 @@ export const LinkTo = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
+    /* Desktop */
+    img {
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 1700px) {
     /* Tablet */
     img {
       height: 30px;
@@ -225,6 +269,11 @@ export const DeveloperWrapper = styled.div`
   text-align: left;
   margin: 0px;
 
+  @media (max-width: 1300px) {
+    /* Desktop */
+    gap: 42px;
+  }
+
   @media (max-width: 1024px) {
     /* Tablet */
     gap: 30px;
@@ -241,6 +290,11 @@ export const DetailDescription = styled.div`
   line-height: 1.6;
   word-wrap: break-word;
   font-family: 'Pretendard-Regular';
+
+  @media (max-width: 1300px) {
+    /* Desktop */
+    font-size: 20px;
+  }
 
   @media (max-width: 1024px) {
     /* Tablet */
