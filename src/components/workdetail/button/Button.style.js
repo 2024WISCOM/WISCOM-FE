@@ -9,7 +9,7 @@ export const ButtonContainer = styled.div`
   color: white;
   margin: 0px;
   font-family: 'PlayfiarDisplay';
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 10px;
 
   @media (max-width: 768px) {
