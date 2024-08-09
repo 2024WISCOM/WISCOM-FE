@@ -1,7 +1,7 @@
 import * as R from './RightContent.style';
-import viewSiteImage from '../../assets/img/view_site.png';
-import Instagram from '../../assets/img/instagram.png';
-import Github from '../../assets/img/github.png';
+import viewSiteImage from '../../../assets/img/view_site.png';
+import Instagram from '../../../assets/img/instagram.png';
+import Github from '../../../assets/img/github.png';
 import Developer from './Developer';
 
 export default function RightComponent() {
