@@ -1,5 +1,5 @@
 import * as B from './Button.style';
-import right from '../../assets/img/right.png';
+import right from '../../../assets/img/right.png';
 
 export default function RightButton({ text }) {
   return (

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import cdCaseImage from '../assets/img/detail_cd_case.svg';
-import RightButton from '../components/workdetail/RightButton';
-import CdCase from '../components/workdetail/CdCase';
-import LeftButton from '../components/workdetail/LeftButton';
+import RightButton from '../components/workdetail/button/RightButton';
+import CdCase from '../components/workdetail/cdcase/CdCase';
+import LeftButton from '../components/workdetail/button/LeftButton';
 
 import * as W from '../components/workdetail/WorkDetail.style';
 

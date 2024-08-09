@@ -1,5 +1,5 @@
 import * as B from './Button.style';
-import left from '../../assets/img/left.png';
+import left from '../../../assets/img/left.png';
 
 export default function LeftButton({ text }) {
   return (
