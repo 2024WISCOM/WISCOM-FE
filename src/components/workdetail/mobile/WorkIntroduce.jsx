@@ -5,6 +5,8 @@ import Image from '../image/Image';
 import Developer from '../developer/Developer';
 import Instagram from '../../../assets/img/instagram.png';
 import Github from '../../../assets/img/github_white.png';
+import RightButton from '../button/RightButton';
+import LeftButton from '../button/LeftButton';
 
 export default function WorkIntroduce() {
   return (
@@ -13,11 +15,13 @@ export default function WorkIntroduce() {
         <WorkTitle src={viewSiteImage} />
       </W.WorkTitleWrapper>
       <W.ImageWrapper>
+        <LeftButton position="top" />
         <Image
           src={
             'https://github.com/user-attachments/assets/a1e6e94c-90a3-41a1-aacf-61ddd773facd'
           }
         />
+        <RightButton position="top" />
       </W.ImageWrapper>
       <W.DeveloperWrapper>
         <W.TeamItem>

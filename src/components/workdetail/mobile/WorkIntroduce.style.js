@@ -20,7 +20,7 @@ export const ImageWrapper = styled.div`
   padding-bottom: 20px;
 
   img {
-    width: 85%;
+    width: 96%;
     height: auto;
   }
 `;
