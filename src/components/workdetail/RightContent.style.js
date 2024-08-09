@@ -290,6 +290,7 @@ export const DetailDescription = styled.div`
   line-height: 1.6;
   word-wrap: break-word;
   font-family: 'Pretendard-Regular';
+  padding-top: 25px;
 
   @media (max-width: 1300px) {
     /* Desktop */
