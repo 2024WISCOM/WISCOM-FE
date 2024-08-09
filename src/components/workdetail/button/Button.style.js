@@ -28,11 +28,10 @@ export const ButtonImage = styled.div`
     height: 100%;
     object-fit: contain;
 
-    /* Conditionally apply padding based on the 'position' prop */
     ${({ position }) =>
       position === 'top' &&
       css`
-        padding: 0px !important; /* Applies when position is 'top' */
+        padding: 0px 
         margin: 0px;
       `}
   }
