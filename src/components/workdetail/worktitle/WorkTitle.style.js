@@ -40,7 +40,7 @@ export const WorkTitle = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 25px;
+    font-size: 23px;
   }
 `;
 
@@ -63,6 +63,7 @@ export const Discription = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
+    font-size: 16px;
     font-family: 'Pretendard-Regular';
   }
 `;

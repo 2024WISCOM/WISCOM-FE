@@ -21,8 +21,8 @@ export const VisitSite = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 17px;
-    gap: 8px;
+    font-size: 13px;
+    gap: 3px;
     font-family: 'Pretendard-Regular';
   }
 `;
@@ -49,8 +49,8 @@ export const ViewSiteImage = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
   }
 
   img {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CdCaseContainer = styled.div`
+export const WorkDetailContainer = styled.div`
   height: 85vh;
   width: 95%;
   display: flex;
@@ -11,7 +11,7 @@ export const CdCaseContainer = styled.div`
   overflow: hidden;
 `;
 
-export const CdCaseRowContainer = styled.div`
+export const WorkDetaileRowContainer = styled.div`
   height: 85vh;
   width: 100%;
   display: flex;
@@ -21,6 +21,16 @@ export const CdCaseRowContainer = styled.div`
   margin: 0;
   padding: 0 20px;
   overflow: hidden;
+`;
+
+export const MobileDetailContainer = styled.div`
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
 `;
 
 export const CdCase = styled.div`

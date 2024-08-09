@@ -14,7 +14,7 @@ export const ButtonContainer = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
   }
 `;
@@ -40,6 +40,6 @@ export const ButtonImage = styled.div`
     width: 17px;
     height: 18px;
     position: relative;
-    top: -2px;
+    top: -1px;
   }
 `;
