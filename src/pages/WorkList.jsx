@@ -1,10 +1,11 @@
 import Nav from '../components/worklist/Nav';
-import NavButton from '../components/worklist/NavButton';
+import Slide from '../components/worklist/Slide';
 
 export default function WorkList() {
   return (
     <>
       <Nav />
+      <Slide />
     </>
   );
 }
