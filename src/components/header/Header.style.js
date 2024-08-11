@@ -7,12 +7,13 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 60px 50px;
   font-family: 'PlayfiarDisplay';
 
   @media (max-width: 1024px) {
-    /* Tablet and smaller */
-    padding: 0 30px;
+    /* Tablet */
+    padding: 0px 40px;
+    height: 90px;
   }
 
   @media (max-width: 768px) {
@@ -23,16 +24,19 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
-  padding-left: 20px;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 35px;
+  }
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 20px;
-    padding-left: 0px;
+    font-size: 21px;
   }
 `;
 
@@ -41,12 +45,12 @@ export const MenuContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0px;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 8px;
+    gap: 12px;
   }
 `;
 
@@ -55,16 +59,21 @@ export const MENU = styled.div`
   position: relative;
   top: -2px;
 
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 20px;
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 16px;
+    font-size: 18px;
     top: -0.4px;
   }
 `;
 
 export const HamburgerIcon = styled.div`
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 2.3px;
   background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
@@ -75,7 +84,7 @@ export const HamburgerIcon = styled.div`
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2.3px;
     background-color: #ffffff;
     transition: transform 0.3s ease;
   }
@@ -106,9 +115,55 @@ export const HamburgerIcon = styled.div`
     }
   `}
 
+  @media (max-width: 1024px) {
+    /* Tablet */
+    width: 20px;
+    height: 2.3px;
+    background-color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2.3px;
+      background-color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: -7.7px;
+    }
+
+    &::after {
+      top: 7.7px;
+    }
+
+    ${({ isVisible }) =>
+      isVisible &&
+      `
+    transform: rotate(45deg);
+
+    &::before, &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(-90deg);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  `}
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
-    width: 15px;
+    width: 16px;
     height: 2px;
     background-color: #ffffff;
     position: relative;
@@ -126,11 +181,11 @@ export const HamburgerIcon = styled.div`
     }
 
     &::before {
-      top: -6px;
+      top: -6.1px;
     }
 
     &::after {
-      top: 6px;
+      top: 6.1px;
     }
 
     ${({ isVisible }) =>
@@ -204,7 +259,7 @@ export const NavItem = styled.div`
   color: #ffffff;
 
   &::first-letter {
-    font-size: 80px;
+    font-size: 72px;
   }
 
   &:hover {
