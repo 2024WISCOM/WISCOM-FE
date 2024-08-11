@@ -29,6 +29,7 @@ export const MobileDetailContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 30px;
 `;
 
 export const CdCase = styled.div`
