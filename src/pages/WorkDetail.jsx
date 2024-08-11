@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import cdCaseImage2880 from '../assets/img/detail_cd_case_2880.svg';
-import cdCaseImageMax from '../assets/img/detail_cd_case_max.svg';
-
+import cdCaseImage from '../assets/img/detail_cd_case.svg';
 import RightButton from '../components/workdetail/button/RightButton';
 import CdCase from '../components/workdetail/cdcase/CdCase';
 import LeftButton from '../components/workdetail/button/LeftButton';
@@ -12,27 +10,24 @@ import * as W from '../components/workdetail/WorkDetail.style';
 export default function WorkDetail() {
   const [isEnoughSpace, setIsEnoughSpace] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [cdCaseImage, setCdCaseImage] = useState(cdCaseImage2880);
   const imageContainerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      const isWide = window.innerWidth > 1450;
-      setCdCaseImage(isWide ? cdCaseImageMax : cdCaseImage2880);
-
       if (imageContainerRef.current) {
         const spaceBelow =
           window.innerHeight -
           imageContainerRef.current.getBoundingClientRect().bottom;
-
-        setIsEnoughSpace(isWide ? spaceBelow > 950 : spaceBelow > 125);
+        setIsEnoughSpace(spaceBelow > 120);
       }
-
       setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener('resize', handleResize);
+    const image = new Image();
+    image.onload = handleResize;
+    image.src = cdCaseImage;
 
+    window.addEventListener('resize', handleResize);
     handleResize();
 
     return () => {
