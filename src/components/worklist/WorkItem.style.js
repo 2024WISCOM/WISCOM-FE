@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  text-align: center;
-  margin: 80px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
 `;
 
 export const Image = styled.img`
-  width: 500px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  width: 800px;
+  height: auto;
 `;
 
-export const Title = styled.div`
-  color: var(--Schemes-On-Primary, #fff);
+export const Title = styled.h2`
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
   text-align: center;
-  font-family: Pretendard;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 `;

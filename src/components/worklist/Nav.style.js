@@ -12,6 +12,7 @@ export const Line = styled.div`
   width: 964px;
   height: 2px;
   margin-top: 42px;
+  margin-bottom: 30px;
 `;
 
 export const Circle = styled.div`
