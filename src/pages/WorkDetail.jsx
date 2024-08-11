@@ -18,7 +18,6 @@ export default function WorkDetail() {
   useEffect(() => {
     const handleResize = () => {
       const isWide = window.innerWidth > 1450;
-      const isTallEnough = window.innerHeight > 800;
       setCdCaseImage(isWide ? cdCaseImageMax : cdCaseImage2880);
 
       if (imageContainerRef.current) {
@@ -26,9 +25,7 @@ export default function WorkDetail() {
           window.innerHeight -
           imageContainerRef.current.getBoundingClientRect().bottom;
 
-        setIsEnoughSpace(
-          isWide && isTallEnough ? spaceBelow > 200 : spaceBelow > 120,
-        );
+        setIsEnoughSpace(isWide ? spaceBelow > 200 : spaceBelow > 120);
       }
 
       setIsMobile(window.innerWidth < 768);
@@ -60,10 +57,7 @@ export default function WorkDetail() {
           {isEnoughSpace ? (
             <W.WorkDetailContainer>
               <W.CdCase ref={imageContainerRef}>
-                <CdCase
-                  cdCaseImage={cdCaseImage}
-                  style={{ maxHeight: '80vh', objectFit: 'contain' }}
-                />
+                <CdCase cdCaseImage={cdCaseImage} />
               </W.CdCase>
               <W.ButtonColumnContainer>
                 <LeftButton text={'PREV'} />
@@ -75,10 +69,7 @@ export default function WorkDetail() {
               <W.ButtonRowContainer>
                 <LeftButton />
                 <W.CdCase ref={imageContainerRef}>
-                  <CdCase
-                    cdCaseImage={cdCaseImage}
-                    style={{ maxHeight: '80vh', objectFit: 'contain' }}
-                  />
+                  <CdCase cdCaseImage={cdCaseImage} />
                 </W.CdCase>
                 <RightButton />
               </W.ButtonRowContainer>
