@@ -9,15 +9,24 @@ import GuestBook from './pages/GuestBook';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
+  const [animationCompleted, setAnimationCompleted] = useState(true);
 
   const toggleMenu = () => {
+    if (isVisible) {
+      setAnimationCompleted(false);
+      const navItemCount = 5;
+      const totalAnimationTime = navItemCount * 0.1;
+      setTimeout(() => {
+        setAnimationCompleted(true);
+      }, totalAnimationTime * 1000);
+    }
     setIsVisible(!isVisible);
   };
 
   return (
     <BrowserRouter>
       <Header isVisible={isVisible} toggleMenu={toggleMenu} />
-      {!isVisible && (
+      {!isVisible & animationCompleted && (
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
