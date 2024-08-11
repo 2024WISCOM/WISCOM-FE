@@ -8,8 +8,9 @@ export const ButtonContainer = styled.div`
   gap: 5px;
   color: white;
   margin: 0px;
-  font-family: 'PlayfiarDisplay';
+  font-family: 'PlayfairDisplay';
   font-size: 30px;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     /* Mobile */
