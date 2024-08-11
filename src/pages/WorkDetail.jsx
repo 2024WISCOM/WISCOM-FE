@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import cdCaseImage from '../assets/img/detail_cd_case.svg';
+import cdCaseImage2880 from '../assets/img/detail_cd_case_2880.svg';
+import cdCaseImageMax from '../assets/img/detail_cd_case_max.svg';
+
 import RightButton from '../components/workdetail/button/RightButton';
 import CdCase from '../components/workdetail/cdcase/CdCase';
 import LeftButton from '../components/workdetail/button/LeftButton';
@@ -10,24 +12,30 @@ import * as W from '../components/workdetail/WorkDetail.style';
 export default function WorkDetail() {
   const [isEnoughSpace, setIsEnoughSpace] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [cdCaseImage, setCdCaseImage] = useState(cdCaseImage2880);
   const imageContainerRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
+      const isWide = window.innerWidth > 1450;
+      const isTallEnough = window.innerHeight > 800;
+      setCdCaseImage(isWide ? cdCaseImageMax : cdCaseImage2880);
+
       if (imageContainerRef.current) {
         const spaceBelow =
           window.innerHeight -
           imageContainerRef.current.getBoundingClientRect().bottom;
-        setIsEnoughSpace(spaceBelow > 120);
+
+        setIsEnoughSpace(
+          isWide && isTallEnough ? spaceBelow > 200 : spaceBelow > 120,
+        );
       }
+
       setIsMobile(window.innerWidth < 768);
     };
 
-    const image = new Image();
-    image.onload = handleResize;
-    image.src = cdCaseImage;
-
     window.addEventListener('resize', handleResize);
+
     handleResize();
 
     return () => {
@@ -52,7 +60,10 @@ export default function WorkDetail() {
           {isEnoughSpace ? (
             <W.WorkDetailContainer>
               <W.CdCase ref={imageContainerRef}>
-                <CdCase cdCaseImage={cdCaseImage} />
+                <CdCase
+                  cdCaseImage={cdCaseImage}
+                  style={{ maxHeight: '80vh', objectFit: 'contain' }}
+                />
               </W.CdCase>
               <W.ButtonColumnContainer>
                 <LeftButton text={'PREV'} />
@@ -64,7 +75,10 @@ export default function WorkDetail() {
               <W.ButtonRowContainer>
                 <LeftButton />
                 <W.CdCase ref={imageContainerRef}>
-                  <CdCase cdCaseImage={cdCaseImage} />
+                  <CdCase
+                    cdCaseImage={cdCaseImage}
+                    style={{ maxHeight: '80vh', objectFit: 'contain' }}
+                  />
                 </W.CdCase>
                 <RightButton />
               </W.ButtonRowContainer>

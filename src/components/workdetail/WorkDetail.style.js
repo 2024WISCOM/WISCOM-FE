@@ -12,7 +12,7 @@ export const WorkDetailContainer = styled.div`
 `;
 
 export const WorkDetaileRowContainer = styled.div`
-  height: 85vh;
+  height: 83vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@ export const WorkDetaileRowContainer = styled.div`
   margin: 0;
   padding: 0 20px;
   overflow: hidden;
+  background-color: transparent;
 `;
 
 export const MobileDetailContainer = styled.div`
