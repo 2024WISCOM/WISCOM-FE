@@ -7,12 +7,11 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 60px 50px;
   font-family: 'PlayfiarDisplay';
 
   @media (max-width: 1024px) {
-    /* Tablet and smaller */
-    padding: 0 30px;
+    /* Tablet */
   }
 
   @media (max-width: 768px) {
@@ -23,16 +22,14 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  font-size: 35px;
+  font-size: 50px;
   font-weight: bold;
   margin: 0;
-  padding-left: 20px;
   cursor: pointer;
 
   @media (max-width: 768px) {
     /* Mobile */
     font-size: 20px;
-    padding-left: 0px;
   }
 `;
 
@@ -51,7 +48,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MENU = styled.div`
-  font-size: 25px;
+  font-size: 35px;
   position: relative;
   top: -2px;
 
@@ -63,8 +60,8 @@ export const MENU = styled.div`
 `;
 
 export const HamburgerIcon = styled.div`
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 2.5px;
   background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
@@ -75,17 +72,17 @@ export const HamburgerIcon = styled.div`
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2.5px;
     background-color: #ffffff;
     transition: transform 0.3s ease;
   }
 
   &::before {
-    top: -9px;
+    top: -11px;
   }
 
   &::after {
-    top: 9px;
+    top: 11px;
   }
 
   ${({ isVisible }) =>
