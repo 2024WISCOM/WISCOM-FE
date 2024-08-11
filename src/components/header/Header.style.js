@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 60px 50px;
-  font-family: 'PlayfiarDisplay';
+  font-family: 'PlayfairDisplay';
 
   @media (max-width: 1024px) {
     /* Tablet */
@@ -208,27 +208,6 @@ export const HamburgerIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.div`
-  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 100px);
-  top: 100px;
-  left: 0;
-  padding: 20px 0 0 20px;
-  color: #ffffff;
-
-  @media (max-width: 768px) {
-    /* Mobile */
-    gap: 50px;
-    padding: 10px 0 0 10px;
-    top: 80px;
-  }
-`;
-
 const slideInFromLeft = keyframes`
   from {
     opacity: 0;
@@ -251,12 +230,43 @@ const slideOutToLeft = keyframes`
   }
 `;
 
+export const NavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  top: 100px;
+  left: 0;
+  padding: 20px 0 0 20px;
+  color: #ffffff;
+  animation: ${({ isVisible }) =>
+      isVisible ? slideInFromLeft : slideOutToLeft}
+    0.5s forwards; /* Ensure both have the same duration */
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    gap: 50px;
+    padding: 10px 0 0 10px;
+    top: 80px;
+  }
+`;
+
 export const NavItem = styled.div`
   font-size: 60px;
   margin-left: 100px;
   position: relative;
   cursor: pointer;
   color: #ffffff;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transform: ${({ isVisible }) =>
+    isVisible ? 'translateX(0)' : 'translateX(-100%)'};
+  transition-delay: ${({ index }) => index * 0.1}s; /* Delay for each item */
 
   &::first-letter {
     font-size: 72px;
@@ -276,12 +286,6 @@ export const NavItem = styled.div`
     color: transparent;
     text-shadow: none;
   }
-
-  animation: ${({ isVisible }) =>
-      isVisible ? slideInFromLeft : slideOutToLeft}
-    0.3s ease forwards;
-  animation-delay: ${({ index }) => index * 0.1}s;
-  opacity: 0;
 
   @media (max-width: 1024px) {
     /* Tablet */

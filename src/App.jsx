@@ -14,8 +14,8 @@ function App() {
   const toggleMenu = () => {
     if (isVisible) {
       setAnimationCompleted(false);
-      const navItemCount = 5;
-      const totalAnimationTime = navItemCount * 0.1;
+      const navItemCount = 4;
+      const totalAnimationTime = navItemCount * 0.1 + 0.1;
       setTimeout(() => {
         setAnimationCompleted(true);
       }, totalAnimationTime * 1000);
@@ -24,15 +24,8 @@ function App() {
   };
 
   const setIsVisibleFalse = () => {
-    if (isVisible) {
-      setAnimationCompleted(false);
-      const navItemCount = 5;
-      const totalAnimationTime = navItemCount * 0.1;
-      setTimeout(() => {
-        setAnimationCompleted(true);
-      }, totalAnimationTime * 1000);
-    }
     setIsVisible(false);
+    setAnimationCompleted(true);
   };
 
   return (
@@ -42,7 +35,7 @@ function App() {
         toggleMenu={toggleMenu}
         setIsVisibleFalse={setIsVisibleFalse}
       />
-      {!isVisible & animationCompleted && (
+      {!isVisible && animationCompleted && (
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
