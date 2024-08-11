@@ -7,12 +7,13 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  font-family: 'PlayfiarDisplay';
+  padding: 60px 50px;
+  font-family: 'PlayfairDisplay';
 
   @media (max-width: 1024px) {
-    /* Tablet and smaller */
-    padding: 0 30px;
+    /* Tablet */
+    padding: 0px 40px;
+    height: 90px;
   }
 
   @media (max-width: 768px) {
@@ -23,16 +24,19 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
-  padding-left: 20px;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 35px;
+  }
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 20px;
-    padding-left: 0px;
+    font-size: 21px;
   }
 `;
 
@@ -41,12 +45,12 @@ export const MenuContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0px;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 8px;
+    gap: 12px;
   }
 `;
 
@@ -55,16 +59,21 @@ export const MENU = styled.div`
   position: relative;
   top: -2px;
 
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 20px;
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 16px;
+    font-size: 18px;
     top: -0.4px;
   }
 `;
 
 export const HamburgerIcon = styled.div`
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 2.3px;
   background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
@@ -75,7 +84,7 @@ export const HamburgerIcon = styled.div`
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2.3px;
     background-color: #ffffff;
     transition: transform 0.3s ease;
   }
@@ -106,10 +115,10 @@ export const HamburgerIcon = styled.div`
     }
   `}
 
-  @media (max-width: 768px) {
-    /* Mobile */
-    width: 15px;
-    height: 2px;
+  @media (max-width: 1024px) {
+    /* Tablet */
+    width: 20px;
+    height: 2.3px;
     background-color: #ffffff;
     position: relative;
     transition: transform 0.3s ease;
@@ -120,17 +129,17 @@ export const HamburgerIcon = styled.div`
       position: absolute;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 2.3px;
       background-color: #ffffff;
       transition: transform 0.3s ease;
     }
 
     &::before {
-      top: -6px;
+      top: -7.7px;
     }
 
     &::after {
-      top: 6px;
+      top: 7.7px;
     }
 
     ${({ isVisible }) =>
@@ -151,26 +160,51 @@ export const HamburgerIcon = styled.div`
     }
   `}
   }
-`;
-
-export const NavMenu = styled.div`
-  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 100px);
-  top: 100px;
-  left: 0;
-  padding: 20px 0 0 20px;
-  color: #ffffff;
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 50px;
-    padding: 10px 0 0 10px;
-    top: 80px;
+    width: 16px;
+    height: 2px;
+    background-color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: -6.1px;
+    }
+
+    &::after {
+      top: 6.1px;
+    }
+
+    ${({ isVisible }) =>
+      isVisible &&
+      `
+    transform: rotate(45deg);
+
+    &::before, &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(-90deg);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  `}
   }
 `;
 
@@ -196,15 +230,46 @@ const slideOutToLeft = keyframes`
   }
 `;
 
+export const NavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 100px);
+  top: 100px;
+  left: 0;
+  padding: 20px 0 0 20px;
+  color: #ffffff;
+  animation: ${({ isVisible }) =>
+      isVisible ? slideInFromLeft : slideOutToLeft}
+    0.5s forwards; /* Ensure both have the same duration */
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    gap: 50px;
+    padding: 10px 0 0 10px;
+    top: 80px;
+  }
+`;
+
 export const NavItem = styled.div`
   font-size: 60px;
   margin-left: 100px;
   position: relative;
   cursor: pointer;
   color: #ffffff;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transform: ${({ isVisible }) =>
+    isVisible ? 'translateX(0)' : 'translateX(-100%)'};
+  transition-delay: ${({ index }) => index * 0.1}s; /* Delay for each item */
 
   &::first-letter {
-    font-size: 80px;
+    font-size: 72px;
   }
 
   &:hover {
@@ -221,12 +286,6 @@ export const NavItem = styled.div`
     color: transparent;
     text-shadow: none;
   }
-
-  animation: ${({ isVisible }) =>
-      isVisible ? slideInFromLeft : slideOutToLeft}
-    0.3s ease forwards;
-  animation-delay: ${({ index }) => index * 0.1}s;
-  opacity: 0;
 
   @media (max-width: 1024px) {
     /* Tablet */
