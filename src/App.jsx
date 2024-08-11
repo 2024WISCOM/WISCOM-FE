@@ -23,9 +23,25 @@ function App() {
     setIsVisible(!isVisible);
   };
 
+  const setIsVisibleFalse = () => {
+    if (isVisible) {
+      setAnimationCompleted(false);
+      const navItemCount = 5;
+      const totalAnimationTime = navItemCount * 0.1;
+      setTimeout(() => {
+        setAnimationCompleted(true);
+      }, totalAnimationTime * 1000);
+    }
+    setIsVisible(false);
+  };
+
   return (
     <BrowserRouter>
-      <Header isVisible={isVisible} toggleMenu={toggleMenu} />
+      <Header
+        isVisible={isVisible}
+        toggleMenu={toggleMenu}
+        setIsVisibleFalse={setIsVisibleFalse}
+      />
       {!isVisible & animationCompleted && (
         <Routes>
           <Route path="/" element={<Main />} />
