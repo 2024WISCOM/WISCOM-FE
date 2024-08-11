@@ -25,10 +25,7 @@ export default function WorkDetail() {
           window.innerHeight -
           imageContainerRef.current.getBoundingClientRect().bottom;
 
-        console.log('spaceBelow : ', spaceBelow);
-        console.log('isWide : ', isWide);
-
-        setIsEnoughSpace(isWide ? spaceBelow > 950 : spaceBelow > 120);
+        setIsEnoughSpace(isWide ? spaceBelow > 950 : spaceBelow > 125);
       }
 
       setIsMobile(window.innerWidth < 768);

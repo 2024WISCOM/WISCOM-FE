@@ -1,27 +1,25 @@
 import styled from 'styled-components';
 
 export const WorkDetailContainer = styled.div`
-  height: 85vh;
+  min-height: 80vh;
   width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   overflow: hidden;
 `;
 
 export const WorkDetaileRowContainer = styled.div`
-  height: 83vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
   overflow: hidden;
-  background-color: transparent;
 `;
 
 export const MobileDetailContainer = styled.div`
@@ -31,15 +29,13 @@ export const MobileDetailContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
-  padding-bottom: 30px;
 `;
 
 export const CdCase = styled.div`
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
   img {
     max-width: 100%;
     max-height: 85vh;
