@@ -10,12 +10,11 @@ export const Container = styled.div`
 export const Image = styled.img`
   border-radius: 20px;
   width: 800px;
-  height: auto;
 `;
 
 export const Title = styled.h2`
   color: white;
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: 30px;
   text-align: center;
 `;

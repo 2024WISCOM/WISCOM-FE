@@ -22,11 +22,11 @@ export const Slide = styled.div`
   text-align: center;
 
   &:nth-child(1) {
-    transform: translateX(230%) scale(0.6);
+    transform: translateX(240%) scale(0.6);
   }
 
   &:nth-child(2) {
-    transform: translateX(150%) scale(0.7);
+    transform: translateX(155%) scale(0.7);
   }
 
   &:nth-child(3) {
@@ -43,12 +43,12 @@ export const Slide = styled.div`
   }
 
   &:nth-child(6) {
-    transform: translateX(-150%) scale(0.7);
+    transform: translateX(-155%) scale(0.7);
     z-index: -2;
   }
 
   &:nth-child(7) {
-    transform: translateX(-230%) scale(0.6);
+    transform: translateX(-240%) scale(0.6);
     z-index: -3;
   }
 `;

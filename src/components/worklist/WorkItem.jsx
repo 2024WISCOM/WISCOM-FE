@@ -5,9 +5,7 @@ export default function WorkItem({ image, title, index }) {
   return (
     <W.Container>
       <W.Image src={image} />
-      <W.Title>
-        {index}. {title}
-      </W.Title>
+      <W.Title>{title}</W.Title>
     </W.Container>
   );
 }
