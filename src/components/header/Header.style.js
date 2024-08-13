@@ -261,7 +261,7 @@ export const NavMenu = styled.div`
 
 export const NavItem = styled.div`
   font-size: 120px;
-  margin-left: 100px;
+  margin-left: 170px;
   position: relative;
   cursor: pointer;
   color: #ffffff;
@@ -295,7 +295,7 @@ export const NavItem = styled.div`
   @media (max-width: 1024px) {
     /* Tablet */
     font-size: 90px;
-    margin-left: 60px;
+    margin-left: 100px;
 
     &::first-letter {
       font-size: 100px;
@@ -308,7 +308,7 @@ export const NavItem = styled.div`
     margin-left: 20px;
 
     &::first-letter {
-      font-size: 50px;
+      font-size: 60px;
     }
   }
 `;
