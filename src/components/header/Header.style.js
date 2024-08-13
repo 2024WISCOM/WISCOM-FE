@@ -55,7 +55,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MENU = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   position: relative;
   top: -2px;
 
@@ -72,7 +72,7 @@ export const MENU = styled.div`
 `;
 
 export const HamburgerIcon = styled.div`
-  width: 23px;
+  width: 26px;
   height: 2.3px;
   background-color: #ffffff;
   position: relative;
@@ -90,11 +90,11 @@ export const HamburgerIcon = styled.div`
   }
 
   &::before {
-    top: -9px;
+    top: -11px;
   }
 
   &::after {
-    top: 9px;
+    top: 11px;
   }
 
   ${({ isVisible }) =>
@@ -234,7 +234,7 @@ export const NavMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 50px;
   position: absolute;
   width: 100%;
   height: calc(100% - 100px);
