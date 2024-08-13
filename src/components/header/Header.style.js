@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 50px;
+  padding: 60px 60px;
   font-family: 'PlayfairDisplay';
 
   @media (max-width: 1024px) {
@@ -24,7 +24,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   margin: 0;
   cursor: pointer;
@@ -55,7 +55,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MENU = styled.div`
-  font-size: 25px;
+  font-size: 30px;
   position: relative;
   top: -2px;
 
@@ -246,6 +246,11 @@ export const NavMenu = styled.div`
       isVisible ? slideInFromLeft : slideOutToLeft}
     0.5s forwards; /* Ensure both have the same duration */
 
+  @media (max-width: 1024px) {
+    /* Tablet */
+    gap: 50px;
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
     gap: 50px;
@@ -255,7 +260,7 @@ export const NavMenu = styled.div`
 `;
 
 export const NavItem = styled.div`
-  font-size: 60px;
+  font-size: 120px;
   margin-left: 100px;
   position: relative;
   cursor: pointer;
@@ -269,7 +274,7 @@ export const NavItem = styled.div`
   transition-delay: ${({ index }) => index * 0.1}s; /* Delay for each item */
 
   &::first-letter {
-    font-size: 72px;
+    font-size: 130px;
   }
 
   &:hover {
@@ -289,11 +294,11 @@ export const NavItem = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 50px;
+    font-size: 90px;
     margin-left: 60px;
 
     &::first-letter {
-      font-size: 70px;
+      font-size: 100px;
     }
   }
 
