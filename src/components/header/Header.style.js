@@ -61,7 +61,8 @@ export const MENU = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 20px;
+    font-size: 22px;
+    top: -1px;
   }
 
   @media (max-width: 768px) {

@@ -20,7 +20,7 @@ export default function WorkDetail() {
           imageContainerRef.current.getBoundingClientRect().bottom;
         setIsEnoughSpace(spaceBelow > 120);
       }
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     const image = new Image();
