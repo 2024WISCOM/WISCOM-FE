@@ -8,11 +8,7 @@ export const Container = styled.div`
   position: relative;
 
   @media (max-width: 1920px) {
-    width: 1200px;
-  }
-
-  @media (max-width: 1280px) {
-    width: 900px;
+    width: 85%;
   }
 
   .react-stacked-center-carousel {
