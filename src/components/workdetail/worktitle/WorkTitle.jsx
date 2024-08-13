@@ -1,14 +1,14 @@
 import * as W from './WorkTitle.style';
 import ViewSite from '../button/ViewSite';
 
-export default function WorkTitle({ src }) {
+export default function WorkTitle({ src, title, shortDescription, deployUrl }) {
   return (
     <W.WorkTitleContainer>
       <W.TitleWrapper>
-        <W.WorkTitle>폭신폭신</W.WorkTitle>
-        <ViewSite src={src} />
+        <W.WorkTitle>{title}</W.WorkTitle>
+        <ViewSite deployUrl={deployUrl} src={src} />
       </W.TitleWrapper>
-      <W.Discription>당신의 안전을 지키는 건강한 연애의 시작</W.Discription>
+      <W.Discription>{shortDescription}</W.Discription>
     </W.WorkTitleContainer>
   );
 }

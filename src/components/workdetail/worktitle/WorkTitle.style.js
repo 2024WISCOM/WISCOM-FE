@@ -29,16 +29,6 @@ export const TitleWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 20px;
-
-  @media (max-width: 1200px) {
-    padding-top: 20px;
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
-    padding-top: 0px;
-  }
 `;
 
 export const WorkTitle = styled.div`

@@ -52,3 +52,18 @@ export const ViewSiteImage = styled.div`
     border-radius: 50%;
   }
 `;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    font-size: 13px;
+    gap: 3px;
+    font-family: 'Pretendard-Regular';
+  }
+`;
