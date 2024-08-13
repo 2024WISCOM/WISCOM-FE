@@ -308,7 +308,7 @@ export const NavItem = styled.div`
     margin-left: 20px;
 
     &::first-letter {
-      font-size: 50px;
+      font-size: 60px;
     }
   }
 `;
