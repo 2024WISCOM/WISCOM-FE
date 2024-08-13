@@ -4,12 +4,12 @@ import * as N from './NavButton.style';
 export default function NavButton({ text }) {
   const styledText = text.split('&').map((part, index, array) =>
     index < array.length - 1 ? (
-      <>
+      <React.Fragment key={index}>
         {part}
-        <span key={index}>&</span>
-      </>
+        <span>&</span>
+      </React.Fragment>
     ) : (
-      <>{part}</>
+      <React.Fragment key={index}>{part}</React.Fragment>
     ),
   );
 
