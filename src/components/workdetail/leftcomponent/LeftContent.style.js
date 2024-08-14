@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LeftContentContainer = styled.div`
   position: absolute;
-  width: 46.2%;
+  width: 46.4%;
   height: 93.4%;
   top: 3.5%;
   left: 1.3%;

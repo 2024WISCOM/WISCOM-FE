@@ -8,15 +8,10 @@ export const VisitSite = styled.div`
   align-items: center;
   font-size: 25px;
 
-  @media (max-width: 1200px) {
-    /* Desktop */
-    font-size: 22px;
-  }
-
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 18px;
-    gap: 10px;
+    font-size: 20px;
+    gap: 12px;
   }
 
   @media (max-width: 768px) {
@@ -35,16 +30,10 @@ export const ViewSiteImage = styled.div`
   font-family: 'Pretendard-Medium';
   cursor: pointer;
 
-  @media (max-width: 1200px) {
-    /* Desktop */
-    width: 30px;
-    height: 30px;
-  }
-
   @media (max-width: 1024px) {
     /* Tablet */
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 
   @media (max-width: 768px) {
@@ -61,5 +50,20 @@ export const ViewSiteImage = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 50%;
+  }
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    font-size: 13px;
+    gap: 3px;
+    font-family: 'Pretendard-Regular';
   }
 `;

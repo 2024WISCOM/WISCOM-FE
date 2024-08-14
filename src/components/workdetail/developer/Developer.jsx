@@ -1,10 +1,10 @@
 import * as D from './Developer.style';
 
-export default function Developer() {
+export default function Developer({ name, role }) {
   return (
     <D.DeveloperContainer>
-      <D.DeveloperName>김은서</D.DeveloperName>
-      <D.DeveloperPosition>Front-end</D.DeveloperPosition>
+      <D.DeveloperName>{name}</D.DeveloperName>
+      <D.DeveloperPosition>{role}</D.DeveloperPosition>
     </D.DeveloperContainer>
   );
 }

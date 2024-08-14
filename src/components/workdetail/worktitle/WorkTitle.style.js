@@ -8,6 +8,16 @@ export const WorkTitleContainer = styled.div`
   gap: 30px;
   width: 100%;
 
+  @media (max-width: 1200px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    /* Mobile */
+    gap: 20px;
+    padding-top: 20px;
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
     gap: 15px;
@@ -30,13 +40,12 @@ export const WorkTitle = styled.div`
   text-align: left;
 
   @media (max-width: 1200px) {
-    /* Desktop */
-    font-size: 30px;
+    font-size: 28px;
   }
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 28px;
+    font-size: 35px;
   }
 
   @media (max-width: 768px) {
@@ -59,7 +68,7 @@ export const Discription = styled.div`
   }
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   @media (max-width: 768px) {

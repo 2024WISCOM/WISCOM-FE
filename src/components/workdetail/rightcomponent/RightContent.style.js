@@ -7,7 +7,7 @@ export const RightContentContainer = styled.div`
   top: 3%;
   left: 52.75%;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 23px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -36,12 +36,8 @@ export const RightContentContainer = styled.div`
     background: #555;
   }
 
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+  @media (max-width: 1200px) {
+    gap: 20px;
   }
 `;
 
@@ -58,18 +54,6 @@ export const WorkTitle = styled.div`
   font-size: 35px;
   margin: 0px;
   font-family: 'Pretendard-ExtraBold';
-
-  @media (max-width: 1200px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
-  }
 `;
 
 export const VisitSite = styled.div`
@@ -79,18 +63,6 @@ export const VisitSite = styled.div`
   margin: 0px;
   align-items: center;
   font-size: 25px;
-
-  @media (max-width: 1200px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
-  }
 `;
 
 export const ViewSiteImage = styled.div`
@@ -100,18 +72,6 @@ export const ViewSiteImage = styled.div`
   position: relative;
   font-family: 'Pretendard-Medium';
   cursor: pointer;
-
-  @media (max-width: 1200px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
-  }
 
   img {
     position: absolute;
@@ -138,15 +98,7 @@ export const TeamWrapper = styled.div`
   margin: 0px;
 
   @media (max-width: 1200px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+    gap: 30px;
   }
 `;
 
@@ -160,15 +112,7 @@ export const TeamItem = styled.div`
   width: 100%;
 
   @media (max-width: 1200px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+    gap: 30px;
   }
 `;
 
@@ -178,16 +122,8 @@ export const TeamTitle = styled.div`
   margin: 0px;
   font-family: 'Pretendard-Bold';
 
-  @media (max-width: 1300px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1700px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+  @media (max-width: 1200px) {
+    font-size: 24px;
   }
 `;
 
@@ -203,16 +139,12 @@ export const LinkTo = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 1300px) {
-    /* Desktop */
-  }
+  @media (max-width: 1200px) {
+    gap: 13px;
 
-  @media (max-width: 1700px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+    img {
+      height: 30px;
+    }
   }
 `;
 
@@ -225,16 +157,8 @@ export const DeveloperWrapper = styled.div`
   text-align: left;
   margin: 0px;
 
-  @media (max-width: 1300px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+  @media (max-width: 1200px) {
+    gap: 40px;
   }
 `;
 
@@ -246,16 +170,8 @@ export const DetailDescription = styled.div`
   font-family: 'Pretendard-Regular';
   padding-top: 25px;
 
-  @media (max-width: 1300px) {
-    /* Desktop */
-  }
-
-  @media (max-width: 1024px) {
-    /* Tablet */
-  }
-
-  @media (max-width: 768px) {
-    /* Mobile */
+  @media (max-width: 1200px) {
+    font-size: 20px;
   }
 `;
 

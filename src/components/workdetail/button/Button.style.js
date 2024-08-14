@@ -12,6 +12,12 @@ export const ButtonContainer = styled.div`
   font-size: 30px;
   cursor: pointer;
 
+  @media (max-width: 1024px) {
+    /* Tablet */
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+
   @media (max-width: 768px) {
     /* Mobile */
     font-size: 18px;
@@ -39,6 +45,10 @@ export const ButtonImage = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
+    width: 23px;
+    height: 22px;
+    position: relative;
+    top: -2.5px;
   }
 
   @media (max-width: 768px) {
