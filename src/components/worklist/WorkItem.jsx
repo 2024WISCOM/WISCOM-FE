@@ -9,7 +9,8 @@ const WorkItem = React.memo(function ({
   slideIndex,
 }) {
   const coverImage = data[dataIndex].image;
-  const text = data[dataIndex].text;
+  const title = data[dataIndex].title;
+  const team = data[dataIndex].team;
 
   return (
     <W.Container>
@@ -21,8 +22,9 @@ const WorkItem = React.memo(function ({
         />
       </div>
       <W.Card>
-        <img alt="j" src={coverImage} />
-        {isCenterSlide && <p>{text}</p>}
+        <img alt={title} src={coverImage} />
+        {isCenterSlide && <W.Title>{title}</W.Title>}
+        {isCenterSlide && <W.Team>{team}</W.Team>}
       </W.Card>
     </W.Container>
   );

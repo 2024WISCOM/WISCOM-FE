@@ -21,16 +21,16 @@ import work9 from '../../assets/img/works/work_9.png';
 import work10 from '../../assets/img/works/work_10.png';
 
 const data = [
-  { image: work1, text: '귀여운게다야' },
-  { image: work2, text: '사랑한다' },
-  { image: work3, text: '종강해요' },
-  { image: work4, text: '운이최고' },
-  { image: work5, text: '교수님절교해요' },
-  { image: work6, text: '별로안감사합니다' },
-  { image: work7, text: 'Iloveyou' },
-  { image: work8, text: '님은짱이신것같아요' },
-  { image: work9, text: '지금뭐하는건가' },
-  { image: work10, text: '저도원숭이에요' },
+  { image: work1, title: '귀여운게다야', team: '최고심' },
+  { image: work2, title: '사랑한다', team: '박명수' },
+  { image: work3, title: '종강해요', team: '컴퓨터공학과' },
+  { image: work4, title: '운이최고', team: '양파쿵야' },
+  { image: work5, title: '교수님절교해요', team: '곰돌이' },
+  { image: work6, title: '별로안감사합니다', team: '나' },
+  { image: work7, title: 'Iloveyou', team: '박명수' },
+  { image: work8, title: '님은짱이신것같아요', team: '최고심' },
+  { image: work9, title: '지금뭐하는건가', team: '커비' },
+  { image: work10, title: '저도원숭이에요', team: '최고심' },
 ];
 
 const Slide = () => {

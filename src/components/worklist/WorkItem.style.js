@@ -43,13 +43,13 @@ export const Card = styled.div`
 
     @media (max-width: 1920px) {
       width: 640px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     @media (max-width: 1280px) {
       width: 440px;
       border-radius: 25px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     @media (max-width: 767px) {
@@ -58,26 +58,49 @@ export const Card = styled.div`
       margin-bottom: 40px;
     }
   }
+`;
 
-  p {
-    color: white;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+export const Title = styled.p`
+  color: white;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 5px;
 
-    @media (max-width: 1920px) {
-      font-size: 28px;
-    }
+  @media (max-width: 1920px) {
+    font-size: 28px;
+  }
 
-    @media (max-width: 1280px) {
-      font-size: 23px;
-    }
+  @media (max-width: 1280px) {
+    font-size: 23px;
+  }
 
-    @media (max-width: 767px) {
-      font-size: 20px;
-    }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+`;
+
+export const Team = styled.p`
+  color: white;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media (max-width: 1920px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
   }
 `;

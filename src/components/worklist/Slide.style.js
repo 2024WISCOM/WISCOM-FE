@@ -24,11 +24,11 @@ export const Container = styled.div`
     height: 900px !important;
 
     @media (max-width: 1920px) {
-      height: 700px !important;
+      height: 730px !important;
     }
 
     @media (max-width: 1280px) {
-      height: 500px !important;
+      height: 530px !important;
     }
   }
 `;
