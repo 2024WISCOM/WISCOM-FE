@@ -29,6 +29,7 @@ export const Line = styled.div`
 
   @media (max-width: 767px) {
     margin-top: 17px;
+    margin-bottom: 90px;
     width: 340px;
     height: 1px;
   }

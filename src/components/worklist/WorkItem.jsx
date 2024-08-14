@@ -22,7 +22,7 @@ const WorkItem = React.memo(function ({
       </div>
       <W.Card>
         <img alt="j" src={coverImage} />
-        <p>{text}</p>
+        {isCenterSlide && <p>{text}</p>}
       </W.Card>
     </W.Container>
   );

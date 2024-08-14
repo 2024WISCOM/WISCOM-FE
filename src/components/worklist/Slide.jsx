@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StackedCarousel,
   ResponsiveContainer,
@@ -36,28 +36,61 @@ const data = [
 const Slide = () => {
   const ref = React.useRef(StackedCarousel);
 
+  const [maxVisibleSlide, setMaxVisibleSlide] = useState(7);
+  const [customScales, setCustomScales] = useState([1, 0.85, 0.7, 0.6, 0.5]);
+  const [slideWidth, setSlideWidth] = useState(800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setMaxVisibleSlide(3);
+        setCustomScales([1, 0.85, 0.7]);
+        setSlideWidth(330);
+      } else if (window.innerWidth <= 1280) {
+        setMaxVisibleSlide(5);
+        setCustomScales([1, 0.85, 0.7, 0.6]);
+      } else {
+        setMaxVisibleSlide(7);
+        setCustomScales([1, 0.85, 0.7, 0.6, 0.5]);
+        setSlideWidth(800);
+      }
+    };
+
+    handleResize(); // 초기 로드 시 한 번 호출
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <S.Container>
-      <S.Button src={left} onClick={() => ref.current?.goBack()} />
-      <ResponsiveContainer
-        carouselRef={ref}
-        render={(width, carouselRef) => {
-          return (
-            <StackedCarousel
-              ref={carouselRef}
-              slideComponent={WorkItem}
-              slideWidth={800}
-              carouselWidth={width}
-              data={data}
-              maxVisibleSlide={7}
-              customScales={[1, 0.85, 0.7, 0.6, 0.5]}
-              transitionTime={450}
-            />
-          );
-        }}
-      />
-      <S.Button src={right} onClick={() => ref.current?.goNext()} />
-    </S.Container>
+    <S.Page>
+      <S.Container>
+        <S.Button src={left} onClick={() => ref.current?.goBack()} />
+        <ResponsiveContainer
+          carouselRef={ref}
+          render={(width, carouselRef) => {
+            const calculatedWidth =
+              window.innerWidth <= 767 ? width + 200 : width;
+
+            return (
+              <StackedCarousel
+                ref={carouselRef}
+                slideComponent={WorkItem}
+                slideWidth={slideWidth}
+                carouselWidth={calculatedWidth}
+                data={data}
+                maxVisibleSlide={maxVisibleSlide}
+                customScales={customScales}
+                transitionTime={300}
+              />
+            );
+          }}
+        />
+        <S.Button src={right} onClick={() => ref.current?.goNext()} />
+      </S.Container>
+    </S.Page>
   );
 };
 

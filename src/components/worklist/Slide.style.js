@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Page = styled.div`
+  overflow-x: hidden; /* 이 페이지에서만 가로 스크롤 방지 */
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -9,6 +13,11 @@ export const Container = styled.div`
 
   @media (max-width: 1920px) {
     width: 85%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    transform: translateX(-100px);
   }
 
   .react-stacked-center-carousel {
@@ -33,5 +42,9 @@ export const Button = styled.img`
 
   @media (max-width: 1280px) {
     width: 35px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
   }
 `;

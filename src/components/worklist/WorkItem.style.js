@@ -16,6 +16,10 @@ export const Container = styled.div`
     width: 440px;
     margin-bottom: 11px;
   }
+
+  @media (max-width: 767px) {
+    width: 330px;
+  }
 `;
 
 export const CardOverlay = styled.div`
@@ -44,7 +48,14 @@ export const Card = styled.div`
 
     @media (max-width: 1280px) {
       width: 440px;
+      border-radius: 25px;
       margin-bottom: 10px;
+    }
+
+    @media (max-width: 767px) {
+      width: 330px;
+      border-radius: 20px;
+      margin-bottom: 40px;
     }
   }
 
@@ -63,6 +74,10 @@ export const Card = styled.div`
 
     @media (max-width: 1280px) {
       font-size: 23px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 20px;
     }
   }
 `;
