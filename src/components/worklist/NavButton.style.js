@@ -13,4 +13,12 @@ export const Text = styled.div`
   span {
     font-family: Podkova;
   }
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 `;

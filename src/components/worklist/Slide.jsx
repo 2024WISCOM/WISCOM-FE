@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StackedCarousel,
   ResponsiveContainer,
@@ -21,43 +21,76 @@ import work9 from '../../assets/img/works/work_9.png';
 import work10 from '../../assets/img/works/work_10.png';
 
 const data = [
-  { image: work1, text: '귀여운게다야' },
-  { image: work2, text: '사랑한다' },
-  { image: work3, text: '종강해요' },
-  { image: work4, text: '운이최고' },
-  { image: work5, text: '교수님절교해요' },
-  { image: work6, text: '별로안감사합니다' },
-  { image: work7, text: 'Iloveyou' },
-  { image: work8, text: '님은짱이신것같아요' },
-  { image: work9, text: '지금뭐하는건가' },
-  { image: work10, text: '저도원숭이에요' },
+  { image: work1, title: '귀여운게다야', team: '최고심' },
+  { image: work2, title: '사랑한다', team: '박명수' },
+  { image: work3, title: '종강해요', team: '컴퓨터공학과' },
+  { image: work4, title: '운이최고', team: '양파쿵야' },
+  { image: work5, title: '교수님절교해요', team: '곰돌이' },
+  { image: work6, title: '별로안감사합니다', team: '나' },
+  { image: work7, title: 'Iloveyou', team: '박명수' },
+  { image: work8, title: '님은짱이신것같아요', team: '최고심' },
+  { image: work9, title: '지금뭐하는건가', team: '커비' },
+  { image: work10, title: '저도원숭이에요', team: '최고심' },
 ];
 
 const Slide = () => {
   const ref = React.useRef(StackedCarousel);
 
+  const [maxVisibleSlide, setMaxVisibleSlide] = useState(7);
+  const [customScales, setCustomScales] = useState([1, 0.85, 0.7, 0.6, 0.5]);
+  const [slideWidth, setSlideWidth] = useState(800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setMaxVisibleSlide(3);
+        setCustomScales([1, 0.85, 0.7]);
+        setSlideWidth(330);
+      } else if (window.innerWidth <= 1280) {
+        setMaxVisibleSlide(5);
+        setCustomScales([1, 0.85, 0.7, 0.6]);
+      } else {
+        setMaxVisibleSlide(7);
+        setCustomScales([1, 0.85, 0.7, 0.6, 0.5]);
+        setSlideWidth(800);
+      }
+    };
+
+    handleResize(); // 초기 로드 시 한 번 호출
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <S.Container>
-      <S.Button src={left} onClick={() => ref.current?.goBack()} />
-      <ResponsiveContainer
-        carouselRef={ref}
-        render={(width, carouselRef) => {
-          return (
-            <StackedCarousel
-              ref={carouselRef}
-              slideComponent={WorkItem}
-              slideWidth={800}
-              carouselWidth={width}
-              data={data}
-              maxVisibleSlide={7}
-              customScales={[1, 0.85, 0.7, 0.6, 0.5]}
-              transitionTime={450}
-            />
-          );
-        }}
-      />
-      <S.Button src={right} onClick={() => ref.current?.goNext()} />
-    </S.Container>
+    <S.Page>
+      <S.Container>
+        <S.Button src={left} onClick={() => ref.current?.goBack()} />
+        <ResponsiveContainer
+          carouselRef={ref}
+          render={(width, carouselRef) => {
+            const calculatedWidth =
+              window.innerWidth <= 767 ? width + 200 : width;
+
+            return (
+              <StackedCarousel
+                ref={carouselRef}
+                slideComponent={WorkItem}
+                slideWidth={slideWidth}
+                carouselWidth={calculatedWidth}
+                data={data}
+                maxVisibleSlide={maxVisibleSlide}
+                customScales={customScales}
+                transitionTime={300}
+              />
+            );
+          }}
+        />
+        <S.Button src={right} onClick={() => ref.current?.goNext()} />
+      </S.Container>
+    </S.Page>
   );
 };
 
