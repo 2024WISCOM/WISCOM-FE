@@ -58,7 +58,7 @@ export const Link = styled.a`
   color: inherit;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   @media (max-width: 768px) {
     /* Mobile */

@@ -1,6 +1,6 @@
 import * as C from './CdCase.style';
 import LeftContent from '../leftcomponent/LeftContent';
-import RightContent from '../rightcommponent/RightContent';
+import RightContent from '../rightcomponent/RightContent';
 
 export default function CdCase({ cdCaseImage, data }) {
   return (

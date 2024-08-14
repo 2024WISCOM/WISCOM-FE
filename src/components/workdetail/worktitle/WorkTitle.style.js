@@ -15,6 +15,7 @@ export const WorkTitleContainer = styled.div`
   @media (max-width: 1024px) {
     /* Mobile */
     gap: 20px;
+    padding-top: 20px;
   }
 
   @media (max-width: 768px) {

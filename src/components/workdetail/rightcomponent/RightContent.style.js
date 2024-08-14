@@ -7,7 +7,7 @@ export const RightContentContainer = styled.div`
   top: 3%;
   left: 52.75%;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 23px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
