@@ -22,6 +22,7 @@ export const FooterTop = styled.div`
 `;
 
 export const FooterLeft = styled.div`
+  flex: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -46,17 +47,21 @@ export const FooterLeft = styled.div`
 `;
 
 export const FooterRight = styled.div`
+  flex: 6;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align:right;
-  justify-content :flex-end;
+  justify-content :flex-start;
+
 `;
 
 
 export const FooterLogo = styled.img`
+
  height:50px;
- margin-left: 395px;
+ margin-left: 440px;
+ align-self: flex-end;
 
 `;
 
@@ -71,7 +76,7 @@ export const FooterBottom = styled.div`
 export const UrlContainer = styled.div`
 
   margin-top: 10px;
-  
+
   a {
     margin-right:10px;
     }
