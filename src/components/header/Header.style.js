@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  font-family: 'PlayfiarDisplay';
+  font-family: 'Playfiar Display';
 
   @media (max-width: 1024px) {
     /* Tablet and smaller */
