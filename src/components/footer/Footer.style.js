@@ -30,16 +30,19 @@ export const FooterLeft = styled.div`
   font-size: 0.9em;
   padding-left:0;
   margin:0;
+  width:100%;
+
   
   div {
     margin-bottom: 8px;
-    width: auto;
+    width: 100%
   }
 
   div:nth-child(2) {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1em; 
   }
+
 `;
 
 export const FooterRight = styled.div`
@@ -66,22 +69,18 @@ export const FooterBottom = styled.div`
 `;
 
 export const UrlContainer = styled.div`
-  display:flex;
-  align-items:center;
-  font-size:0;
-  margin-top:10px;
 
+  margin-top: 10px;
+  
   a {
-    margin-right:3px;
+    margin-right:10px;
     }
-
   
   img { 
-  height : 35px;
-  width : 35px;
-  margin: 0;
-  margin-right: 5px;
-  display:inline-block;
+    height : 35px;
+    width : 35px;
+    margin: 0;
+    display:inline-block;
   }
   
   `;
