@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import * as W from './WorkIntroduce.style';
 import viewSiteImage from '../../../assets/img/viewsite_white.png';
 import WorkTitle from '../worktitle/WorkTitle';
@@ -9,6 +10,20 @@ import RightButton from '../button/RightButton';
 import LeftButton from '../button/LeftButton';
 
 export default function WorkIntroduce({ data }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : data.images.length - 1,
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex < data.images.length - 1 ? prevIndex + 1 : 0,
+    );
+  };
+
   return (
     <W.WorkIntroduceContainer>
       <W.WorkTitleWrapper>
@@ -20,13 +35,9 @@ export default function WorkIntroduce({ data }) {
         />
       </W.WorkTitleWrapper>
       <W.ImageWrapper>
-        <LeftButton position="top" />
-        <Image
-          src={
-            'https://github.com/user-attachments/assets/a1e6e94c-90a3-41a1-aacf-61ddd773facd'
-          }
-        />
-        <RightButton position="top" />
+        <LeftButton position="top" onClick={handlePrevClick} />
+        <Image src={data.images[currentImageIndex].url} />
+        <RightButton position="top" onClick={handleNextClick} />
       </W.ImageWrapper>
       <W.DeveloperWrapper>
         <W.TeamItem>

@@ -7,6 +7,9 @@ export const VisitSite = styled.div`
   margin: 0px;
   align-items: center;
   font-size: 25px;
+  line-height: 1;
+  word-wrap: break-word;
+  text-align: left;
 
   @media (max-width: 1024px) {
     /* Tablet */

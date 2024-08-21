@@ -7,7 +7,7 @@ export default function CdCase({ cdCaseImage, data }) {
     <C.CdCaseContainer>
       <C.ImageContainer>
         <img src={cdCaseImage} alt="CD Case" />
-        <LeftContent />
+        <LeftContent images={data.images} />
         <RightContent data={data} />
       </C.ImageContainer>
     </C.CdCaseContainer>
