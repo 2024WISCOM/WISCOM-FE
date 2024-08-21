@@ -38,6 +38,8 @@ export const WorkTitle = styled.div`
   margin: 0px;
   font-family: 'Pretendard-ExtraBold';
   text-align: left;
+  line-height: 1.3;
+  word-wrap: break-word;
 
   @media (max-width: 1200px) {
     font-size: 28px;
