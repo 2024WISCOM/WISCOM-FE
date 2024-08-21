@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as W from './WorkIntroduce.style';
 import viewSiteImage from '../../../assets/img/viewsite_white.png';
 import WorkTitle from '../worktitle/WorkTitle';
@@ -11,6 +11,10 @@ import LeftButton from '../button/LeftButton';
 
 export default function WorkIntroduce({ data }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [data.prev, data.next]);
 
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) =>
