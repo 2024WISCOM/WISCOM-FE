@@ -17,7 +17,7 @@ export default function WorkDetail() {
   const navigate = useNavigate();
 
   const location = useLocation();
-  const { category, id } = location.state;
+  const { category, id } = location.state || { category: 'big_data', id: 2 };
   console.log(category);
 
   const fetchWorkDetail = async (category, id) => {
