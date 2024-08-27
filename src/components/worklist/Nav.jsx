@@ -6,8 +6,20 @@ export default function Nav({ onChangeType }) {
   const [type, setType] = useState('ALL');
 
   const handleChangeType = (type) => {
+    let apiType;
+    switch (type) {
+      case 'WEB & APP':
+        apiType = 'WEB_APP';
+        break;
+      case 'BIG DATA':
+        apiType = 'BIG_DATA';
+        break;
+      default:
+        apiType = type;
+    }
+
     setType(type);
-    onChangeType(type);
+    onChangeType(apiType);
   };
 
   return (

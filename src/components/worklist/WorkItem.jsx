@@ -8,6 +8,10 @@ const WorkItem = React.memo(function ({
   swipeTo,
   slideIndex,
 }) {
+  if (!data || !data[dataIndex]) {
+    return null;
+  }
+
   const coverImage = data[dataIndex].image;
   const title = data[dataIndex].title;
   const team = data[dataIndex].team;

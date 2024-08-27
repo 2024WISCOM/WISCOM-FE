@@ -9,6 +9,7 @@ import WorkItem from './WorkItem';
 
 import left from '../../assets/img/worklist/left_button.png';
 import right from '../../assets/img/worklist/right_button.png';
+import Nav from './Nav';
 
 const Slide = () => {
   const ref = React.useRef(StackedCarousel);
@@ -17,12 +18,16 @@ const Slide = () => {
   const [customScales, setCustomScales] = useState([1, 0.85, 0.7, 0.6, 0.5]);
   const [slideWidth, setSlideWidth] = useState(800);
   const [data, setData] = useState([]);
+  const [type, setType] = useState('ALL');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://2024wiscom-backend.store/api/works/category?type=ALL',
+          `https://2024wiscom-backend.store/api/works/category?type=${type}`,
+        );
+        console.log(
+          `https://2024wiscom-backend.store/api/works/category?type=${type}`,
         );
         const worksData = response.data.data.map((item) => ({
           image: item.imageUrl,
@@ -58,12 +63,13 @@ const Slide = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [type]);
 
   const minRequiredItems = Math.ceil((maxVisibleSlide + 1) / 2);
 
   return (
     <S.Page>
+      <Nav onChangeType={setType} />
       <S.Container>
         {data.length >= minRequiredItems ? (
           <>
