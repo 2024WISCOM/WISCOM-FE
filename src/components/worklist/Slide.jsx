@@ -32,7 +32,7 @@ const Slide = () => {
         const worksData = response.data.data.map((item) => ({
           image: item.imageUrl,
           title: item.title,
-          team: 'Unknown',
+          team: item.teamName,
         }));
         setData(worksData);
       } catch (error) {
