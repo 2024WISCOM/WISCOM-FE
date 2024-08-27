@@ -30,4 +30,4 @@ const WorkItem = React.memo(function ({
   );
 });
 
-export default WorkItem; // 기본 내보내기 추가
+export default WorkItem;

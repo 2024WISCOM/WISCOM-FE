@@ -91,7 +91,7 @@ const Slide = () => {
             <S.Button src={right} onClick={() => ref.current?.goNext()} />
           </>
         ) : (
-          <p>슬라이드를 표시하기에 충분한 데이터가 없습니다.</p>
+          <p>데이터 부족</p>
         )}
       </S.Container>
     </S.Page>
