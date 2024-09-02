@@ -8,6 +8,10 @@ const WorkItem = React.memo(function ({
   swipeTo,
   slideIndex,
 }) {
+  if (!data || !data[dataIndex]) {
+    return null;
+  }
+
   const coverImage = data[dataIndex].image;
   const title = data[dataIndex].title;
   const team = data[dataIndex].team;
@@ -30,4 +34,4 @@ const WorkItem = React.memo(function ({
   );
 });
 
-export default WorkItem; // 기본 내보내기 추가
+export default WorkItem;

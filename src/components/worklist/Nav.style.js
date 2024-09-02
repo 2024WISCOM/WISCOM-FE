@@ -42,7 +42,23 @@ export const Circle = styled.div`
   border-radius: 50%;
   position: absolute;
   top: -10px;
-  left: 13px;
+  left: ${({ position }) => {
+    switch (position) {
+      case 'ALL':
+        return '13px';
+      case 'WEB & APP':
+        return '250px';
+      case 'GAME':
+        return '495px';
+      case 'AI':
+        return '685px';
+      case 'BIG DATA':
+        return '900px';
+      default:
+        return '13px';
+    }
+  }};
+  transition: left 0.3s ease;
 
   @media (max-width: 1280px) {
     width: 15px;

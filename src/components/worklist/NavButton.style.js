@@ -10,6 +10,8 @@ export const Text = styled.div`
   line-height: normal;
   margin: 0;
 
+  user-select: none;
+
   span {
     font-family: Podkova;
   }

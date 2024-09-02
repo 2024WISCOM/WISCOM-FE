@@ -35,6 +35,7 @@ export const Container = styled.div`
 
 export const Button = styled.img`
   width: 50px;
+  user-select: none;
 
   @media (max-width: 1920px) {
     width: 40px;
