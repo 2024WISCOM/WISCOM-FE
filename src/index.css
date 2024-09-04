@@ -23,6 +23,11 @@
   src: url('/Pretendard-Bold.woff2');
 }
 
+@font-face {
+  font-family: 'Inter';
+  src : url('/Inter.ttf');
+}
+
 * {
   margin: 0 auto;
   padding: 0;
