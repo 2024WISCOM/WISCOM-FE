@@ -235,7 +235,7 @@ export const NavMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 50px;
+  gap: 25px;
   position: absolute;
   width: 100%;
   height: calc(100% - 100px);
@@ -247,11 +247,6 @@ export const NavMenu = styled.div`
       isVisible ? slideInFromLeft : slideOutToLeft}
     0.5s forwards; /* Ensure both have the same duration */
 
-  @media (max-width: 1024px) {
-    /* Tablet */
-    gap: 50px;
-  }
-
   @media (max-width: 768px) {
     /* Mobile */
     gap: 50px;
@@ -261,7 +256,7 @@ export const NavMenu = styled.div`
 `;
 
 export const NavItem = styled.div`
-  font-size: 120px;
+  font-size: 80px;
   margin-left: 170px;
   position: relative;
   cursor: pointer;
@@ -275,7 +270,7 @@ export const NavItem = styled.div`
   transition-delay: ${({ index }) => index * 0.1}s; /* Delay for each item */
 
   &::first-letter {
-    font-size: 130px;
+    font-size: 90px;
   }
 
   &:hover {
@@ -295,7 +290,6 @@ export const NavItem = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
-    font-size: 90px;
     margin-left: 100px;
 
     &::first-letter {
