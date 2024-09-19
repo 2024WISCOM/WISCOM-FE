@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const DeveloperContainer = styled.div`
   display: flex;
@@ -24,9 +24,17 @@ export const DeveloperContainer = styled.div`
 `;
 
 export const DeveloperName = styled.div`
+  width: 70px;
   font-size: 25px;
   font-family: 'Pretendard-Medium';
   margin: 0px;
+
+  ${({ isTwoCharacters }) =>
+    isTwoCharacters &&
+    css`
+    width: 70px;
+      letter-spacing: 7px; 
+    `}
 
   @media (max-width: 1200px) {
     font-size: 22px;
@@ -35,13 +43,29 @@ export const DeveloperName = styled.div`
   @media (max-width: 1024px) {
     /* Tablet */
     font-size: 22px;
+    width: 60px;
+
+      ${({ isTwoCharacters }) =>
+    isTwoCharacters &&
+    css`
+      letter-spacing: 6.5px; 
+    `}
   }
 
   @media (max-width: 768px) {
     /* Mobile */
     font-size: 17px;
+    
+    width: 50px;
+
+      ${({ isTwoCharacters }) =>
+    isTwoCharacters &&
+    css`
+      letter-spacing: 5px; 
+    `}
   }
 `;
+
 
 export const DeveloperPosition = styled.div`
   font-size: 25px;
