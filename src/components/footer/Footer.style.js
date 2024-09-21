@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
 
@@ -36,7 +36,6 @@ export const FooterLeft = styled.div`
   text-align: left;
   justify-content: flex-start;
   font-size: 0.9em;
-  padding-left: 0;
   margin: 0;
   width: 100%;
   max-width: 600px;
@@ -53,6 +52,7 @@ export const FooterInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  margin-left : 48px;
 
 
   div {
@@ -64,12 +64,12 @@ export const FooterInfo = styled.div`
   div:nth-child(2) {
     font-weight: bold;
     font-size: 1.1em;
+
   }
 
   @media(max-width: 767px) {
     align-items: flex-start;
-    text-align: left;
-
+    margin-left : 0;
 
  
   }
@@ -84,6 +84,8 @@ export const FooterRight = styled.div`
   align-items: flex-end;
   text-align: right;
   justify-content: flex-end;
+  margin-left :0;
+  width:100%;
 
   @media(max-width: 767px) {
     align-items: center;
@@ -93,12 +95,24 @@ export const FooterRight = styled.div`
 
 export const FooterLogo = styled.img`
   height: 50px;
-  margin-left: 440px;
+  margin : 0;
   align-self: flex-end;
 
 
+  @media (max-width : 767px){
+    display : none;
+  
+  }
+
+
+
+`;
+
+export const FooterLogoMobile = styled.img `
+  display: none;
+
   @media(max-width: 767px) {
-    height: 30px;
+    height: 35px;
     width: 150px;
     margin: 10px 0;
     text-align: center;
@@ -113,15 +127,16 @@ export const FooterBottom = styled.div`
   color: #ccc;
   line-height: 1.5em;
   margin-top: 20px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
-  text-align: left;
+  text-align: right;
   width: 100%; 
 
   .webAddress, .rights {
     display: block;
+    text-align :right;
+    width: 100%;
   }
 
   .phoneAddress1, .phoneAddress2 {
@@ -130,10 +145,11 @@ export const FooterBottom = styled.div`
 
   @media(max-width: 767px) {
     margin-top: 0;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start; 
-    // text-align:left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align:left;
+    // margin-left : 0;
 
     .webAddress {
       display: none;
@@ -141,22 +157,19 @@ export const FooterBottom = styled.div`
 
     .phoneAddress1 {
       display: block;
-      order: 1;
       margin-bottom: 10px; 
       width : 100%;
     }
 
     .phoneAddress2 {
       display: block;
-      order: 2; 
       margin-bottom: 20px; 
       width : 100%;
       
     }
 
-    .FooterLogo {
+    .FooterLogoMobile  {
       display: block;
-      order: 3;
       margin: 10px 0;
       width:100%;
       text-align:center;
@@ -164,7 +177,6 @@ export const FooterBottom = styled.div`
 
     .rights {
       display: block;
-      order: 4; 
       width : 100%;
       text-align:center;
     }
@@ -172,19 +184,25 @@ export const FooterBottom = styled.div`
 `;
 
 export const UrlContainer = styled.div`
-  display: flex;
-  align-items: left;
+  display : flex;
+  flex-direction: row;
+  align-items:flex-start;
   margin-top: 10px;
+  text-align : left ;
+  margin-left :48px;
+   display : inline-block;
+
 
   a {
     margin-right: 10px;
+    width:100%;
+    text-align:left;
   }
 
   img {
     height: 35px;
     width: 35px;
     margin: 0;
-    display: inline-block;
   }
 
   @media(max-width: 767px) {
