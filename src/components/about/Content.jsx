@@ -1,4 +1,5 @@
 import * as A from './About.style';
+import Introduction from './Introduction';
 
 export default function Content() {
   return (
@@ -12,6 +13,7 @@ export default function Content() {
         </A.Menu>
         <A.MenuLine />
       </A.MenuWrapper>
+      <Introduction />
     </>
   );
 }

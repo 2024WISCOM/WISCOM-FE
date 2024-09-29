@@ -66,3 +66,65 @@ export const MenuLine = styled.div`
   height: 1px;
   background: #d9d9d9;
 `;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  padding-left: 50px;
+`;
+
+export const Inter2 = styled(Inter)`
+  font-size: 45px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 14px;
+`;
+
+export const Identity = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  margin-bottom: 128px;
+`;
+
+export const Poster = styled.img`
+  width: 419px;
+  height: 603px;
+  flex-shrink: 0;
+`;
+
+export const Text = styled.div`
+  color: #fff;
+  text-align: justify;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 55px;
+`;
+
+export const Inter3 = styled(Inter)`
+  width: 100%;
+  text-align: left;
+`;
+
+export const Part = styled.div`
+  width: 20%;
+  text-align: left;
+  color: #fff;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+export const PeopleWrap = styled.div`
+  width: 100%;
+  margin-top: 36px;
+`;
+
+export const People = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+`;
