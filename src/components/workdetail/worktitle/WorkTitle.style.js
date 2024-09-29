@@ -5,7 +5,7 @@ export const WorkTitleContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
 
   @media (max-width: 1200px) {

@@ -11,7 +11,7 @@ export const RightContentContainer = styled.div`
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   text-align: left;
   overflow-y: auto;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
@@ -92,14 +92,11 @@ export const Line = styled.div`
 export const TeamWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 38px;
   justify-content: center;
   text-align: left;
   margin: 0px;
 
-  @media (max-width: 1200px) {
-    gap: 30px;
-  }
 `;
 
 export const TeamItem = styled.div`
@@ -135,7 +132,7 @@ export const LinkTo = styled.div`
   margin: 0px;
   img {
     width: auto;
-    height: 40px;
+    height: 30px;
     cursor: pointer;
   }
 
@@ -143,7 +140,7 @@ export const LinkTo = styled.div`
     gap: 13px;
 
     img {
-      height: 30px;
+      height: 25px;
     }
   }
 `;
@@ -151,7 +148,7 @@ export const LinkTo = styled.div`
 export const DeveloperWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: 50px;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
@@ -163,7 +160,7 @@ export const DeveloperWrapper = styled.div`
 `;
 
 export const DetailDescription = styled.div`
-  font-size: 23px;
+  font-size: 22px;
   min-height: 100px;
   line-height: 1.6;
   word-wrap: break-word;
