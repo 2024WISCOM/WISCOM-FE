@@ -59,7 +59,9 @@ export default function WorkIntroduce({ data }) {
           <Developer key={d.name} name={d.name} role={d.role} />
         ))}
         <W.DetailDescription>
-          {data.description}
+          <div style={{ whiteSpace: 'pre-line' }}>
+            {data.description}
+          </div>
           <W.Spacer />
         </W.DetailDescription>
       </W.DeveloperWrapper>

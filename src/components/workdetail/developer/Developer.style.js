@@ -3,14 +3,10 @@ import styled, {css} from 'styled-components';
 export const DeveloperContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 0px;
   text-align: left;
   margin: 0px;
   justify-content: center;
-
-  @media (max-width: 1200px) {
-    gap: 35px;
-  }
 
   @media (max-width: 1024px) {
     /* Tablet */
@@ -25,7 +21,7 @@ export const DeveloperContainer = styled.div`
 
 export const DeveloperName = styled.div`
   width: 70px;
-  font-size: 25px;
+  font-size: 22px;
   font-family: 'Pretendard-Medium';
   margin: 0px;
 
@@ -33,7 +29,7 @@ export const DeveloperName = styled.div`
     isTwoCharacters &&
     css`
     width: 70px;
-      letter-spacing: 7px; 
+      letter-spacing: 5.7px; 
     `}
 
   @media (max-width: 1200px) {
@@ -68,7 +64,7 @@ export const DeveloperName = styled.div`
 
 
 export const DeveloperPosition = styled.div`
-  font-size: 25px;
+  font-size: 22px;
   font-family: 'Pretendard-Regular';
   color: #696969;
   margin: 0px;

@@ -14,7 +14,8 @@ export default function Developer({ name, role }) {
     <D.DeveloperContainer>
       <D.DeveloperName isTwoCharacters={name.length === 2}>
         {nameFormat(name)}
-      </D.DeveloperName>      <D.DeveloperPosition>{role}</D.DeveloperPosition>
+      </D.DeveloperName>      
+      <D.DeveloperPosition>{role}</D.DeveloperPosition>
     </D.DeveloperContainer>
   );
 }
