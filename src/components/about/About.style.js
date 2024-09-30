@@ -70,6 +70,7 @@ export const MenuLine = styled.div`
 export const Wrapper = styled.div`
   width: 100%;
   padding-left: 50px;
+  margin-bottom: 100px;
 `;
 
 export const Inter2 = styled(Inter)`
@@ -230,4 +231,64 @@ export const Student = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
+`;
+
+export const MapWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const MapTitle = styled.div`
+  color: #fff;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 24px;
+`;
+
+export const InfoWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & div:nth-child(3) {
+    width: 95px;
+  }
+
+  & div:nth-child(5) {
+    width: 95px;
+  }
+`;
+
+export const MapHead = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  width: 160px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
+  margin-left: 0;
+  margin-bottom: 21px;
+`;
+
+export const MapText = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 0;
+`;
+
+export const TextWrap = styled.div`
+  width: 100%;
+  margin-bottom: 43px;
 `;
