@@ -1,5 +1,39 @@
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/PlayfairDisplaySC-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Pretendard-ExtraBold';
+  src: url('/Pretendard-ExtraBold.woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('/Pretendard-Medium.woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('/Pretendard-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('/Pretendard-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src : url('/Inter.ttf');
+}
+
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #000000;
 }
