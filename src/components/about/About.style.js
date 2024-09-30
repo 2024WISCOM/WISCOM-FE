@@ -56,9 +56,20 @@ export const MenuText = styled.div`
   font-family: Pretendard;
   font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: ${(props) => (props.isActive ? '700' : '400')};
   line-height: normal;
   cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    width: ${(props) => (props.isActive ? '100%' : '0')};
+    height: 2px;
+    background-color: #fff;
+  }
 `;
 
 export const MenuLine = styled.div`
