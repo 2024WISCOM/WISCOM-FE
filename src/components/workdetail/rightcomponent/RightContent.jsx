@@ -35,7 +35,10 @@ export default function RightContent({ data }) {
         </R.DeveloperWrapper>
       </R.TeamWrapper>
       <R.DetailDescription>
-        {data.description}
+      <div style={{ whiteSpace: 'pre-line' }}>
+    {data.description}
+  </div>
+        
         <R.Spacer />
       </R.DetailDescription>
     </R.RightContentContainer>
