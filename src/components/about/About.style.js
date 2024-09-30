@@ -99,28 +99,29 @@ export const Identity = styled.div`
 `;
 
 export const Poster = styled.img`
-  width: 419px;
-  height: 603px;
+  width: 30%;
   flex-shrink: 0;
+  margin: 0;
 `;
 
 export const Text = styled.div`
   color: #fff;
   text-align: justify;
   font-family: Pretendard;
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
-  line-height: 55px;
+  line-height: 40px;
 `;
 
 export const Inter3 = styled(Inter)`
   width: 100%;
   text-align: left;
+  font-size: 25px;
 `;
 
 export const Part = styled.div`
-  width: 20%;
+  width: 22%;
   text-align: left;
   color: #fff;
   font-family: Inter;
@@ -181,14 +182,14 @@ export const ProfWrap = styled.div`
 `;
 
 export const Prof = styled.img`
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   flex-shrink: 0;
   margin: 0;
 `;
 
 export const ProfName = styled.div`
-  width: 240px;
+  width: 200px;
   color: #fff;
   font-family: Pretendard;
   font-size: 30px;
@@ -203,7 +204,7 @@ export const ProfMsg = styled.div`
   color: #fff;
   text-align: justify;
   font-family: Pretendard;
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
@@ -219,7 +220,7 @@ export const DevWrapper = styled.div`
 `;
 
 export const StudentWrap = styled.div`
-  width: 120px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -227,8 +228,8 @@ export const StudentWrap = styled.div`
 `;
 
 export const Dot = styled.div`
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
   background: #fff;
   border-radius: 50%;
@@ -238,7 +239,7 @@ export const Student = styled.div`
   color: #fff;
   text-align: center;
   font-family: Pretendard;
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
@@ -278,9 +279,9 @@ export const InfoWrap = styled.div`
 export const MapHead = styled.div`
   color: #fff;
   font-family: Pretendard;
-  font-size: 35px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   line-height: normal;
   width: 160px;
   border-bottom: 1px solid #fff;
