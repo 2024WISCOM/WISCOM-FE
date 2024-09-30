@@ -12,6 +12,7 @@ const WorkItem = React.memo(function ({
     return null;
   }
 
+  const id = data[dataIndex].id;
   const coverImage = data[dataIndex].image;
   const title = data[dataIndex].title;
   const team = data[dataIndex].team;

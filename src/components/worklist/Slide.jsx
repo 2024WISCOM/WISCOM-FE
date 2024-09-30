@@ -30,6 +30,7 @@ const Slide = () => {
           `https://2024wiscom-backend.store/api/works/category?type=${type}`,
         );
         const worksData = response.data.data.map((item) => ({
+          id: item.id,
           image: item.imageUrl,
           title: item.title,
           team: item.teamName,
