@@ -196,3 +196,38 @@ export const ProfMsg = styled.div`
   font-weight: 400;
   line-height: 45px;
 `;
+
+export const DevWrapper = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  padding: 0 30px;
+  margin-bottom: 100px;
+`;
+
+export const StudentWrap = styled.div`
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 65px;
+`;
+
+export const Dot = styled.div`
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 50%;
+`;
+
+export const Student = styled.div`
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+`;
