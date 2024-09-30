@@ -128,3 +128,71 @@ export const People = styled.div`
   flex-direction: row;
   justify-content: start;
 `;
+
+export const CongratWrapper = styled.div`
+  width: 100%;
+  padding: 0 50px;
+  margin-bottom: 137px;
+`;
+
+export const MainProfWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 84px;
+  margin-bottom: 90px;
+`;
+
+export const UnderProfWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & > div:nth-child(2) {
+    align-items: center;
+  }
+  & > div:nth-child(3) {
+    align-items: flex-end;
+    padding-right: 2%;
+  }
+  & > div:nth-child(4) {
+    align-items: end;
+  }
+`;
+
+export const ProfWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 22px;
+`;
+
+export const Prof = styled.img`
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+  margin: 0;
+`;
+
+export const ProfName = styled.div`
+  width: 240px;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  text-align: center;
+`;
+
+export const ProfMsg = styled.div`
+  color: #fff;
+  text-align: justify;
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+`;
