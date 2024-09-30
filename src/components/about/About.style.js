@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 160px;
+
+  @media (max-width: 768px) {
+    padding: 0 40px;
+  }
 `;
 
 export const Inter = styled.div`
@@ -14,6 +18,10 @@ export const Inter = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
 `;
 
 export const Wiscom = styled.div`
@@ -24,6 +32,10 @@ export const Wiscom = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const Pretendard = styled.div`
@@ -35,12 +47,22 @@ export const Pretendard = styled.div`
   font-weight: 400;
   line-height: 55px;
   margin-top: 70px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
 `;
 
 export const MenuWrapper = styled.div`
   width: 100%;
   margin-top: 107px;
   margin-bottom: 117px;
+
+  @media (max-width: 768px) {
+    margin: 30px 0;
+  }
 `;
 
 export const Menu = styled.div`
@@ -70,6 +92,10 @@ export const MenuText = styled.div`
     height: 2px;
     background-color: #fff;
   }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const MenuLine = styled.div`
@@ -82,6 +108,10 @@ export const Wrapper = styled.div`
   width: 100%;
   padding-left: 50px;
   margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
 `;
 
 export const Inter2 = styled(Inter)`
@@ -89,6 +119,10 @@ export const Inter2 = styled(Inter)`
   font-weight: 700;
   text-align: left;
   margin-bottom: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Identity = styled.div`
@@ -96,12 +130,21 @@ export const Identity = styled.div`
   flex-direction: row;
   gap: 60px;
   margin-bottom: 128px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 `;
 
 export const Poster = styled.img`
   width: 30%;
   flex-shrink: 0;
   margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Text = styled.div`
@@ -112,12 +155,21 @@ export const Text = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 28px;
+  }
 `;
 
 export const Inter3 = styled(Inter)`
   width: 100%;
   text-align: left;
   font-size: 25px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Part = styled.div`
@@ -129,11 +181,20 @@ export const Part = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    width: 30%;
+    font-size: 12px;
+  }
 `;
 
 export const PeopleWrap = styled.div`
   width: 100%;
   margin-top: 36px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 export const People = styled.div`
