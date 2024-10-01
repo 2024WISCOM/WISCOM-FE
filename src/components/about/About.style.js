@@ -296,7 +296,7 @@ export const People = styled.div`
 
 export const CongratWrapper = styled.div`
   width: 100%;
-  padding: 0 50px;
+  padding: 0 5vw;
   margin-bottom: 137px;
 `;
 
@@ -304,8 +304,8 @@ export const MainProfWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 84px;
-  margin-bottom: 90px;
+  gap: 5vw;
+  margin-bottom: 5vw;
 `;
 
 export const UnderProfWrap = styled.div`
@@ -330,19 +330,18 @@ export const ProfWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 22px;
+  gap: 2vw;
   cursor: pointer;
 `;
 
 export const Prof = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 16vw;
   flex-shrink: 0;
   margin: 0;
 `;
 
 export const ProfName = styled.div`
-  width: 200px;
+  width: 16vw;
   color: #fff;
   font-family: Pretendard;
   font-size: 30px;
@@ -351,6 +350,18 @@ export const ProfName = styled.div`
   line-height: normal;
   margin: 0;
   text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
 `;
 
 export const ProfMsg = styled.div`
@@ -361,6 +372,21 @@ export const ProfMsg = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+    line-height: 15px;
+  }
 `;
 
 export const DevWrapper = styled.div`
@@ -468,13 +494,14 @@ export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
   z-index: 999;
-  transform: translate(10%, 50%);
+  transform: translate(15%, 50%);
 `;
 
 export const ModalWrap = styled.div`
   display: flex;
   flex-direction: row;
   gap: 30px;
+  padding-top: 20px;
 `;
 
 export const CloseBtn = styled.button`
@@ -491,6 +518,14 @@ export const CloseBtn = styled.button`
   border: none;
   cursor: pointer;
   margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const ModalProfName = styled(ProfName)`
@@ -507,4 +542,14 @@ export const ModalText = styled.div`
   align-self: center;
   text-align: justify;
   padding: 10px 0;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
 `;
