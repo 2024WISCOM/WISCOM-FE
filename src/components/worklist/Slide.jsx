@@ -95,7 +95,16 @@ const Slide = () => {
             }}
           />
         ) : (
-          <p>데이터 부족</p>
+          // data가 부족할 때 하나의 WorkItem만 렌더링
+          data.length > 0 && (
+            <WorkItem
+              data={data}
+              dataIndex={0} // 첫 번째 항목을 사용
+              isCenterSlide={true} // 단일 항목이므로 중앙 슬라이드로 취급
+              swipeTo={() => {}} // 슬라이드 기능은 사용하지 않음
+              slideIndex={0}
+            />
+          )
         )}
         <S.Button src={right} onClick={() => ref.current?.goNext()} />
       </S.Container>
