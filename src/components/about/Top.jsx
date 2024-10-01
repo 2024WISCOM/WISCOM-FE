@@ -17,7 +17,6 @@ export default function Top() {
         졸업생들의 새로운 여정에 따뜻한 관심과 성원으로 함께해 주시기를
         바랍니다.
       </A.Pretendard>
-      ;
     </>
   );
 }

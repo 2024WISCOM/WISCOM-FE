@@ -27,8 +27,8 @@ export default function Kakaomap() {
     <div
       id="map"
       style={{
-        width: '40%',
-        height: '550px',
+        width: '100%',
+        height: '100%',
         margin: '0',
       }}
     ></div>

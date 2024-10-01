@@ -33,11 +33,11 @@ export default function Introduction() {
           <A.Inter3>김희원 이채은 장은선 황민지</A.Inter3>
         </A.People>
         <A.People>
-          <A.Part>Front-end</A.Part>
+          <A.Part>Front-end&nbsp;&nbsp;&nbsp;&nbsp;</A.Part>
           <A.Inter3>김미주 김은서 남시윤 최유리</A.Inter3>
         </A.People>
         <A.People>
-          <A.Part>Back-end</A.Part>
+          <A.Part>Back-end&nbsp;&nbsp;&nbsp;&nbsp;</A.Part>
           <A.Inter3>김은서 김희원 박효진 조수민 황민지</A.Inter3>
         </A.People>
       </A.PeopleWrap>
