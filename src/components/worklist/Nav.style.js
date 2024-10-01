@@ -64,7 +64,23 @@ export const Circle = styled.div`
     width: 15px;
     height: 15px;
     top: -7.5px;
-    left: 10px;
+    left: ${({ position }) => {
+      switch (position) {
+        case 'ALL':
+          return '10px';
+        case 'WEB & APP':
+          return '145px';
+        case 'GAME':
+          return '285px';
+        case 'AI':
+          return '383px';
+        case 'BIG DATA':
+          return '495px';
+        default:
+          return '10px';
+      }
+    }};
+    transition: left 0.3s ease;
   }
 
   @media (max-width: 767px) {
