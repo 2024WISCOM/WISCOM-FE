@@ -1,6 +1,7 @@
+// MessageGrid.style.js
 import styled from 'styled-components';
 
-export const GridContainer = styled.div`
+export const MessageGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);  // 3열 그리드로 설정
   gap: 20px;
@@ -12,7 +13,7 @@ export const GridContainer = styled.div`
 export const MessageCard = styled.div`
   width: 360px;
   height: 400px;
-  background-image: url('./img/CD1.png');  // CD 이미지 경로
+  background-image: url(${cdImage});  
   background-size: cover;
   background-position: center;
   position: relative;
@@ -22,7 +23,7 @@ export const MessageCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
+  
   p {
     color: #fff;
     margin: 5px 0;

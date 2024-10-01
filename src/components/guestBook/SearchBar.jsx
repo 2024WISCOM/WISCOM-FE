@@ -1,6 +1,5 @@
-// 검색 기능
 import React, { useState } from 'react';
-import { SearchBarContainer, SearchInput, SearchButton } from './SearchBar.style.js'; // 스타일 컴포넌트 import
+import { SearchBarContainer, SearchInput, SearchButton } from './SearchBar.style.js';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,4 +24,3 @@ const SearchBar = ({ onSearch }) => {
 };
 
 export default SearchBar;
-

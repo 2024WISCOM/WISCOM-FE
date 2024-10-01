@@ -11,10 +11,23 @@ export const Container = styled.div`
 `;
 
 export const TextSection = styled.div`
-  flex: 1;
-  font-size: 24px;
-  line-height: 1.5;
-  padding-right: 20px;
+position: absolute;
+width: 654px;
+height: 351px;
+left: 226px;
+top: 363px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 70px;
+line-height: 84px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
 `;
 
 export const InputSection = styled.div`

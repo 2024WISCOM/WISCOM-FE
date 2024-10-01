@@ -9,6 +9,7 @@ export const CardContainer = styled.div`
   position: relative;
 `;
 
+//cd 이미지 및 관련 내용 
 export const CDContainer = styled.div`
   width: 400px;
   height: 400px;
