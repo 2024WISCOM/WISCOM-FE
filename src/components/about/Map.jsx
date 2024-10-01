@@ -3,10 +3,12 @@ import Kakaomap from './Kakaomap';
 
 export default function Map() {
   return (
-    <A.Wrapper>
+    <A.MapContainer>
       <A.MapTitle>오시는 길</A.MapTitle>
       <A.MapWrap>
-        <Kakaomap />
+        <A.Kakaomap>
+          <Kakaomap />
+        </A.Kakaomap>
         <A.InfoWrap>
           <A.MapHead>전시장 안내</A.MapHead>
           <A.TextWrap>
@@ -34,6 +36,6 @@ export default function Map() {
           </A.TextWrap>
         </A.InfoWrap>
       </A.MapWrap>
-    </A.Wrapper>
+    </A.MapContainer>
   );
 }
