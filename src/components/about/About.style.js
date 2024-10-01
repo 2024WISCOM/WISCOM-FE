@@ -449,11 +449,33 @@ export const Student = styled.div`
   }
 `;
 
+export const MapContainer = styled.div`
+  width: 100%;
+  padding: 0 5vw;
+  margin-bottom: 10vh;
+`;
+
 export const MapWrap = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;
+
+export const Kakaomap = styled.div`
+  width: 35vw;
+  height: 40vw;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 50vw;
+  }
 `;
 
 export const MapTitle = styled.div`
@@ -464,19 +486,55 @@ export const MapTitle = styled.div`
   font-weight: 700;
   line-height: normal;
   margin-bottom: 24px;
+
+  @media (max-width: 1024px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin: 0;
 
   & div:nth-child(3) {
     width: 95px;
+    @media (max-width: 1024px) {
+      width: 60px;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+    }
+
+    @media (max-width: 480px) {
+      width: 35px;
+    }
   }
 
   & div:nth-child(5) {
     width: 95px;
+    @media (max-width: 1024px) {
+      width: 60px;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+    }
+
+    @media (max-width: 480px) {
+      width: 35px;
+    }
   }
 `;
 
@@ -492,6 +550,22 @@ export const MapHead = styled.div`
   padding-bottom: 8px;
   margin-left: 0;
   margin-bottom: 21px;
+
+  @media (max-width: 1024px) {
+    font-size: 22px;
+    width: 110px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    width: 90px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    width: 65px;
+    margin-bottom: 9px;
+  }
 `;
 
 export const MapText = styled.div`
@@ -502,11 +576,23 @@ export const MapText = styled.div`
   font-weight: 400;
   line-height: normal;
   margin-left: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const TextWrap = styled.div`
   width: 100%;
-  margin-bottom: 43px;
+  margin: 0 0 4vw 0;
 `;
 
 export const ModalContainer = styled.div`
