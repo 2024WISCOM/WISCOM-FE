@@ -3,11 +3,7 @@ import { styled } from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 160px;
-
-  @media (max-width: 768px) {
-    padding: 0 40px;
-  }
+  padding: 0 5vw;
 `;
 
 export const Inter = styled.div`
@@ -19,7 +15,15 @@ export const Inter = styled.div`
   font-weight: 400;
   line-height: normal;
 
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
   @media (max-width: 768px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 9px;
   }
 `;
@@ -33,11 +37,15 @@ export const Wiscom = styled.div`
   font-weight: 700;
   line-height: normal;
 
-  @media (max-width: 768px) {
-    font-size: 32px;
+  @media (max-width: 1024px) {
+    font-size: 80px;
   }
 
   @media (max-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 32px;
   }
 `;
@@ -52,13 +60,19 @@ export const Pretendard = styled.div`
   line-height: 55px;
   margin-top: 70px;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
-    line-height: 20px;
-    margin-top: 20px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
   }
 
   @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 12px;
     line-height: 20px;
     margin-top: 20px;
@@ -71,10 +85,10 @@ export const MenuWrapper = styled.div`
   margin-bottom: 117px;
 
   @media (max-width: 768px) {
-    margin: 30px 0;
+    margin: 50px 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     margin: 30px 0;
   }
 `;
@@ -107,11 +121,15 @@ export const MenuText = styled.div`
     background-color: #fff;
   }
 
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
   }
 
   @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 12px;
   }
 `;
@@ -124,12 +142,8 @@ export const MenuLine = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding-left: 50px;
-  margin-bottom: 100px;
-
-  @media (max-width: 768px) {
-    padding: 0 30px;
-  }
+  padding: 0 30px;
+  margin-bottom: 10vh;
 `;
 
 export const Inter2 = styled(Inter)`
@@ -138,11 +152,15 @@ export const Inter2 = styled(Inter)`
   text-align: left;
   margin-bottom: 14px;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
+  @media (max-width: 1024px) {
+    font-size: 30px;
   }
 
   @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 16px;
   }
 `;
@@ -153,14 +171,17 @@ export const Identity = styled.div`
   gap: 60px;
   margin-bottom: 128px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-bottom: 50px;
+  @media (max-width: 1024px) {
+    margin-bottom: 80px;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 50px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 40px;
   }
 `;
 
@@ -168,10 +189,6 @@ export const Poster = styled.img`
   width: 30%;
   flex-shrink: 0;
   margin: 0;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -187,9 +204,19 @@ export const Text = styled.div`
   font-weight: 400;
   line-height: 40px;
 
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
   @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 12px;
-    line-height: 28px;
+    line-height: 22px;
   }
 `;
 
@@ -198,28 +225,40 @@ export const Inter3 = styled(Inter)`
   text-align: left;
   font-size: 25px;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 
 export const Part = styled.div`
-  width: 22%;
+  width: 100%;
   text-align: left;
   color: #fff;
   font-family: Inter;
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
 
   @media (max-width: 768px) {
-    width: 30%;
-    font-size: 12px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 
@@ -230,16 +269,29 @@ export const PeopleWrap = styled.div`
   @media (max-width: 768px) {
     margin-top: 20px;
   }
-
-  @media (max-width: 768px) {
-    margin-top: 20px;
-  }
 `;
 
 export const People = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  gap: 10px;
+  justify-content: flex-start;
+
+  @media (max-width: 1920px) {
+    grid-template-columns: 1.5fr 7fr;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 2fr 8fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 2.5fr 7fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 3fr 7fr;
+  }
 `;
 
 export const CongratWrapper = styled.div`
