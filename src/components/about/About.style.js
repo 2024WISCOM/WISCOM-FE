@@ -392,16 +392,21 @@ export const ProfMsg = styled.div`
 export const DevWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
+  margin: 0 5vw;
   margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
 
 export const StudentWrap = styled.div`
-  width: 100px;
+  width: auto;
   display: flex;
   flex-direction: row;
+  gap: 1vw;
   align-items: center;
-  margin-bottom: 65px;
+  margin-bottom: 3vw;
 `;
 
 export const Dot = styled.div`
@@ -410,6 +415,16 @@ export const Dot = styled.div`
   flex-shrink: 0;
   background: #fff;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 8px;
+    height: 8px;
+  }
 `;
 
 export const Student = styled.div`
@@ -420,6 +435,18 @@ export const Student = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const MapWrap = styled.div`
