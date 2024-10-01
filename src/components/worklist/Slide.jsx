@@ -71,7 +71,7 @@ const Slide = () => {
   return (
     <S.Page>
       <Nav onChangeType={setType} />
-      <S.Container>
+      <S.Container dataLength={data.length}>
         <S.Button src={left} onClick={() => ref.current?.goBack()} />
         {data.length >= minRequiredItems ? (
           <ResponsiveContainer
@@ -90,6 +90,7 @@ const Slide = () => {
                   maxVisibleSlide={maxVisibleSlide}
                   customScales={customScales}
                   transitionTime={300}
+                  initialSlideIndex={3}
                 />
               );
             }}
