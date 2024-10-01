@@ -1,14 +1,41 @@
+import { useState } from 'react';
 import * as A from './About.style';
 import gyeona from '../../assets/img/professor/gyeona.svg';
 import woochang from '../../assets/img/professor/woochang.svg';
 import seunghoon from '../../assets/img/professor/seunghoon.svg';
 import gyeongmi from '../../assets/img/professor/gyeongmi.svg';
 import jooyeong from '../../assets/img/professor/jooyeong.svg';
+import Modal from './Modal';
 
 export default function Congratulation() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPerson, setSelectedPerson] = useState({ name: '', image: '' });
+
+  const openModal = (person) => {
+    let personData;
+    if (person === '박우창') {
+      personData = { name: '박우창', image: woochang };
+    } else if (person === '최승훈') {
+      personData = { name: '최승훈', image: seunghoon };
+    } else if (person === '이경미') {
+      personData = { name: '이경미', image: gyeongmi };
+    } else if (person === '이주영') {
+      personData = { name: '이주영', image: jooyeong };
+    }
+
+    setSelectedPerson(personData);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedPerson({ name: '', image: '' });
+  };
+
   return (
     <>
       <A.CongratWrapper>
+        {isModalOpen && <Modal person={selectedPerson} onClose={closeModal} />}
         <A.MainProfWrap>
           <A.ProfWrap>
             <A.Prof src={gyeona} />
@@ -26,19 +53,19 @@ export default function Congratulation() {
           </A.ProfMsg>
         </A.MainProfWrap>
         <A.UnderProfWrap>
-          <A.ProfWrap>
+          <A.ProfWrap onClick={() => openModal('박우창')}>
             <A.Prof src={woochang} />
             <A.ProfName>박우창 교수님</A.ProfName>
           </A.ProfWrap>
-          <A.ProfWrap>
+          <A.ProfWrap onClick={() => openModal('이경미')}>
             <A.Prof src={gyeongmi} />
             <A.ProfName>이경미 교수님</A.ProfName>
           </A.ProfWrap>
-          <A.ProfWrap>
+          <A.ProfWrap onClick={() => openModal('이주영')}>
             <A.Prof src={jooyeong} />
             <A.ProfName>이주영 교수님</A.ProfName>
           </A.ProfWrap>
-          <A.ProfWrap>
+          <A.ProfWrap onClick={() => openModal('최승훈')}>
             <A.Prof src={seunghoon} />
             <A.ProfName>최승훈 교수님</A.ProfName>
           </A.ProfWrap>

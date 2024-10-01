@@ -36,6 +36,10 @@ export const Wiscom = styled.div`
   @media (max-width: 768px) {
     font-size: 32px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const Pretendard = styled.div`
@@ -53,12 +57,22 @@ export const Pretendard = styled.div`
     line-height: 20px;
     margin-top: 20px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
 `;
 
 export const MenuWrapper = styled.div`
   width: 100%;
   margin-top: 107px;
   margin-bottom: 117px;
+
+  @media (max-width: 768px) {
+    margin: 30px 0;
+  }
 
   @media (max-width: 768px) {
     margin: 30px 0;
@@ -96,6 +110,10 @@ export const MenuText = styled.div`
   @media (max-width: 768px) {
     font-size: 12px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const MenuLine = styled.div`
@@ -123,6 +141,10 @@ export const Inter2 = styled(Inter)`
   @media (max-width: 768px) {
     font-size: 16px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Identity = styled.div`
@@ -135,12 +157,21 @@ export const Identity = styled.div`
     flex-direction: column;
     margin-bottom: 50px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 `;
 
 export const Poster = styled.img`
   width: 30%;
   flex-shrink: 0;
   margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -170,6 +201,10 @@ export const Inter3 = styled(Inter)`
   @media (max-width: 768px) {
     font-size: 12px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Part = styled.div`
@@ -191,6 +226,10 @@ export const Part = styled.div`
 export const PeopleWrap = styled.div`
   width: 100%;
   margin-top: 36px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 
   @media (max-width: 768px) {
     margin-top: 20px;
@@ -240,6 +279,7 @@ export const ProfWrap = styled.div`
   flex-direction: column;
   justify-content: start;
   gap: 22px;
+  cursor: pointer;
 `;
 
 export const Prof = styled.img`
@@ -272,11 +312,9 @@ export const ProfMsg = styled.div`
 `;
 
 export const DevWrapper = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 10px;
-  padding: 0 30px;
   margin-bottom: 100px;
 `;
 
@@ -364,4 +402,57 @@ export const MapText = styled.div`
 export const TextWrap = styled.div`
   width: 100%;
   margin-bottom: 43px;
+`;
+
+export const ModalContainer = styled.div`
+  width: 60vw;
+  height: auto;
+  background: #000000;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 30px 30px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transform: translate(10%, 50%);
+`;
+
+export const ModalWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+`;
+
+export const CloseBtn = styled.button`
+  width: 100%;
+  color: #fff;
+  text-align: end;
+  font-family: Pretendard;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  background: #000000;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+`;
+
+export const ModalProfName = styled(ProfName)`
+  font-size: 20px;
+`;
+
+export const ModalText = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  align-self: center;
+  text-align: justify;
+  padding: 10px 0;
 `;
