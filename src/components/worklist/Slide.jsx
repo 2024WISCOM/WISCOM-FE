@@ -72,34 +72,32 @@ const Slide = () => {
     <S.Page>
       <Nav onChangeType={setType} />
       <S.Container>
+        <S.Button src={left} onClick={() => ref.current?.goBack()} />
         {data.length >= minRequiredItems ? (
-          <>
-            <S.Button src={left} onClick={() => ref.current?.goBack()} />
-            <ResponsiveContainer
-              carouselRef={ref}
-              render={(width, carouselRef) => {
-                const calculatedWidth =
-                  window.innerWidth <= 767 ? width + 200 : width;
+          <ResponsiveContainer
+            carouselRef={ref}
+            render={(width, carouselRef) => {
+              const calculatedWidth =
+                window.innerWidth <= 767 ? width + 200 : width;
 
-                return (
-                  <StackedCarousel
-                    ref={carouselRef}
-                    slideComponent={WorkItem}
-                    slideWidth={slideWidth}
-                    carouselWidth={calculatedWidth}
-                    data={data}
-                    maxVisibleSlide={maxVisibleSlide}
-                    customScales={customScales}
-                    transitionTime={300}
-                  />
-                );
-              }}
-            />
-            <S.Button src={right} onClick={() => ref.current?.goNext()} />
-          </>
+              return (
+                <StackedCarousel
+                  ref={carouselRef}
+                  slideComponent={WorkItem}
+                  slideWidth={slideWidth}
+                  carouselWidth={calculatedWidth}
+                  data={data}
+                  maxVisibleSlide={maxVisibleSlide}
+                  customScales={customScales}
+                  transitionTime={300}
+                />
+              );
+            }}
+          />
         ) : (
           <p>데이터 부족</p>
         )}
+        <S.Button src={right} onClick={() => ref.current?.goNext()} />
       </S.Container>
     </S.Page>
   );
