@@ -87,6 +87,22 @@ export const Circle = styled.div`
     width: 8px;
     height: 8px;
     top: -4px;
-    left: 10px;
+    left: ${({ position }) => {
+      switch (position) {
+        case 'ALL':
+          return '10px';
+        case 'WEB & APP':
+          return '93px';
+        case 'GAME':
+          return '180px';
+        case 'AI':
+          return '233px';
+        case 'BIG DATA':
+          return '300px';
+        default:
+          return '10px';
+      }
+    }};
+    transition: left 0.3s ease;
   }
 `;
