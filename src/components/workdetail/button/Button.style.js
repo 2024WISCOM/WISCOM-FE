@@ -64,8 +64,8 @@ export const ButtonImage = styled.div`
     position: relative;
     top: -3.2px;
 
-    padding-right: ${({ right }) => (right === 'Y' ? '2px' : '0px')};
-    padding-left: ${({ right }) => (right === 'Y' ? '0px' : '2px')};
+    padding-right: ${({ right }) => (right === 'Y' ? '3px' : '0px')};
+    padding-left: ${({ right }) => (right === 'Y' ? '0px' : '3px')};
 
   }
 `;
