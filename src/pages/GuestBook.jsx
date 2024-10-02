@@ -3,7 +3,7 @@ import { GuestBookContainer } from '../components/guestBook/GuestBook.style';
 import MessageInputSection from '../components/guestBook/MessageInputSection';
 import MessageGrid from '../components/guestBook/MessageGrid';
 import Pagination from '../components/guestBook/Pagination';
-import SearchBar from '../components/guestBook/SearchBar'; // 검색 기능
+import SearchBar from '../components/guestBook/SearchBar';
 
 const API_BASE_URL = 'https://2024wiscom-backend.store/api/guestbook';
 
@@ -21,10 +21,8 @@ const GuestBook = () => {
     try {
       const response = await fetch(`${API_BASE_URL}?page=${page - 1}&size=${size}&search=${searchTerm}`);
       const data = await response.json();
-      
-      // 최신순 정렬
       const sortedGuestBooks = data.data.guestBooks.sort((a, b) => b.id - a.id);
-      
+
       setMessages(sortedGuestBooks); // 최신순으로 정렬된 데이터 설정
       setTotalPages(data.data.totalPages);
     } catch (error) {
@@ -58,10 +56,25 @@ const GuestBook = () => {
       }
 
       const savedMessage = await response.json();
-      setMessages((prevMessages) => [savedMessage.data, ...prevMessages]); // 최신 메시지를 맨 앞에 추가
-      setCurrentPage(1); // 새로운 메시지를 1페이지에 추가
+
+      // 새로운 메시지를 맨 앞에 추가하고, 1페이지에 9개의 메시지를 유지
+      setMessages((prevMessages) => {
+        const updatedMessages = [savedMessage.data, ...prevMessages];
+
+        // 1페이지에서 9개를 초과한 메시지를 다음 페이지로 이동시키기
+        if (updatedMessages.length > messagesPerPage) {
+          const messagesForNextPage = updatedMessages.slice(messagesPerPage); // 9개를 넘은 메시지
+          const messagesForCurrentPage = updatedMessages.slice(0, messagesPerPage); // 1페이지에 표시할 9개의 메시지
+          return [...messagesForCurrentPage, ...messagesForNextPage];
+        }
+
+        return updatedMessages;
+      });
+
+      setCurrentPage(1); // 새로운 메시지를 1페이지에 추가 후 1페이지로 이동
     } catch (error) {
       console.error('메시지 전송 중 오류 발생:', error);
+      alert(`메시지 전송에 실패했습니다: ${error.message}`);
     }
   };
 
@@ -84,7 +97,7 @@ const GuestBook = () => {
       ) : (
         <>
           {/* 메시지 목록 섹션 */}
-          <MessageGrid messages={messages} />
+          <MessageGrid messages={messages.slice(0, messagesPerPage)} /> {/* 1페이지에 9개의 메시지 표시 */}
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </>
       )}

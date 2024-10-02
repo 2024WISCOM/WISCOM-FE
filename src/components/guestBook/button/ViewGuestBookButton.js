@@ -1,20 +1,25 @@
 import styled from 'styled-components';
 
 export const ViewButton = styled.button`
-  background-color: ${(props) => (props.active ? '#5f7af7' : '#b3b3b3')};
-  color: white;
-  padding: 15px 25px;
-  border: none;
+  width: 660px; /* 너비 조정 */
+  height: 70px; /* 높이 조정 */
+  background:rgba(61, 60, 62, 1);
   border-radius: 20px;
-  font-size: 18px;
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 30px; 
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out; /* 부드러운 효과 */
 
   &:hover {
-    background-color: #4b62d1;
+    font-size: 32px; /* 마우스 오버 시 글씨 크기 증가 */
   }
 
   &:focus {
-    outline: none;
+    outline: none; /* 포커스 시 아웃라인 제거 */
   }
 `;

@@ -29,7 +29,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         disabled={currentPage === 1}
         style={{ margin: '0 5px', padding: '5px', background: '#fff', color: '#000' }}
       >
-        이전
+        &lt;
       </button>
 
       {/* 페이지 번호들 */}
@@ -41,7 +41,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         disabled={currentPage === totalPages}
         style={{ margin: '0 5px', padding: '5px', background: '#fff', color: '#000' }}
       >
-        다음
+        &gt;
       </button>
     </div>
   );
