@@ -5,12 +5,8 @@ export const WorkTitleContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 16px;
   width: 100%;
-
-  @media (max-width: 1200px) {
-    gap: 16px;
-  }
 
   @media (max-width: 1024px) {
     /* Mobile */
@@ -41,8 +37,12 @@ export const WorkTitle = styled.div`
   line-height: 1.3;
   word-wrap: break-word;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1500px) {
     font-size: 28px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 24px;
   }
 
   @media (max-width: 1024px) {
@@ -65,8 +65,12 @@ export const Discription = styled.div`
   overflow-wrap: break-word;
   hyphens: auto;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1500px) {
     font-size: 22px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
   }
 
   @media (max-width: 1024px) {
