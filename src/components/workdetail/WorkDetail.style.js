@@ -59,6 +59,7 @@ export const ButtonColumnContainer = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 10px;
+  padding: 4px;
 `;
 
 export const ButtonRowContainer = styled.div`

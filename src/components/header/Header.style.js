@@ -299,11 +299,11 @@ export const NavItem = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 50px;
+    font-size: 40px;
     margin-left: 20px;
 
     &::first-letter {
-      font-size: 60px;
+      font-size: 50px;
     }
   }
 `;

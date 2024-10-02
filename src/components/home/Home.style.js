@@ -188,7 +188,7 @@ export const Cd = styled.img`
   width: 814px;
   position: absolute;
   left: 28px;
-  animation: ${rotateImage} 30s linear infinite;
+  animation: ${rotateImage} 20s linear infinite;
   transform-origin: 50.65% 50.73%;
 
   @media (max-width: 1920px) {

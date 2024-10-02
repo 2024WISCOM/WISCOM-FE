@@ -66,6 +66,6 @@ export const ButtonImage = styled.div`
 
     padding-right: ${({ right }) => (right === 'Y' ? '2px' : '0px')};
     padding-left: ${({ right }) => (right === 'Y' ? '0px' : '2px')};
-
+    
   }
 `;
