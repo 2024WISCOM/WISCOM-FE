@@ -1,3 +1,11 @@
+
+
 export default function GuestBook() {
-  return <>GuestBook</>;
+  return (
+    <>
+    
+    <AddMessage/>
+    
+    </>
+  );
 }
