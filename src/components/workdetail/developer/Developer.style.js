@@ -32,8 +32,8 @@ export const DeveloperName = styled.div`
       letter-spacing: 5.7px; 
     `}
 
-  @media (max-width: 1200px) {
-    font-size: 22px;
+  @media (max-width: 1500px) {
+    font-size: 20px;
   }
 
   @media (max-width: 1024px) {
@@ -69,8 +69,8 @@ export const DeveloperPosition = styled.div`
   color: #696969;
   margin: 0px;
 
-  @media (max-width: 1200px) {
-    font-size: 22px;
+    @media (max-width: 1500px) {
+    font-size: 20px;
   }
 
   @media (max-width: 1024px) {
