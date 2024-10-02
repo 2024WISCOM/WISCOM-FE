@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import Main from './pages/Main';
 import About from './pages/About';
 import WorkList from './pages/WorkList';
@@ -36,13 +37,16 @@ function App() {
         setIsVisibleFalse={setIsVisibleFalse}
       />
       {!isVisible && animationCompleted && (
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work-list" element={<WorkList />} />
-          <Route path="/work-detail" element={<WorkDetail />} />
-          <Route path="/guestbook" element={<GuestBook />} />
-        </Routes>
+        <>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work-list" element={<WorkList />} />
+            <Route path="/work-detail" element={<WorkDetail />} />
+            <Route path="/guestbook" element={<GuestBook />} />
+          </Routes>
+          <Footer />
+        </>
       )}
     </BrowserRouter>
   );
