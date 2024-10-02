@@ -8,7 +8,6 @@ import WorkList from './pages/WorkList';
 import WorkDetail from './pages/WorkDetail';
 import GuestBook from './pages/GuestBook';
 
-
 function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [animationCompleted, setAnimationCompleted] = useState(true);
@@ -38,19 +37,18 @@ function App() {
         setIsVisibleFalse={setIsVisibleFalse}
       />
       {!isVisible && animationCompleted && (
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work-list" element={<WorkList />} />
-          <Route path="/work-detail" element={<WorkDetail />} />
-          <Route path="/guestbook" element={<GuestBook />} />
-        </Routes>
-        <Footer/>
+        <>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work-list" element={<WorkList />} />
+            <Route path="/work-detail" element={<WorkDetail />} />
+            <Route path="/guestbook" element={<GuestBook />} />
+          </Routes>
+          <Footer />
         </>
       )}
-  
     </BrowserRouter>
-    
   );
 }
 
