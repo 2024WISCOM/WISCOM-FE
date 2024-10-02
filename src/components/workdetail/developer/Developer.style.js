@@ -15,7 +15,7 @@ export const DeveloperContainer = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 20px;
+    gap: 15px;
   }
 `;
 
@@ -50,14 +50,14 @@ export const DeveloperName = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 17px;
+    font-size: 15px;
     
     width: 50px;
 
       ${({ isTwoCharacters }) =>
     isTwoCharacters &&
     css`
-      letter-spacing: 5px; 
+      letter-spacing: 3.8px; 
     `}
   }
 `;
@@ -82,6 +82,6 @@ export const DeveloperPosition = styled.div`
   @media (max-width: 768px) {
     /* Mobile */
     color: #d9d9d9;
-    font-size: 17px;
+    font-size: 15px;
   }
 `;
