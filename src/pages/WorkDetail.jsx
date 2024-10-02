@@ -32,7 +32,7 @@ export default function WorkDetail() {
   };
 
   useEffect(() => {
-    fetchWorkDetail(category, id);
+    if (category && id) fetchWorkDetail(category, id);
   }, [category, id]);
 
   useEffect(() => {

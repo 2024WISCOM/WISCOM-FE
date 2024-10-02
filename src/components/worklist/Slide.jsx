@@ -34,6 +34,7 @@ const Slide = () => {
           image: item.imageUrl,
           title: item.title,
           team: item.teamName,
+          type: type,
         }));
         setData(worksData);
       } catch (error) {
