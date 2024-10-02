@@ -23,7 +23,7 @@ export const WorkDetaileRowContainer = styled.div`
 `;
 
 export const MobileDetailContainer = styled.div`
-  width: 95%;
+  width: 97%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -59,6 +59,7 @@ export const ButtonColumnContainer = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 10px;
+  padding: 4px;
 `;
 
 export const ButtonRowContainer = styled.div`

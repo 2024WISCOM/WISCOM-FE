@@ -8,6 +8,8 @@ import Instagram from '../../../assets/img/instagram.png';
 import Github from '../../../assets/img/github_white.png';
 import RightButton from '../button/RightButton';
 import LeftButton from '../button/LeftButton';
+import ImageLeftButton from '../button/ImageLeftButton';
+import ImageRightButton from '../button/ImageRightButton';
 
 export default function WorkIntroduce({ data }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -41,7 +43,7 @@ export default function WorkIntroduce({ data }) {
       <W.ImageWrapper>
         <LeftButton position="top" onClick={handlePrevClick} />
         <Image src={data.images[currentImageIndex].url} />
-        <RightButton position="top" onClick={handleNextClick} />
+        <RightButton style={{padding: "0px"}} position="top" onClick={handleNextClick} />
       </W.ImageWrapper>
       <W.DeveloperWrapper>
         <W.TeamItem>

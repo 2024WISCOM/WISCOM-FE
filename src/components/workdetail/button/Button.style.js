@@ -21,9 +21,15 @@ export const ButtonContainer = styled.div`
   @media (max-width: 768px) {
     /* Mobile */
     font-size: 18px;
-    padding: 5px;
+    padding: 1px;
   }
 `;
+
+export const MobileButtonImage = styled.div`
+  img {
+      width: 40px;
+  }
+`
 
 export const ButtonImage = styled.div`
   margin: 0px;
@@ -53,9 +59,13 @@ export const ButtonImage = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    width: 17px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     position: relative;
-    top: -1px;
+    top: -3.2px;
+
+    padding-right: ${({ right }) => (right === 'Y' ? '3px' : '0px')};
+    padding-left: ${({ right }) => (right === 'Y' ? '0px' : '3px')};
+
   }
 `;
