@@ -36,8 +36,8 @@ export default function RightContent({ data }) {
       </R.TeamWrapper>
       <R.DetailDescription>
       <div style={{ whiteSpace: 'pre-line' }}>
-    {data.description}
-  </div>
+        {data.description}
+      </div>
         
         <R.Spacer />
       </R.DetailDescription>

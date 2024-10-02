@@ -23,7 +23,7 @@ export const WorkDetaileRowContainer = styled.div`
 `;
 
 export const MobileDetailContainer = styled.div`
-  width: 95%;
+  width: 97%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

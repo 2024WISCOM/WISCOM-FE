@@ -25,7 +25,7 @@ export const ImageWrapper = styled.div`
   padding-bottom: 20px;
 
   img {
-    width: 96%;
+    width: 97%;
     height: auto;
   }
 `;
@@ -103,7 +103,7 @@ export const DetailDescription = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 
