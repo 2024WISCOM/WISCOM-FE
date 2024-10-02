@@ -1,5 +1,6 @@
 import React from 'react';
 import * as W from './WorkItem.style';
+import { useNavigate } from 'react-router-dom';
 
 const WorkItem = React.memo(function ({
   data,
@@ -8,16 +9,23 @@ const WorkItem = React.memo(function ({
   swipeTo,
   slideIndex,
 }) {
+  const navigate = useNavigate();
+
   if (!data || !data[dataIndex]) {
     return null;
   }
 
-  const coverImage = data[dataIndex].image;
-  const title = data[dataIndex].title;
-  const team = data[dataIndex].team;
+  const { id, image, title, team, type } = data[dataIndex];
+
+  const handleItemClick = () => {
+    if (isCenterSlide) {
+      navigate(`/work-detail`, { state: { category: type, id } });
+      console.log(`type: ${type}, id: ${id}`);
+    }
+  };
 
   return (
-    <W.Container>
+    <W.Container onClick={handleItemClick}>
       <div>
         <W.CardOverlay
           onClick={() => {
@@ -26,7 +34,7 @@ const WorkItem = React.memo(function ({
         />
       </div>
       <W.Card>
-        <img alt={title} src={coverImage} />
+        <img alt={title} src={image} />
         {isCenterSlide && <W.Title>{title}</W.Title>}
         {isCenterSlide && <W.Team>{team}</W.Team>}
       </W.Card>
