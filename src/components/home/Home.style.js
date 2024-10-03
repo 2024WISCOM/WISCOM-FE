@@ -9,11 +9,20 @@ export const Container = styled.div`
   padding: 50px 0px;
   width: 100%;
   max-width: 1920px;
+  margin-bottom: 120px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     padding: 0px 10px 50px 10px;
     flex-direction: column;
+    margin-bottom: 90px;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  overflow-x: hidden;
+  overflow-y: hidden;
 `;
 
 export const TextContainer = styled.div`
@@ -24,6 +33,10 @@ export const TextContainer = styled.div`
 
   @media (max-width: 1280px) {
     margin-right: 45px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 20px auto 50px auto;
   }
 
   @media (max-width: 767px) {
@@ -45,6 +58,10 @@ export const Title = styled.h2`
   @media (max-width: 1920px) {
     font-size: 90px;
     margin-bottom: -40px;
+  }
+
+  @media (max-width: 1470px) {
+    font-size: 75px;
   }
 
   @media (max-width: 1280px) {
@@ -72,6 +89,10 @@ export const DS = styled.span`
     font-size: 65px;
   }
 
+  @media (max-width: 1470px) {
+    font-size: 55px;
+  }
+
   @media (max-width: 1280px) {
     font-size: 45px;
   }
@@ -95,6 +116,10 @@ export const Wiscom = styled.div`
   @media (max-width: 1920px) {
     font-size: 140px;
     margin-bottom: -25px;
+  }
+
+  @media (max-width: 1470px) {
+    font-size: 120px;
   }
 
   @media (max-width: 1280px) {
@@ -123,6 +148,10 @@ export const SubTitle = styled.h3`
     font-size: 45px;
   }
 
+  @media (max-width: 1470px) {
+    font-size: 38px;
+  }
+
   @media (max-width: 1280px) {
     font-size: 35px;
   }
@@ -144,6 +173,10 @@ export const Description = styled.p`
 
   @media (max-width: 1920px) {
     font-size: 28px;
+  }
+
+  @media (max-width: 1470px) {
+    font-size: 25px;
   }
 
   @media (max-width: 1280px) {
@@ -168,6 +201,10 @@ export const Case = styled.img`
     width: 665px;
   }
 
+  @media (max-width: 1470px) {
+    width: 623px;
+  }
+
   @media (max-width: 1280px) {
     width: 500px;
   }
@@ -188,11 +225,15 @@ export const Cd = styled.img`
   width: 814px;
   position: absolute;
   left: 28px;
-  animation: ${rotateImage} 30s linear infinite;
+  animation: ${rotateImage} 20s linear infinite;
   transform-origin: 50.65% 50.73%;
 
   @media (max-width: 1920px) {
     width: 651px;
+  }
+
+  @media (max-width: 1470px) {
+    width: 610px;
   }
 
   @media (max-width: 1280px) {

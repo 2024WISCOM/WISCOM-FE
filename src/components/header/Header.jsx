@@ -2,8 +2,8 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as H from './Header.style';
 
-export default function Header({ isVisible, toggleMenu }) {
-  const [isAnimating, setIsAnimating] = useState(isVisible);
+export default function Header({ isVisible, toggleMenu, setIsVisibleFalse }) {
+  const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,13 +34,28 @@ export default function Header({ isVisible, toggleMenu }) {
   }, []);
 
   const handleNavigation = (path) => {
-    navigate(path);
     toggleMenu();
+    setTimeout(() => {
+      navigate(path);
+    }, 500);
+  };
+
+  const handleClickWiscom = () => {
+    if (isVisible) {
+      toggleMenu();
+      setTimeout(() => {
+        navigate('/');
+        setIsVisibleFalse();
+      }, 500);
+    } else {
+      navigate('/');
+      setIsVisibleFalse();
+    }
   };
 
   return (
     <H.HeaderContainer>
-      <H.Logo onClick={() => navigate('/')}>WISCOM</H.Logo>{' '}
+      <H.Logo onClick={handleClickWiscom}>WISCOM</H.Logo>
       <H.MenuContainer onClick={toggleMenu}>
         <H.MENU>{isVisible ? 'CLOSE' : 'MENU'}</H.MENU>
         <H.HamburgerIcon isVisible={isVisible} />
