@@ -35,7 +35,7 @@ export const FooterLeft = styled.div`
   align-items: flex-start;
   text-align: left;
   justify-content: flex-start;
-  font-size: 0.9em;
+  font-size: 0.7em;
   margin: 0;
   width: 100%;
   max-width: 600px;
@@ -209,7 +209,7 @@ export const UrlContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 1px;
 
     img{
       height : 30px;
