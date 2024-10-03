@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SearchBarContainer, SearchInput, SearchButton } from './SearchBar.style.js';
+import search from './img/Search.png';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,12 +13,12 @@ const SearchBar = ({ onSearch }) => {
     <SearchBarContainer>
       <SearchInput
         type="text"
-        placeholder="검색어를 입력하세요"
+        placeholder="Search"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <SearchButton onClick={handleSearch}>
-        검색
+      <img src={search} alt="Search" />
       </SearchButton>
     </SearchBarContainer>
   );
