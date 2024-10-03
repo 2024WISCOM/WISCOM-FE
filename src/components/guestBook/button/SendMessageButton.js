@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const SendButton = styled.button`
-  width: 500px; /* 너비 조정 */
-  height: 60px; /* 높이 조정 */
-  background: #FFFFFF; /* 기본 배경색 */
+  width: 500px; 
+  height: 60px; 
+  background: #FFFFFF; 
   border-radius: 20px;
   font-family: 'Pretendard';
   font-weight: 600;
-  font-size: 25px; 
-  color: #000000; /* 기본 글자색 */
+  font-size: 20px; 
+  color: #000000; 
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ export const SendButton = styled.button`
   margin-right:180px;
 
   &:hover {
-    font-size: 32px; /* 마우스 오버 시 글씨 크기 증가 */
+    font-size: 28px; /* 마우스 오버 시 글씨 크기 증가 */
   }
 
   &:active {

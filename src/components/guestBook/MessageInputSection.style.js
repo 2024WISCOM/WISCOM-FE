@@ -9,9 +9,9 @@ export const Container = styled.div`
   align-items: flex-start; /* 위쪽 정렬 */
   width: 100%;
   max-width: 1200px; /* 최대 폭 설정 */
-  // padding: 30px 10px;
   color: white;
   margin-bottom: 100px;
+  
 `;
 
 export const TextSection = styled.div`
@@ -22,6 +22,7 @@ export const TextSection = styled.div`
   text-align: left; /* 왼쪽 정렬 */
   width: 50%; /* 왼쪽 영역의 폭 */
   margin-top:90px;
+
 
 `;
 
@@ -63,7 +64,6 @@ export const Input = styled.input`
   width: 170px;
   padding: 5px;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: black;
   background: transparent;
   font-size: 30px;
@@ -71,13 +71,14 @@ export const Input = styled.input`
 
   &::placeholder {
     text-align:left;
+    color: #D9D9D9;
 
   }
 `;
 
 export const TextArea = styled.textarea`
   position: absolute;
-  width: 390px;
+  width: 340px;
   height: 280px;
   border: none;
   color: black;
@@ -86,9 +87,10 @@ export const TextArea = styled.textarea`
   background: transparent;
   resize: none;
   margin-top:20px;
+  font-size: 25px;
 
   &::placeholder {
-    color: rgba(217, 217, 217, 1);
+    color: #D9D9D9;
     font-size: 25px;
     font-family:'Pretendard';
     font-weight:400;
