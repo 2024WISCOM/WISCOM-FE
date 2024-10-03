@@ -8,7 +8,7 @@ export const WorkIntroduceContainer = styled.div`
 `;
 
 export const WorkTitleWrapper = styled.div`
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   width: 85%;
 
   @media (max-width: 768px) {
@@ -42,7 +42,7 @@ export const DeveloperWrapper = styled.div`
 
   @media (max-width: 768px) {
     /* mobile */
-    gap: 20px;
+    gap: 15px;
   }
 `;
 
@@ -78,6 +78,11 @@ export const LinkTo = styled.div`
   gap: 17px;
   align-items: center;
   margin: 0px;
+  
+  a {
+     display: flex;
+  }
+
   img {
     width: auto;
     height: 30px;
