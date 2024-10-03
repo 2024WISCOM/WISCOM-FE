@@ -5,6 +5,7 @@ import MessageGrid from '../components/guestBook/MessageGrid';
 import Pagination from '../components/guestBook/Pagination';
 import SearchBar from '../components/guestBook/SearchBar';
 
+
 const API_BASE_URL = 'https://2024wiscom-backend.store/api/guestbook';
 
 const GuestBook = () => {

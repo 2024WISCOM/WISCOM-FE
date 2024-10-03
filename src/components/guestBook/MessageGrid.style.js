@@ -37,6 +37,7 @@ export const ToText = styled.p`
 export const MessageText = styled.p`
   font-size: 16px;
   text-align: center;
+
 `;
 
 export const FromText = styled.p`

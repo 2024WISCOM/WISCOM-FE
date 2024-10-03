@@ -36,7 +36,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="받는 사람" 
           value={newMessage.to}
           onChange={(e) => setNewMessage({ ...newMessage, to: e.target.value })}
-          maxLength={10}
+          maxLength={7}
         />
         </Label>
         
@@ -44,7 +44,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="메시지를 입력하세요" 
           value={newMessage.message}
           onChange={(e) => setNewMessage({ ...newMessage, message: e.target.value })}
-          maxLength={300}
+          maxLength={250}
         />
         <Label className='from-label'>
           <HighlightedText>From.</HighlightedText> 
@@ -53,7 +53,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="보내는 사람" 
           value={newMessage.from}
           onChange={(e) => setNewMessage({ ...newMessage, from: e.target.value })}
-          maxLength={10}
+          maxLength={7}
         />
         </Label>
       </InputSection>

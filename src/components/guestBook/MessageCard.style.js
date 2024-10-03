@@ -45,6 +45,7 @@ export const MessageText = styled.p`
   top: 25%; /* CD 이미지 안에서 더 위로 올려 배치 */
   left: 16%;
   max-height:300px;
+  max-width:270px;
   overflow:auto;
   
 `;
