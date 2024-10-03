@@ -41,7 +41,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
         </Label>
         
         <TextArea 
-          placeholder="메시지를 입력하세요" 
+          placeholder="메시지를 입력해주세요" 
           value={newMessage.message}
           onChange={(e) => setNewMessage({ ...newMessage, message: e.target.value })}
           maxLength={250}

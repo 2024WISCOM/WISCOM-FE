@@ -9,18 +9,20 @@ export const Container = styled.div`
   align-items: flex-start; /* 위쪽 정렬 */
   width: 100%;
   max-width: 1200px; /* 최대 폭 설정 */
-  padding: 50px 100px;
+  // padding: 30px 10px;
   color: white;
   margin-bottom: 100px;
 `;
 
 export const TextSection = styled.div`
   font-family: 'Pretendard', sans-serif;
-  font-size: 32px;
+  font-size: 45px;
   line-height: 1.5;
   color: #FFFFFF;
   text-align: left; /* 왼쪽 정렬 */
-  width: 40%; /* 왼쪽 영역의 폭 */
+  width: 50%; /* 왼쪽 영역의 폭 */
+  margin-top:90px;
+
 `;
 
 export const InputSection = styled.div`
@@ -29,8 +31,8 @@ export const InputSection = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 400px; /* CD 이미지 및 입력 폼의 가로 크기 */
-  height: 400px; /* CD 이미지 높이 */
+  width: 500px; /* CD 이미지 및 입력 폼의 가로 크기 */
+  height: 500px; /* CD 이미지 높이 */
   padding: 10px;
 `;
 
@@ -44,26 +46,26 @@ export const Label = styled.label`
 
   &.to-label {
     top: 50px; 
-    left: 70px; 
+    left: 80px; 
     text-align:left;
   }
 
   &.from-label {
     bottom: 50px; 
-    right: -150px;
+    right: -210px;
     text-lign:right;
   }
 `;
 
 export const Input = styled.input`
   position: absolute;
-  width: 130px;
+  width: 170px;
   padding: 5px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: black;
   background: transparent;
-  font-size: 23px;
+  font-size: 30px;
   
 
   &::placeholder {
@@ -74,18 +76,22 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   position: absolute;
-  width: 300px;
-  height:180px;
+  width: 390px;
+  height: 280px;
   border: none;
   color: black;
   top:100px;
-  left:70px;
+  left:80px;
   background: transparent;
   resize: none;
   margin-top:20px;
 
   &::placeholder {
-    color: black;
+    color: rgba(217, 217, 217, 1);
+    font-size: 25px;
+    font-family:'Pretendard';
+    font-weight:400;
+    font-style: normal;
   }
 `;
 
