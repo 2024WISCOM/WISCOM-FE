@@ -15,7 +15,7 @@ export const DeveloperContainer = styled.div`
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 15px;
+    gap: 13px;
   }
 `;
 
