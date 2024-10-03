@@ -1,4 +1,5 @@
 import React from 'react';
+import { PaginationContainer, PageButton } from './Pagination.style.js'; // Styled components 가져오기
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
@@ -9,41 +10,39 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
       pageNumbers.push(
-        <button
+        <PageButton
           key={i}
           onClick={() => handlePageChange(i)}
-          style={{ margin: '0 5px', padding: '5px', background: i === currentPage ? '#000' : '#fff', color: i === currentPage ? '#fff' : '#000' }}
+          active={i === currentPage} // 현재 페이지에만 active 상태
         >
           {i}
-        </button>
+        </PageButton>
       );
     }
     return pageNumbers;
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+    <PaginationContainer>
       {/* 이전 페이지 버튼 */}
-      <button
+      <PageButton
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        style={{ margin: '0 5px', padding: '5px', background: '#fff', color: '#000' }}
       >
-        &lt;
-      </button>
+        &lt; 
+      </PageButton>
 
       {/* 페이지 번호들 */}
       {renderPageNumbers()}
 
       {/* 다음 페이지 버튼 */}
-      <button
+      <PageButton
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        style={{ margin: '0 5px', padding: '5px', background: '#fff', color: '#000' }}
       >
-        &gt;
-      </button>
-    </div>
+        &gt; 
+      </PageButton>
+    </PaginationContainer>
   );
 };
 

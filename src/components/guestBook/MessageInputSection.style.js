@@ -30,7 +30,7 @@ export const InputSection = styled.div`
 position: relative;
 background-image: url(${barcode}), url(${signText}), url(${cdImage});
 background-size: 40px 130px, 420px, contain; 
-background-position: right 35px top 50px, left 40px top 130px , center; 
+background-position: right 35px top 50px, left 40px top 130px , center ; 
 background-repeat: no-repeat;
 width: 500px;
 height: 500px;

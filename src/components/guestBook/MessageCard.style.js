@@ -7,12 +7,13 @@ export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  padding : 10px;
 `;
 
 //cd 이미지 및 관련 내용 
 export const CDContainer = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 320px;
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
@@ -21,17 +22,30 @@ export const CDContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  margin:10px 30px ;
+`;
+
+export const ToText = styled.p`
+  color: black; /* 검정색 글자 */
+  font-size: 25px;
+  text-align: left; /* 가운데 정렬 */
+  position: absolute;
+  top: 10px; /* 위쪽에 배치 */
+  left: 60px;
+  right: 0;
+  white-space: pre-wrap; /* 공백 및 줄바꿈을 유지한 채로 텍스트 줄바꿈 */
+  word-break: break-word;
+
 `;
 
 export const FromText = styled.p`
   color: black; /* 검정색 글자 */
-  font-size: 30px;
+  font-size: 25px;
   text-align: right; /* 가운데 정렬 */
   position: absolute; /* 절대 위치 */
-  bottom: 20px; /* 아래쪽에서 여유 공간 */
+  bottom:10px; /* 아래쪽에서 여유 공간 */
   right:0;
-  margin-right:25px;
+  margin-right:20px;
   white-space: pre-wrap; /* 공백 및 줄바꿈을 유지한 채로 텍스트 줄바꿈 */
   word-break: break-word;
   
@@ -39,29 +53,31 @@ export const FromText = styled.p`
 
 export const MessageText = styled.p`
   color: black; /* 검정색 글자 */
-  font-size: 25px;
+  font-size: 18px;
   text-align: left;
   position: absolute;
-  top: 25%; /* CD 이미지 안에서 더 위로 올려 배치 */
-  left: 16%;
-  max-height:300px;
-  max-width:270px;
-  overflow:auto;
+  top: 18%; /* CD 이미지 안에서 더 위로 올려 배치 */
+  left:60px;
+  max-height:200px;
+  width:230px;
+  overflow:auto; // 스크롤 
+  z-index: 10; // 이미지 위에 텍스트 배치
+
+  /* 스크롤바 스타일링 (Webkit 기반 브라우저용) */
+  &::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 모서리 둥글게 */
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); /* 스크롤 트랙(배경) 색상 */
+  }
   
 `;
 
-export const ToText = styled.p`
-  color: black; /* 검정색 글자 */
-  font-size: 30px;
-  text-align: left; /* 가운데 정렬 */
-  position: absolute;
-  top: 30px; /* 위쪽에 배치 */
-  left: 60px;
-  right: 0;
-  white-space: pre-wrap; /* 공백 및 줄바꿈을 유지한 채로 텍스트 줄바꿈 */
-  word-break: break-word;
 
-`;
 
 
 

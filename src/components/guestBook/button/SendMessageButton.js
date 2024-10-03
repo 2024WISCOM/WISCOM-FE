@@ -21,8 +21,10 @@ export const SendButton = styled.button`
   }
 
   &:active {
+    animation:activeEffect 20s forwards;
     background: linear-gradient(90deg, #ACDEE8 3%, #848AFF 49.1%, #65BBCD 100%);
     color: #FFFFFF; /* 클릭 시 글자 색상 변경 */
+
   }
 
   &:focus {
