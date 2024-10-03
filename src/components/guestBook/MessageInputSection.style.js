@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import cdImage from './img/CD1.png'; // CD 이미지 경로
+import cdImage from './img/CD1.png'; 
 import barcode from './img/barcode.png';
 import signText from './img/sign text.png';
 
@@ -26,14 +26,15 @@ export const TextSection = styled.div`
 `;
 
 export const InputSection = styled.div`
-  position: relative; /* absolute positioning을 위한 relative 설정 */
-  background-image: url(${cdImage});
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 500px; /* CD 이미지 및 입력 폼의 가로 크기 */
-  height: 500px; /* CD 이미지 높이 */
-  padding: 10px;
+position: relative;
+background-image: url(${barcode}), url(${signText}), url(${cdImage});
+background-size: 40px 130px, 420px, contain; 
+background-position: right 35px top 50px, left 40px top 130px , center; 
+background-repeat: no-repeat;
+width: 500px;
+height: 500px;
+padding: 10px;
+
 `;
 
 export const Label = styled.label`
