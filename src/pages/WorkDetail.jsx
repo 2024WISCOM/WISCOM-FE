@@ -44,7 +44,7 @@ export default function WorkDetail() {
           window.innerHeight - imageContainerRef.current.getBoundingClientRect().bottom;
         setIsEnoughSpace(spaceBelow > 120); // 공간 여부 설정
       }
-      setIsMobile(window.innerWidth < 1024); // 모바일 여부 설정
+      setIsMobile(window.innerWidth <= 1024); // 모바일 여부 설정
     };
 
     const image = new Image();
@@ -53,7 +53,7 @@ export default function WorkDetail() {
     image.onload = () => {
       setImageLoaded(true); // 이미지 로드 완료 상태 설정
       
-      // 500ms 딜레이 후 handleResize 호출
+      // 100ms 딜레이 후 handleResize 호출
       setTimeout(() => {
         handleResize(); // 이미지 로드 후 handleResize 호출
       }, 100); 
