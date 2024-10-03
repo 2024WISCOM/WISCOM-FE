@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { GuestBookContainer } from '../components/guestBook/GuestBook.style';
 import MessageInputSection from '../components/guestBook/MessageInputSection';
 import MessageGrid from '../components/guestBook/MessageGrid';
@@ -14,6 +14,7 @@ const GuestBook = () => {
   const messagesPerPage = 9;
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
+  const messageGridRef = useRef(null); // Ref to scroll to
 
   // 메시지 목록을 가져오는 함수
   const fetchMessages = async (page, size) => {
@@ -57,24 +58,19 @@ const GuestBook = () => {
 
       const savedMessage = await response.json();
 
-      // 새로운 메시지를 맨 앞에 추가하고, 1페이지에 9개의 메시지를 유지
-      setMessages((prevMessages) => {
-        const updatedMessages = [savedMessage.data, ...prevMessages];
-
-        // 1페이지에서 9개를 초과한 메시지를 다음 페이지로 이동시키기
-        if (updatedMessages.length > messagesPerPage) {
-          const messagesForNextPage = updatedMessages.slice(messagesPerPage); // 9개를 넘은 메시지
-          const messagesForCurrentPage = updatedMessages.slice(0, messagesPerPage); // 1페이지에 표시할 9개의 메시지
-          return [...messagesForCurrentPage, ...messagesForNextPage];
-        }
-
-        return updatedMessages;
-      });
+      setMessages((prevMessages) => [savedMessage.data, ...prevMessages]);
 
       setCurrentPage(1); // 새로운 메시지를 1페이지에 추가 후 1페이지로 이동
     } catch (error) {
       console.error('메시지 전송 중 오류 발생:', error);
       alert(`메시지 전송에 실패했습니다: ${error.message}`);
+    }
+  };
+
+  // 방명록 보러가기 버튼 클릭 시 스크롤 처리
+  const handleViewGuestBook = () => {
+    if (messageGridRef.current) {
+      messageGridRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -87,17 +83,20 @@ const GuestBook = () => {
   return (
     <GuestBookContainer>
       {/* 상단 메시지 입력 섹션 */}
-      <MessageInputSection onSendMessage={addMessage} />
-
-      {/* 검색바 추가 */}
-      <SearchBar onSearch={handleSearch} />
+      <MessageInputSection onSendMessage={addMessage} onViewGuestBook={handleViewGuestBook} /> {/* 스크롤 핸들러 추가 */}
 
       {loading ? (
         <p>로딩 중...</p>
       ) : (
         <>
+          {/* 검색바 추가 */}
+          <SearchBar onSearch={handleSearch} />
+
           {/* 메시지 목록 섹션 */}
-          <MessageGrid messages={messages.slice(0, messagesPerPage)} /> {/* 1페이지에 9개의 메시지 표시 */}
+          <div id="messageGrid" ref={messageGridRef}>
+            <MessageGrid messages={messages.slice(0, messagesPerPage)} /> {/* 1페이지에 9개의 메시지 표시 */}
+          </div>
+          
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </>
       )}

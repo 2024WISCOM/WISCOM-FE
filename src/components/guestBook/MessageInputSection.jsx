@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import SendMessageButton from './button/SendMessageButton.jsx'; 
 import ViewGuestBookButton from './button/ViewGuestBookButton.jsx';
 import { Container, TextSection, InputSection, Input, TextArea, ButtonContainer, Label, HighlightedText } from './MessageInputSection.style.js';
@@ -17,8 +17,9 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
   };
 
   const handleViewGuestBook = () => {
-    const messageGrid = document.getElementById('messageGrid'); // messageGrid의 ID를 사용
+    if(messageGridRef.current){ // messageGrid 존재 유무 확인
     messageGrid.scrollIntoView({ behavior: 'smooth' }); // 부드러운 스크롤
+    }
   };
 
   return (
@@ -55,12 +56,11 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           maxLength={10}
         />
         </Label>
-
-        <ButtonContainer>
-          <ViewGuestBookButton onClick={handleViewGuestBook} />
-          <SendMessageButton onClick={handleSendClick} />
-        </ButtonContainer>
       </InputSection>
+      <ButtonContainer>
+          <ViewGuestBookButton onClick={onViewGuestBook} />
+          <SendMessageButton onClick={handleSendClick} />
+      </ButtonContainer>
     </Container>
   );
 };

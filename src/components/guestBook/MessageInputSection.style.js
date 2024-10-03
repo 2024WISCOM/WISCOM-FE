@@ -9,6 +9,7 @@ export const Container = styled.div`
   max-width: 1200px; /* 최대 폭 설정 */
   padding: 50px 100px;
   color:white;
+  margin-bottom: 100px;
 `;
 
 export const TextSection = styled.div`
@@ -77,7 +78,7 @@ export const ButtonContainer = styled.div`
   bottom: -100px;
   left :0;
   right:0;
-  margin-top:50px;
+  margin-top:0;
 
 `;
 
