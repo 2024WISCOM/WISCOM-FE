@@ -44,7 +44,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="메시지를 입력해주세요" 
           value={newMessage.message}
           onChange={(e) => setNewMessage({ ...newMessage, message: e.target.value })}
-          maxLength={250}
+          // maxLength={250}
         />
         <Label className='from-label'>
           <HighlightedText>From.</HighlightedText> 
