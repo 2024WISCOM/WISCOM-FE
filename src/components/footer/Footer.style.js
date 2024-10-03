@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
 
   @media(max-width: 767px) {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 `;
 
@@ -43,7 +43,7 @@ export const FooterLeft = styled.div`
   @media(max-width: 767px) {
     flex-direction: row;
     align-items: flex-start;
-    font-size: 0.5em;
+    font-size: 0.8em;
     justify-content: space-between;
   }
 `;
@@ -209,6 +209,11 @@ export const UrlContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-top: 5px;
-    margin-right:0;
+    margin-right: 5px;
+
+    img{
+      height : 30px;
+      width: 30px;
+      }
   }
 `;

@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   width: 1800px;
   position: relative;
+  margin-bottom: 120px;
 
   @media (max-width: 1920px) {
     width: 85%;
@@ -19,6 +20,7 @@ export const Container = styled.div`
     width: 100%;
     ${(props) =>
       props.dataLength === 1 ? '' : 'transform: translateX(-100px);'}
+    margin-bottom: 0;
   }
 
   .react-stacked-center-carousel {
