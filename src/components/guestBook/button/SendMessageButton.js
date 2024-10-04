@@ -36,6 +36,11 @@ export const SendButton = styled.button`
     font-size: 17px;
     height:40px;
     margin:20px; 
+
+    
+  &:hover {
+    font-size: 19px; /* 마우스 오버 시 글씨 크기 증가 */
+  }
    
   }
 `;

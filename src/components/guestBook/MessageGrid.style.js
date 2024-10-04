@@ -9,10 +9,12 @@ export const MessageGridContainer = styled.div`
   margin: 50px auto;
   width:100%;
 
-  @media (max-width: 767px) {
+  @media (max-width:767px) {
     width:100%;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
+    margin:0;
+    padding :0;
   }
 `;
 
@@ -34,11 +36,11 @@ export const MessageCard = styled.div`
     margin: 5px 0;
   }
 
-  @media (max-width: 767px) {
-    width:100%;
-    height: 200px; 
-    padding: 10px;
-  }
+  // @media (max-width: 767px) {
+  //   width:100%;
+  //   height: 200px; 
+  //   padding: 10px;
+  // }
 `;
 
 export const ToText = styled.p`

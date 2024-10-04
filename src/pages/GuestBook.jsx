@@ -12,16 +12,17 @@ const GuestBook = () => {
   const [messages, setMessages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const messagesPerPage = 9;
+  const [messagesPerPage , setMessagesPerPage] = useState(window.innerWidth<= 767 ? 6 : 9);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
   const messageGridRef = useRef(null); // Ref to scroll to
-  const [isMobile, setIsMobile ]=useState(window.innerWidth <= 767);
+  const [isMobile, setIsMobile ]=useState(window.innerWidth <= 767 );
   
    // 윈도우 리사이즈 이벤트를 감지해 모바일 상태 업데이트
    useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 767);
+      setMesagesPerPage(window.innerWidth <= 767? 6:9);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
