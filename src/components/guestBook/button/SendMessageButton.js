@@ -30,4 +30,17 @@ export const SendButton = styled.button`
   &:focus {
     outline: none; /* 포커스 시 아웃라인 제거 */
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    font-size: 17px;
+    height:40px;
+    margin:20px; 
+
+    
+  &:hover {
+    font-size: 19px; /* 마우스 오버 시 글씨 크기 증가 */
+  }
+   
+  }
 `;
