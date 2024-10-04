@@ -11,6 +11,7 @@ export const SearchBarContainer = styled.div`
     margin-top:20px;
     margin-left: 0;
     text-align:left;
+    display: ${({ isMobile }) => (isMobile ? 'flex' : 'none')}; /* 모바일에서만 보여주기 */
 
     }
 `;
@@ -61,9 +62,15 @@ export const SearchButton = styled.button`
   &:focus {
     outline: none; /* 포커스 시 외곽선 제거 */
 
+  /* 버튼 눌렀을 때도 약간 강조 되는 것 필요할 듯 ?"
+
+
+  
+
     @media (max-width:767px){
       width:100%;
-  
+
+      /* 버튼 눌렸을 때도 이상함 수정 */
     }
   }
 

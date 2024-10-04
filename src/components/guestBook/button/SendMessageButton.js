@@ -33,8 +33,9 @@ export const SendButton = styled.button`
 
   @media (max-width: 767px) {
     width: 100%;
-    font-size: 18px;
+    font-size: 17px;
     height:40px;
-    margin-right: 0; 
+    margin:20px; 
+   
   }
 `;

@@ -73,16 +73,22 @@ export const MessageText = styled.p`
   z-index: 10; // 이미지 위에 텍스트 배치
 
   /* 스크롤바 스타일링 (Webkit 기반 브라우저용) */
-  &::-webkit-scrollbar {
-    width: 8px; /* 스크롤바 너비 */
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 색상 */
-    border-radius: 10px; /* 스크롤바 모서리 둥글게 */
-  }
-  &::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.1); /* 스크롤 트랙(배경) 색상 */
-  }
+    &::-webkit-scrollbar {
+      width: 8px; /* 스크롤바 너비 */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 색상 */
+      border-radius: 10px; /* 스크롤바 모서리 둥글게 */
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.1); /* 스크롤 트랙(배경) 색상 */
+    }
+
+    @media (max-width:767px){
+      width:
+      height:
+    }
+  
   
 `;
 

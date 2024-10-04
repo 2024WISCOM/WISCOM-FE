@@ -30,11 +30,12 @@ export const TextSection = styled.div`
   margin-top: ${(props) => (props.isMobile ? '-10px' : '90px')}; /* 모바일에서는 20px, 웹에서는 90px */
 
   @media (max-width: 767px) {
-    font-size: 17px;
+    font-size: 20px;
     width: 100%;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom:30px;
+
   }
 
 `;
@@ -52,9 +53,10 @@ export const InputSection = styled.div`
   @media (max-width: 767px) {
       width: 100%;
       height: 300px; 
-      background-size: 30px 100px, 300px, contain;
-      background-position: right 15px top 20px, left 20px top 60px, center;
+      background-size: 30px 100px, 290px, contain;
+      background-position: right 30px top 20px, left 40px top 50px, center;
       padding: 5px; 
+      
     }
 
 `;
@@ -78,11 +80,24 @@ export const Label = styled.label`
     right: -210px;
     text-lign:right;
 
-  @media (max-width: 767px) {
-      right: -50px;
-      bottom: 30px;
-    }
+  
   }
+    @media (max-width: 767px) {
+      
+
+      &.to-label {
+        top:15px;
+        left:65px;
+        
+      } 
+
+      &.from-label {
+        bottom:15px;
+        right:-155px;
+      }
+
+
+    }
 `;
 
 export const Input = styled.input`
@@ -94,12 +109,17 @@ export const Input = styled.input`
   background: transparent;
   font-size: 30px;
   
-
   &::placeholder {
     text-align:left;
     color: #D9D9D9;
 
   }
+  
+  @media (max-width:767px){
+    width:120px;
+    font-size:20px;
+    
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -122,6 +142,21 @@ export const TextArea = styled.textarea`
     font-weight:400;
     font-style: normal;
   }
+
+  @media (max-width:767px){
+    width:220px;
+    height:190px;
+    top: 65px;
+    left :65px;
+    margin-top:0;
+    align-items:center;
+    font-size:20px;
+
+    &::placeholder {
+      font-size:15px;
+    }
+   
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -135,7 +170,9 @@ export const ButtonContainer = styled.div`
   margin-top: 0;
 
   @media (max-width:767px){
-      width:100%
+      width:100%;
+      top: 500px;
+    
       }
 `;
 
@@ -144,4 +181,8 @@ export const HighlightedText = styled.span`
   color: black;
   margin-right: 5px; /* 텍스트와 입력 필드 간의 여백 */
   font-size: 30px;
+
+  @media (max-width:767px){
+    font-size:20px;
+    }
 `;
