@@ -61,7 +61,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="받는 사람" 
           value={newMessage.to}
           onChange={(e) => setNewMessage({ ...newMessage, to: e.target.value })}
-          maxLength={7}
+          maxLength={10}
         />
         </Label>
         
@@ -78,7 +78,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="보내는 사람" 
           value={newMessage.from}
           onChange={(e) => setNewMessage({ ...newMessage, from: e.target.value })}
-          maxLength={7}
+          maxLength={8}
         />
         </Label>
       </InputSection>

@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const TextSection = styled.div`
   font-family: 'Pretendard', sans-serif;
-  font-size: ${(props) => (props.isMobile ? '17px' : '45px')}; /* 모바일에서는 24px, 웹에서는 45px */
+  font-size: ${(props) => (props.isMobile ? '17px' : '45px')}; 
   line-height: 1.5;
   color: #FFFFFF;
   text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
@@ -30,11 +30,11 @@ export const TextSection = styled.div`
   margin-top: ${(props) => (props.isMobile ? '-10px' : '90px')}; /* 모바일에서는 20px, 웹에서는 90px */
 
   @media (max-width: 767px) {
-    font-size: 20px;
+    font-size: 1.2em;
     width: 100%;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom:30px;
+    margin-top: 0%;
+    margin-bottom:10%;
 
   }
 
@@ -43,19 +43,19 @@ export const TextSection = styled.div`
 export const InputSection = styled.div`
   position: relative;
   background-image: url(${barcode}), url(${signText}), url(${cdImage});
-  background-size: 40px 130px, 420px, contain; 
-  background-position: right 35px top 50px, left 40px top 130px , center ; 
+  background-size: 8% 27%, 85%, contain; 
+  background-position: right 7% top 14%,left 60% top 70% , center ; 
   background-repeat: no-repeat;
-  width: 500px;
+  width: 500;
   height: 500px;
   padding: 10px;
 
   @media (max-width: 767px) {
       width: 100%;
-      height: 300px; 
-      background-size: 30px 100px, 290px, contain;
-      background-position: right 30px top 20px, left 40px top 50px, center;
-      padding: 5px; 
+      height: 50vh; 
+      background-size: 7vw 15vh, 75vw, contain;
+      background-position: right 11% top 9% , left 55% top 70%, center;
+      padding: 5%; 
       
     }
 
@@ -67,10 +67,14 @@ export const Label = styled.label`
   color: black;
   font-size: 20px;
   width:100%;
+
+  &:focus {
+    outline :none;
+    }
   
 
   &.to-label {
-    top: 50px; 
+    top: 10%; 
     left: 80px; 
     text-align:left;
   }
@@ -86,14 +90,15 @@ export const Label = styled.label`
       
 
       &.to-label {
-        top:15px;
-        left:65px;
+        top:5%;
+        left:18%;
+
         
       } 
 
       &.from-label {
-        bottom:15px;
-        right:-155px;
+        bottom:4%;
+        right:-44%;
       }
 
 
@@ -114,10 +119,16 @@ export const Input = styled.input`
     color: #D9D9D9;
 
   }
+
+   &:focus {
+    outline :none;
+  }
   
   @media (max-width:767px){
-    width:120px;
-    font-size:20px;
+    width:30vw;
+    top:13%;
+    font-size:1.0em;
+    padding:0;
     
     }
 `;
@@ -135,6 +146,10 @@ export const TextArea = styled.textarea`
   margin-top:20px;
   font-size: 25px;
 
+   &:focus {
+    outline :none;
+    }
+
   &::placeholder {
     color: #D9D9D9;
     font-size: 25px;
@@ -144,16 +159,17 @@ export const TextArea = styled.textarea`
   }
 
   @media (max-width:767px){
-    width:220px;
-    height:190px;
-    top: 65px;
-    left :65px;
+    width:60vw;
+    height:30vh;
+    top: 20%;
+    left :18%;
     margin-top:0;
     align-items:center;
-    font-size:20px;
+    font-size:1.3em;
 
     &::placeholder {
-      font-size:15px;
+      font-size:0.9em;
+
     }
    
   }
@@ -171,7 +187,7 @@ export const ButtonContainer = styled.div`
 
   @media (max-width:767px){
       width:100%;
-      top: 500px;
+      top: 82%;
     
       }
 `;
@@ -183,6 +199,6 @@ export const HighlightedText = styled.span`
   font-size: 30px;
 
   @media (max-width:767px){
-    font-size:20px;
+    font-size:1.1em;
     }
 `;
