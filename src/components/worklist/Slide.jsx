@@ -67,6 +67,21 @@ const Slide = () => {
     };
   }, [type]);
 
+  // 오른쪽 화살표 자동 클릭 기능
+  useEffect(() => {
+    const autoClickNext = () => {
+      if (ref.current) {
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => {
+            ref.current.goNext();
+          }, i * 20);
+        }
+      }
+    };
+
+    autoClickNext();
+  }, [data]); // data가 로드된 후에 자동으로 동작
+
   const minRequiredItems = Math.ceil((maxVisibleSlide + 1) / 2);
 
   return (
