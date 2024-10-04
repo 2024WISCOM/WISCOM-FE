@@ -9,7 +9,7 @@ export const GuestBookContainer = styled.div`
   width:100%;
   
 
-  @media (max-width:767){
+  @media (max-width:767px){
     padding:5px;
     width:100%;
     overflow-x :hidden;
