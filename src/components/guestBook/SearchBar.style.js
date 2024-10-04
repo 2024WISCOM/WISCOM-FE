@@ -4,7 +4,16 @@ export const SearchBarContainer = styled.div`
   display: flex;
   align-items: flex-end; /* 수직 정렬을 밑줄 기준으로 맞춤 */
   margin: 20px 0;
-  margin-left: 950px;
+  margin-left: 950px; /* 여기에 걍 .. text-lign: left 로 할까?*/
+
+  @media (max-width:767px){
+    width:100%;
+    margin-top:20px;
+    margin-left: 0;
+    text-align:left;
+    display: ${({ isMobile }) => (isMobile ? 'flex' : 'none')}; /* 모바일에서만 보여주기 */
+
+    }
 `;
 
 export const SearchInput = styled.input`
@@ -24,7 +33,16 @@ export const SearchInput = styled.input`
 
   &:focus {
     outline: none; /* 포커스 시 외곽선 제거 */
-  }
+
+    @media (max-width:767px){
+      width:10px;
+      font-size:10px;
+      color:white;
+
+      /*글쓸 때 줄 사라지고 안 보이는 것 해결하기 */
+      }
+}
+    
 `;
 
 export const SearchButton = styled.button`
@@ -43,5 +61,18 @@ export const SearchButton = styled.button`
 
   &:focus {
     outline: none; /* 포커스 시 외곽선 제거 */
+
+  /* 버튼 눌렀을 때도 약간 강조 되는 것 필요할 듯 ?"
+
+
+  
+
+    @media (max-width:767px){
+      width:100%;
+
+      /* 버튼 눌렸을 때도 이상함 수정 */
+    }
   }
+
+
 `;
