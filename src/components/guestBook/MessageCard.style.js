@@ -8,6 +8,11 @@ export const CardContainer = styled.div`
   height: 100%;
   position: relative;
   padding : 10px;
+
+  @media (max-width:767px){
+    width:100%;
+    height:auto;
+    }
 `;
 
 //cd 이미지 및 관련 내용 
@@ -23,6 +28,10 @@ export const CDContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin:10px 30px ;
+
+  @media (max-width:767px) {
+    width:100%;
+    }
 `;
 
 export const ToText = styled.p`

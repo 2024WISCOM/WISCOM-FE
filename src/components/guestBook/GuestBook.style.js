@@ -6,4 +6,12 @@ export const GuestBookContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  width:100%;
+
+  @media (max-width:767){
+    padding:5px;
+    width:100%;
+    max-width:100%;
+  
+  } 
 `;

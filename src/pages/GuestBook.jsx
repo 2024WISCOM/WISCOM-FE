@@ -94,7 +94,7 @@ const GuestBook = () => {
           <SearchBar onSearch={handleSearch} />
 
           {/* 메시지 목록 섹션 */}
-          <div id="messageGrid" ref={messageGridRef}>
+          <div id="messageGrid" ref={messageGridRef} >
             <MessageGrid messages={messages.slice(0, messagesPerPage)} /> {/* 1페이지에 9개의 메시지 표시 */}
           </div>
           
