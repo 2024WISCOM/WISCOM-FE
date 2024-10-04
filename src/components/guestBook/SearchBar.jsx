@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SearchBarContainer, SearchInput, SearchButton } from './SearchBar.style.js';
 import search from './img/Search.png';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, isMobile }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
@@ -10,7 +10,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <SearchBarContainer>
+    <SearchBarContainer isMobile={isMobile} >
       <SearchInput
         type="text"
         placeholder="Search"

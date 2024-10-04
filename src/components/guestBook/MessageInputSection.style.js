@@ -11,30 +11,53 @@ export const Container = styled.div`
   max-width: 1200px; /* 최대 폭 설정 */
   color: white;
   margin-bottom: 100px;
+
+  @media (max-width:767px){
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+  }
   
 `;
 
 export const TextSection = styled.div`
   font-family: 'Pretendard', sans-serif;
-  font-size: 45px;
+  font-size: ${(props) => (props.isMobile ? '17px' : '45px')}; /* 모바일에서는 24px, 웹에서는 45px */
   line-height: 1.5;
   color: #FFFFFF;
-  text-align: left; /* 왼쪽 정렬 */
-  width: 50%; /* 왼쪽 영역의 폭 */
-  margin-top:90px;
+  text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
+  width: ${(props) => (props.isMobile ? '100%' : '50%')}; /* 모바일에서는 전체 너비, 웹에서는 50% */
+  margin-top: ${(props) => (props.isMobile ? '-10px' : '90px')}; /* 모바일에서는 20px, 웹에서는 90px */
 
+  @media (max-width: 767px) {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom:30px;
+
+  }
 
 `;
 
 export const InputSection = styled.div`
-position: relative;
-background-image: url(${barcode}), url(${signText}), url(${cdImage});
-background-size: 40px 130px, 420px, contain; 
-background-position: right 35px top 50px, left 40px top 130px , center ; 
-background-repeat: no-repeat;
-width: 500px;
-height: 500px;
-padding: 10px;
+  position: relative;
+  background-image: url(${barcode}), url(${signText}), url(${cdImage});
+  background-size: 40px 130px, 420px, contain; 
+  background-position: right 35px top 50px, left 40px top 130px , center ; 
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+
+  @media (max-width: 767px) {
+      width: 100%;
+      height: 300px; 
+      background-size: 30px 100px, 290px, contain;
+      background-position: right 30px top 20px, left 40px top 50px, center;
+      padding: 5px; 
+      
+    }
 
 `;
 
@@ -56,7 +79,25 @@ export const Label = styled.label`
     bottom: 50px; 
     right: -210px;
     text-lign:right;
+
+  
   }
+    @media (max-width: 767px) {
+      
+
+      &.to-label {
+        top:15px;
+        left:65px;
+        
+      } 
+
+      &.from-label {
+        bottom:15px;
+        right:-155px;
+      }
+
+
+    }
 `;
 
 export const Input = styled.input`
@@ -68,12 +109,17 @@ export const Input = styled.input`
   background: transparent;
   font-size: 30px;
   
-
   &::placeholder {
     text-align:left;
     color: #D9D9D9;
 
   }
+  
+  @media (max-width:767px){
+    width:120px;
+    font-size:20px;
+    
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -96,6 +142,21 @@ export const TextArea = styled.textarea`
     font-weight:400;
     font-style: normal;
   }
+
+  @media (max-width:767px){
+    width:220px;
+    height:190px;
+    top: 65px;
+    left :65px;
+    margin-top:0;
+    align-items:center;
+    font-size:20px;
+
+    &::placeholder {
+      font-size:15px;
+    }
+   
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -107,6 +168,12 @@ export const ButtonContainer = styled.div`
   left: 0;
   right: 0;
   margin-top: 0;
+
+  @media (max-width:767px){
+      width:100%;
+      top: 500px;
+    
+      }
 `;
 
 export const HighlightedText = styled.span`
@@ -114,4 +181,8 @@ export const HighlightedText = styled.span`
   color: black;
   margin-right: 5px; /* 텍스트와 입력 필드 간의 여백 */
   font-size: 30px;
+
+  @media (max-width:767px){
+    font-size:20px;
+    }
 `;

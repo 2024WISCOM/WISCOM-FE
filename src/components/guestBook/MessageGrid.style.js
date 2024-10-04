@@ -2,15 +2,24 @@ import styled from 'styled-components';
 
 export const MessageGridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); // 3열 그리드
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 50px auto;
+  width:100%;
+
+  @media (max-width:767px) {
+    width:100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin:0;
+    padding :0;
+  }
 `;
 
 export const MessageCard = styled.div`
-  width: 360px;
+  width: 100%;
   height: 400px;
   background-color: #fff;
   border-radius: 10px;
@@ -26,10 +35,16 @@ export const MessageCard = styled.div`
     color: black;
     margin: 5px 0;
   }
+
+  // @media (max-width: 767px) {
+  //   width:100%;
+  //   height: 200px; 
+  //   padding: 10px;
+  // }
 `;
 
 export const ToText = styled.p`
-  font-size: 18px; /* 수정된 font-size */
+  font-size: 18px; 
   color: #333;
   text-align: center;
 `;

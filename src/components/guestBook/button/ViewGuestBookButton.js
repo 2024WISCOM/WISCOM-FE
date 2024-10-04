@@ -23,4 +23,8 @@ export const ViewButton = styled.button`
   &:focus {
     outline: none; /* 포커스 시 아웃라인 제거 */
   }
+
+   @media (max-width: 767px) {
+    display:none;
+  }
 `;

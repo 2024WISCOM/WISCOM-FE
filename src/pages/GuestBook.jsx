@@ -12,10 +12,23 @@ const GuestBook = () => {
   const [messages, setMessages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const messagesPerPage = 9;
+  const [messagesPerPage , setMessagesPerPage] = useState(window.innerWidth<= 767 ? 6 : 9);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
   const messageGridRef = useRef(null); // Ref to scroll to
+  const [isMobile, setIsMobile ]=useState(window.innerWidth <= 767 );
+  
+   // 윈도우 리사이즈 이벤트를 감지해 모바일 상태 업데이트
+   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+      setMesagesPerPage(window.innerWidth <= 767? 6:9);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
 
   // 메시지 목록을 가져오는 함수
   const fetchMessages = async (page, size) => {
@@ -91,10 +104,10 @@ const GuestBook = () => {
       ) : (
         <>
           {/* 검색바 추가 */}
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch}isMobile={isMobile} />
 
           {/* 메시지 목록 섹션 */}
-          <div id="messageGrid" ref={messageGridRef}>
+          <div id="messageGrid" ref={messageGridRef} >
             <MessageGrid messages={messages.slice(0, messagesPerPage)} /> {/* 1페이지에 9개의 메시지 표시 */}
           </div>
           
