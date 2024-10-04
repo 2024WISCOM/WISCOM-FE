@@ -70,6 +70,8 @@ const GuestBook = () => {
         throw new Error(`서버 응답 오류: ${response.statusText}`);
       }
 
+
+
       const savedMessage = await response.json();
 
       setMessages((prevMessages) => [savedMessage.data, ...prevMessages]);

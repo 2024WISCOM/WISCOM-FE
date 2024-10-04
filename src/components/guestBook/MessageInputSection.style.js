@@ -43,10 +43,10 @@ export const TextSection = styled.div`
 export const InputSection = styled.div`
   position: relative;
   background-image: url(${barcode}), url(${signText}), url(${cdImage});
-  background-size: 8% 27%, 85%, contain; 
-  background-position: right 7% top 14%,left 60% top 70% , center ; 
+  background-size: 40px 130px, 420px, contain; 
+  background-position: right 35px top 50px,left 40px top 130px , center ; 
   background-repeat: no-repeat;
-  width: 500;
+  width: 500px;
   height: 500px;
   padding: 10px;
 
@@ -74,15 +74,15 @@ export const Label = styled.label`
   
 
   &.to-label {
-    top: 10%; 
+    top: 50px; 
     left: 80px; 
     text-align:left;
   }
 
   &.from-label {
     bottom: 50px; 
-    right: -210px;
-    text-lign:right;
+    right: 200px;
+    text-align:right;
 
   
   }
@@ -98,7 +98,7 @@ export const Label = styled.label`
 
       &.from-label {
         bottom:4%;
-        right:-44%;
+        right:39%;
       }
 
 

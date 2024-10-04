@@ -4,8 +4,7 @@ export const MessageGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
+  // padding: 20px;
   margin: 50px auto;
   width:100%;
 
@@ -36,11 +35,11 @@ export const MessageCard = styled.div`
     margin: 5px 0;
   }
 
-  // @media (max-width: 767px) {
-  //   width:100%;
-  //   height: 200px; 
-  //   padding: 10px;
-  // }
+  @media (max-width: 767px) {
+    width:100%;
+    height: 200px; 
+    padding: 10px;
+  }
 `;
 
 export const ToText = styled.p`
