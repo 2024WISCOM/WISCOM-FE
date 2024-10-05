@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1200px; /* 최대 폭 설정 */
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 30vh;
 
   @media (max-width:767px){
     width:100%;
@@ -22,19 +22,19 @@ export const Container = styled.div`
 
 export const TextSection = styled.div`
   font-family: 'Pretendard', sans-serif;
-  font-size: ${(props) => (props.isMobile ? '17px' : '45px')}; /* 모바일에서는 24px, 웹에서는 45px */
+  font-size: ${(props) => (props.isMobile ? '17px' : '3vw')}; 
   line-height: 1.5;
   color: #FFFFFF;
   text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
   width: ${(props) => (props.isMobile ? '100%' : '50%')}; /* 모바일에서는 전체 너비, 웹에서는 50% */
-  margin-top: ${(props) => (props.isMobile ? '-10px' : '90px')}; /* 모바일에서는 20px, 웹에서는 90px */
+  margin-top: ${(props) => (props.isMobile ? '-10px' : '22vh')}; /* 모바일에서는 20px, 웹에서는 90px */
 
   @media (max-width: 767px) {
-    font-size: 20px;
+    font-size: 1.2em;
     width: 100%;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom:30px;
+    margin-top: 0%;
+    margin-bottom:10%;
 
   }
 
@@ -43,19 +43,18 @@ export const TextSection = styled.div`
 export const InputSection = styled.div`
   position: relative;
   background-image: url(${barcode}), url(${signText}), url(${cdImage});
-  background-size: 40px 130px, 420px, contain; 
-  background-position: right 35px top 50px, left 40px top 130px , center ; 
+  background-size: 2.5vw 19vh, 30vw,contain; 
+  background-position: right 2vw top 8vh,left 3vw top 18vh , center ; 
   background-repeat: no-repeat;
-  width: 500px;
-  height: 500px;
-  padding: 10px;
+  width: 36vw;
+  height: 74vh;
 
   @media (max-width: 767px) {
       width: 100%;
-      height: 300px; 
-      background-size: 30px 100px, 290px, contain;
-      background-position: right 30px top 20px, left 40px top 50px, center;
-      padding: 5px; 
+      height: 50vh; 
+      background-size: 7vw 15vh, 75vw, contain;
+      background-position: right 11% top 9% , left 55% top 70%, center;
+      padding: 5%; 
       
     }
 
@@ -65,20 +64,23 @@ export const Label = styled.label`
   position: absolute;
   font-weight: bold;
   color: black;
-  font-size: 20px;
   width:100%;
+
+  &:focus {
+    outline :none;
+    }
   
 
   &.to-label {
-    top: 50px; 
+    top: 2vw; 
     left: 80px; 
     text-align:left;
   }
 
   &.from-label {
     bottom: 50px; 
-    right: -210px;
-    text-lign:right;
+    right: 200px;
+    text-align:right;
 
   
   }
@@ -86,14 +88,15 @@ export const Label = styled.label`
       
 
       &.to-label {
-        top:15px;
-        left:65px;
+        top:5%;
+        left:18%;
+
         
       } 
 
       &.from-label {
-        bottom:15px;
-        right:-155px;
+        bottom:4%;
+        right:39%;
       }
 
 
@@ -102,38 +105,47 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   position: absolute;
-  width: 170px;
-  padding: 5px;
+  width: 12.5vw;
+  padding: 1%;
   border: none;
   color: black;
   background: transparent;
-  font-size: 30px;
+  font-size: 1.8em;
   
   &::placeholder {
     text-align:left;
     color: #D9D9D9;
 
   }
+
+   &:focus {
+    outline :none;
+  }
   
   @media (max-width:767px){
-    width:120px;
-    font-size:20px;
+    width:30vw;
+    top:13%;
+    font-size:1.0em;
+    padding:0;
     
     }
 `;
 
 export const TextArea = styled.textarea`
   position: absolute;
-  width: 340px;
-  height: 280px;
+  width: 25vw;
+  height: 44vh;
   border: none;
   color: black;
-  top:100px;
-  left:80px;
+  top:7vw;
+  left:5.5vw;
   background: transparent;
   resize: none;
-  margin-top:20px;
-  font-size: 25px;
+  font-size: 1.7em;
+
+   &:focus {
+    outline :none;
+    }
 
   &::placeholder {
     color: #D9D9D9;
@@ -144,16 +156,17 @@ export const TextArea = styled.textarea`
   }
 
   @media (max-width:767px){
-    width:220px;
-    height:190px;
-    top: 65px;
-    left :65px;
+    width:60vw;
+    height:30vh;
+    top: 20%;
+    left :18%;
     margin-top:0;
     align-items:center;
-    font-size:20px;
+    font-size:1.3em;
 
     &::placeholder {
-      font-size:15px;
+      font-size:0.9em;
+
     }
    
   }
@@ -164,14 +177,16 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100%; /* 버튼을 가로로 정렬 */
   position: absolute;
-  bottom: 0px;
+  top: 110%;
   left: 0;
   right: 0;
-  margin-top: 0;
+  margin : 0 1%;
+  
+ 
 
   @media (max-width:767px){
       width:100%;
-      top: 500px;
+      top: 82%;
     
       }
 `;
@@ -183,6 +198,6 @@ export const HighlightedText = styled.span`
   font-size: 30px;
 
   @media (max-width:767px){
-    font-size:20px;
+    font-size:1.1em;
     }
 `;

@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
 export const SendButton = styled.button`
-  width: 500px; 
-  height: 60px; 
+  width: 34vw; 
+  height: 8vh; 
   background: #FFFFFF; 
   border-radius: 20px;
   font-family: 'Pretendard';
   font-weight: 600;
-  font-size: 20px; 
+  font-size: 1.4em; 
   color: #000000; 
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out; /* 부드러운 효과 */
-  margin-right:180px;
+  margin-right:10vw;
+
 
   &:hover {
     font-size: 28px; /* 마우스 오버 시 글씨 크기 증가 */
