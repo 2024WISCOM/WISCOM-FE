@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  padding : 10px;
+
 
   @media (max-width:767px){
     width:100%;
