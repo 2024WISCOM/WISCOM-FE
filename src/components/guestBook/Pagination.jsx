@@ -1,7 +1,7 @@
 import React from 'react';
 import { PaginationContainer, PageButton } from './Pagination.style.js'; // Styled components 가져오기
-import Previous from './img/vector.png';
-import Next from './img/vector2.png';
+import Previous from './img/Vector.png';
+import Next from './img/Vector2.png';
 
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
