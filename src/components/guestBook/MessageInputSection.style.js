@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1200px; /* 최대 폭 설정 */
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 30vh;
 
   @media (max-width:767px){
     width:100%;
@@ -22,12 +22,12 @@ export const Container = styled.div`
 
 export const TextSection = styled.div`
   font-family: 'Pretendard', sans-serif;
-  font-size: ${(props) => (props.isMobile ? '17px' : '45px')}; 
+  font-size: ${(props) => (props.isMobile ? '17px' : '3vw')}; 
   line-height: 1.5;
   color: #FFFFFF;
   text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
   width: ${(props) => (props.isMobile ? '100%' : '50%')}; /* 모바일에서는 전체 너비, 웹에서는 50% */
-  margin-top: ${(props) => (props.isMobile ? '-10px' : '90px')}; /* 모바일에서는 20px, 웹에서는 90px */
+  margin-top: ${(props) => (props.isMobile ? '-10px' : '22vh')}; /* 모바일에서는 20px, 웹에서는 90px */
 
   @media (max-width: 767px) {
     font-size: 1.2em;
@@ -43,12 +43,11 @@ export const TextSection = styled.div`
 export const InputSection = styled.div`
   position: relative;
   background-image: url(${barcode}), url(${signText}), url(${cdImage});
-  background-size: 40px 130px, 420px, contain; 
-  background-position: right 35px top 50px,left 40px top 130px , center ; 
+  background-size: 2.5vw 19vh, 30vw,contain; 
+  background-position: right 2vw top 8vh,left 3vw top 18vh , center ; 
   background-repeat: no-repeat;
-  width: 500px;
-  height: 500px;
-  padding: 10px;
+  width: 36vw;
+  height: 74vh;
 
   @media (max-width: 767px) {
       width: 100%;
@@ -65,7 +64,6 @@ export const Label = styled.label`
   position: absolute;
   font-weight: bold;
   color: black;
-  font-size: 20px;
   width:100%;
 
   &:focus {
@@ -74,7 +72,7 @@ export const Label = styled.label`
   
 
   &.to-label {
-    top: 50px; 
+    top: 2vw; 
     left: 80px; 
     text-align:left;
   }
@@ -107,12 +105,12 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   position: absolute;
-  width: 170px;
-  padding: 5px;
+  width: 12.5vw;
+  padding: 1%;
   border: none;
   color: black;
   background: transparent;
-  font-size: 30px;
+  font-size: 1.8em;
   
   &::placeholder {
     text-align:left;
@@ -135,16 +133,15 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   position: absolute;
-  width: 340px;
-  height: 280px;
+  width: 25vw;
+  height: 44vh;
   border: none;
   color: black;
-  top:100px;
-  left:80px;
+  top:7vw;
+  left:5.5vw;
   background: transparent;
   resize: none;
-  margin-top:20px;
-  font-size: 25px;
+  font-size: 1.7em;
 
    &:focus {
     outline :none;
@@ -183,6 +180,8 @@ export const ButtonContainer = styled.div`
   top: 110%;
   left: 0;
   right: 0;
+  margin : 0 1%;
+  
  
 
   @media (max-width:767px){

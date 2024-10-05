@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const GuestBookContainer = styled.div`
-  min-height: 100vh;
-  max-width:1200wh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
   width:100%;
+  max-width: 100vw;  /* 부모 뷰포트 너비를 넘지 않도록 설정 */
+  overflow-x: hidden; /* 가로 스크롤 방지 */
   
 
   @media (max-width:767px){
