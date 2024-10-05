@@ -17,7 +17,9 @@ export const PaginationContainer = styled.div`
   }
 `;
 
-export const PageButton = styled.button`
+export const PageButton = styled.button.withConfig({
+  shouldForwardProp: (prop) => prop !== 'active', // active 속성 필터링
+})`
   background: none; 
   border: none;
   padding: 0 13px; 
