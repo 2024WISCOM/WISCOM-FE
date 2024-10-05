@@ -180,10 +180,10 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100%; /* 버튼을 가로로 정렬 */
   position: absolute;
-  bottom: 0px;
+  top: 110%;
   left: 0;
   right: 0;
-  margin-top: 0;
+ 
 
   @media (max-width:767px){
       width:100%;
