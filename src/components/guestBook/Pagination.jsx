@@ -1,5 +1,8 @@
 import React from 'react';
 import { PaginationContainer, PageButton } from './Pagination.style.js'; // Styled components 가져오기
+import Previous from './img/vector.png';
+import Next from './img/vector2.png';
+
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
@@ -29,7 +32,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
-        &lt; 
+        <img src ={Previous} alt="Previous" /> 
       </PageButton>
 
       {/* 페이지 번호들 */}
@@ -40,7 +43,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
-        &gt; 
+         <img src={Next} alt="Next" />
       </PageButton>
     </PaginationContainer>
   );
