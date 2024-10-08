@@ -124,12 +124,13 @@ export const TeamTitle = styled.div`
 export const LinkTo = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   margin: 0px;
+
   img {
     width: auto;
-    height: 30px;
+    height: 25px;
     cursor: pointer;
   }
 
