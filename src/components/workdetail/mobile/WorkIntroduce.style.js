@@ -85,15 +85,15 @@ export const LinkTo = styled.div`
 
   img {
     width: auto;
-    height: 30px;
+    height: 25px;
     cursor: pointer;
   }
 
   @media (max-width: 768px) {
     /* Mobile */
-    gap: 10px;
+    gap: 13px;
     img {
-      height: 22px;
+      height: 18px;
     }
   
 `;
