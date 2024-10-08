@@ -11,8 +11,8 @@ export default function Nav({ onChangeType }) {
       case 'WEB & APP':
         apiType = 'WEB_APP';
         break;
-      case 'BIG DATA':
-        apiType = 'BIG_DATA';
+      case 'IoT':
+        apiType = 'IOT';
         break;
       default:
         apiType = type;
@@ -25,7 +25,7 @@ export default function Nav({ onChangeType }) {
   return (
     <>
       <N.ButtonList>
-        {['ALL', 'WEB & APP', 'GAME', 'AI', 'BIG DATA'].map((text) => (
+        {['ALL', 'WEB & APP', 'GAME', 'AI', 'IoT'].map((text) => (
           <NavButton
             key={text}
             text={text}
