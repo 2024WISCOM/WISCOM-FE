@@ -76,6 +76,7 @@ export default function WorkDetail() {
   const handlePrevClick = () => {
     if (data && data.prev) {
       navigate(`/work-detail`, { state: { category, id: data.prev } });
+      window.scrollTo(0, 0);
     } else {
       console.error('이전 항목을 찾을 수 없습니다.');
     }
@@ -84,6 +85,7 @@ export default function WorkDetail() {
   // 다음 버튼 클릭 핸들러
   const handleNextClick = () => {
     if (data && data.next) {
+      window.scrollTo(0, 0);
       navigate(`/work-detail`, { state: { category, id: data.next } });
     }
   };
