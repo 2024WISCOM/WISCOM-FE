@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     font-size: 0.8em;
   }
 `;
@@ -23,7 +23,7 @@ export const FooterTop = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -40,7 +40,7 @@ export const FooterLeft = styled.div`
   width: 100%;
   max-width: 600px;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
     font-size: 0.8em;
@@ -67,7 +67,7 @@ export const FooterInfo = styled.div`
 
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     align-items: flex-start;
     margin-left : 0;
 
@@ -87,7 +87,7 @@ export const FooterRight = styled.div`
   margin-left :0;
   width:100%;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     align-items: center;
     text-align: center;
   }
@@ -99,7 +99,7 @@ export const FooterLogo = styled.img`
   align-self: flex-end;
 
 
-  @media (max-width : 767px){
+  @media (max-width : 768px){
     display : none;
   
   }
@@ -111,7 +111,7 @@ export const FooterLogo = styled.img`
 export const FooterLogoMobile = styled.img `
   display: none;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     height: 35px;
     width: 150px;
     margin: 10px 0;
@@ -143,7 +143,7 @@ export const FooterBottom = styled.div`
     display: none;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -205,7 +205,7 @@ export const UrlContainer = styled.div`
     margin: 0;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     display: flex;
     justify-content: flex-start;
     margin-top: 5px;

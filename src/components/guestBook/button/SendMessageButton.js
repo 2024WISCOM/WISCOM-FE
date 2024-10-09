@@ -14,11 +14,11 @@ export const SendButton = styled.button`
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out; /* 부드러운 효과 */
-  margin-right:10vw;
+  margin-right:12vw;
 
 
   &:hover {
-    font-size: 28px; /* 마우스 오버 시 글씨 크기 증가 */
+    font-size: 1.6em; /* 마우스 오버 시 글씨 크기 증가 */
   }
 
   &:active {
@@ -32,16 +32,27 @@ export const SendButton = styled.button`
     outline: none; /* 포커스 시 아웃라인 제거 */
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 100%;
-    font-size: 17px;
-    height:40px;
-    margin:20px; 
+    font-size: 1.0em;
+    height:7vh;
+    margin:0 4%; 
 
-    
-  &:hover {
-    font-size: 19px; /* 마우스 오버 시 글씨 크기 증가 */
-  }
+    &:hover {
+      font-size: 1.1em /* 마우스 오버 시 글씨 크기 증가 */
+    }
    
   }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 45vw;  
+    font-size: 1.2em; 
+    height: 7.5vh;
+    margin-right: 10vw;
+
+    &:hover {
+      font-size: 1.4em; /* 아이패드에서 마우스 오버 시 글씨 크기 증가 */
+    }
+  }
+
 `;
