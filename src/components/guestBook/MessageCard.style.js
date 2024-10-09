@@ -5,93 +5,106 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
 
 
-  @media (max-width:767px){
+  @media (max-width:768px){
     width:100%;
     height:auto;
     padding:0;
-    }
+  }
+
+
 `;
 
 //cd 이미지 및 관련 내용 
 export const CDContainer = styled.div`
-  width: 360px;
-  height: 320px;
+  width: 24vw;
+  height: 50vh;
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:10px 30px ;
+  margin:2% 5%;
 
-  @media (max-width:767px) {
-    width:159px;
-    height:147px;
-    gap:10px;
-    padding:0;
-    margin:0;
-    }
+  @media (max-width:768px) {
+    width:159px; //40vw
+    height:147px; //40vw
+    margin:2%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 30vw; /* 아이패드에서 이미지 크기 조정 */
+    height: 40vh;
+    margin:0 auto ;
+  }
 `;
 
 export const ToText = styled.p`
-  color: black; /* 검정색 글자 */
-  font-size: 25px;
-  text-align: left; /* 가운데 정렬 */
+  color: black;
+  font-size: 1.5em;
+  text-align: left;
   position: absolute;
-  top: 10px; /* 위쪽에 배치 */
-  left: 60px;
-  right: 0;
+  top: 5%;
+  left: 15%;
   white-space: pre-wrap; /* 공백 및 줄바꿈을 유지한 채로 텍스트 줄바꿈 */
   word-break: break-word;
 
-  @media (max-width: 767px) {
-    font-size: 10px; 
+  @media (max-width: 768px) {
+    font-size: 0.7em; 
     left:25px;
   }
 
-  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 1.2em; 
+    left: 15%;
+  }
 
 `;
 
 export const FromText = styled.p`
-  color: black; /* 검정색 글자 */
-  font-size: 25px;
-  text-align: right; /* 가운데 정렬 */
-  position: absolute; /* 절대 위치 */
-  bottom:10px; /* 아래쪽에서 여유 공간 */
-  right:0;
-  margin-right:20px;
+  color: black;
+  font-size: 1.5em;
+  text-align: right; 
+  position: absolute; 
+  bottom: 5%;
+  right:5%;
   white-space: pre-wrap; /* 공백 및 줄바꿈을 유지한 채로 텍스트 줄바꿈 */
   word-break: break-word;
 
-  @media (max-width: 767px) {
-    font-size: 10px; 
-    margin-right: 20px; 
-    bottom: 10px;
-  
+  @media (max-width: 768px) {
+    font-size: 0.7em; 
+    margin-right: 2%; 
+    bottom: 10%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 1.2em;
+    right: 8%;
+    bottom:15%;
+  }
+
 `;
 
 export const MessageText = styled.p`
-  color: black; /* 검정색 글자 */
-  font-size: 18px;
+  color: black; 
+  font-size: 1.1em;
   text-align: left;
   position: absolute;
-  top: 18%; /* CD 이미지 안에서 더 위로 올려 배치 */
-  left:60px;
-  max-height:200px;
-  width:230px;
+  top: 18%; 
+  left:15%;
+  max-height:33vh;
+  width:16vw;
   overflow:auto; // 스크롤 
   z-index: 10; // 이미지 위에 텍스트 배치
 
   /* 스크롤바 스타일링 (Webkit 기반 브라우저용) */
     &::-webkit-scrollbar {
-      width: 8px; /* 스크롤바 너비 */
+      width: 0.7vw; /* 스크롤바 너비 */
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 색상 */
@@ -101,21 +114,28 @@ export const MessageText = styled.p`
       background-color: rgba(255, 255, 255, 0.1); /* 스크롤 트랙(배경) 색상 */
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       font-size: 9px; /* 모바일에서 텍스트 크기 조정 */
       width: 109px; 
       height: 82px;
       top: 35px;
       left: 25px; /* 모바일에서 왼쪽 간격 조정 */
       z-index: 10; // 이미지 위에 텍스트 배치
+
+      &::-webkit-scrollbar {
+        width: 1.5vw; /* 스크롤바 너비 */
+      }
+    }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 1em;
+    width: 20vw;
+    height:23vh;
+    top: 18%;
   }
   
   
 `;
-
-
-
-
 
 export const CDImage = styled.img`
   position: absolute;
@@ -124,39 +144,52 @@ export const CDImage = styled.img`
   width: 100%;
   height: 100%;
 
-  @media (max-width: 767px) {
-    width: 100%; /* 모바일에서도 100% 유지 */
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 100%;
     height: auto;
   }
 `;
 
 export const SignText = styled.img`
   position: absolute;
-  top: 50%;
-  left: 55%;
+  top: 55%;
+  left: 52%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  width: 21vw;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 130px;
     bottom:30%;
-    left:50%;
-    
+    left:50%;  
   }
-  
-  
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 27vw;
+    top: 52%;
+    left:55%;
+  }
 `;
 
 export const BarcodeImage = styled.img`
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
+  top: 5%;
+  right: 5%;
+  width: 2vw;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 13px; /* 모바일에서 크기 조정 */
     top:10px;
     right:10px;
+  }
 
+   @media (min-width: 769px) and (max-width: 1024px) {
+    width: 2.5vw;
+    top: 4%;
+    right: 4%;
   }
 `;

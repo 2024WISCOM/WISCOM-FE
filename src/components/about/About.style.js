@@ -234,7 +234,7 @@ export const Inter3 = styled(Inter)`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
 
@@ -325,6 +325,26 @@ export const UnderProfWrap = styled.div`
   }
 `;
 
+export const MainChoiWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5vw;
+  margin-bottom: 5vw;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
+export const ProfChoiWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2vw;
+  cursor: pointer;
+`;
+
 export const ProfWrap = styled.div`
   width: 100%;
   display: flex;
@@ -368,7 +388,7 @@ export const ProfMsg = styled.div`
   color: #fff;
   text-align: justify;
   font-family: Pretendard;
-  font-size: 25px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
@@ -384,8 +404,8 @@ export const ProfMsg = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 9px;
-    line-height: 15px;
+    font-size: 10px;
+    line-height: 18px;
   }
 `;
 
@@ -451,7 +471,7 @@ export const Student = styled.div`
 
 export const MapContainer = styled.div`
   width: 100%;
-  padding: 0 5vw;
+  padding: 0 6vw;
   margin-bottom: 10vh;
 `;
 
@@ -461,9 +481,8 @@ export const MapWrap = styled.div`
   flex-direction: row;
   gap: 30px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-    gap: 20px;
   }
 `;
 
@@ -472,7 +491,7 @@ export const Kakaomap = styled.div`
   height: 40vw;
   margin: 0;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 100%;
     height: 50vw;
   }
@@ -576,6 +595,9 @@ export const MapText = styled.div`
   font-weight: 400;
   line-height: normal;
   margin-left: 0;
+  letter-spacing: 0.57px;
+  margin: 0;
+  padding-bottom: 8px;
 
   @media (max-width: 1024px) {
     font-size: 18px;
@@ -590,9 +612,23 @@ export const MapText = styled.div`
   }
 `;
 
+export const MapTextWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  flex-wrap: nowrap;
+`;
+
 export const TextWrap = styled.div`
   width: 100%;
-  margin: 0 0 4vw 0;
+  margin: 0 0 4vw 7px;
+`;
+
+export const Bar = styled(MapText)`
+  padding: 0 2px;
+  margin: 0;
+  color: #fff;
 `;
 
 export const ModalContainer = styled.div`
