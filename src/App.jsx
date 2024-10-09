@@ -7,6 +7,7 @@ import About from './pages/About';
 import WorkList from './pages/WorkList';
 import WorkDetail from './pages/WorkDetail';
 import GuestBook from './pages/GuestBook';
+import HiddenAbout from './pages/HiddenAbout';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,6 +45,7 @@ function App() {
             <Route path="/work-list" element={<WorkList />} />
             <Route path="/work-detail" element={<WorkDetail />} />
             <Route path="/guestbook" element={<GuestBook />} />
+            <Route path="/about-hidden" element={<HiddenAbout />} />
           </Routes>
           <Footer />
         </>

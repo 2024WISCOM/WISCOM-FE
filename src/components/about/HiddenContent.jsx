@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as A from './About.style';
 import Introduction from './Introduction';
-import NewCongratulation from './NewCongratulation';
+import Congratulation from './Congratulation';
 import Developer from './Developer';
 import Map from './Map';
 
@@ -40,7 +40,7 @@ export default function Content() {
         <A.MenuLine />
       </A.MenuWrapper>
       {activeComponent === 'Introduction' && <Introduction />}
-      {activeComponent === 'Congratulation' && <NewCongratulation />}
+      {activeComponent === 'Congratulation' && <Congratulation />}
       {activeComponent === 'Developer' && <Developer />}
       {activeComponent === 'Map' && <Map />}
     </>
