@@ -78,7 +78,8 @@ export const HamburgerIcon = styled.div`
   background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
-
+  margin-top: 1px;
+  
   &::before,
   &::after {
     content: '';
@@ -102,6 +103,7 @@ export const HamburgerIcon = styled.div`
     isVisible &&
     `
     transform: rotate(45deg);
+    width: 36px;
 
     &::before, &::after {
       top: 0;
@@ -118,11 +120,13 @@ export const HamburgerIcon = styled.div`
 
   @media (max-width: 1024px) {
     /* Tablet */
+    margin-top: 1px;
     width: 20px;
     height: 2.3px;
     background-color: #ffffff;
     position: relative;
     transition: transform 0.3s ease;
+    top: 0.3px;
 
     &::before,
     &::after {
@@ -136,17 +140,18 @@ export const HamburgerIcon = styled.div`
     }
 
     &::before {
-      top: -7.7px;
+      top: -8px;
     }
 
     &::after {
-      top: 7.7px;
+      top: 8px;
     }
 
     ${({ isVisible }) =>
       isVisible &&
       `
     transform: rotate(45deg);
+    width: 23px;
 
     &::before, &::after {
       top: 0;
@@ -163,6 +168,8 @@ export const HamburgerIcon = styled.div`
   }
 
   @media (max-width: 768px) {
+  top: 0.8px;
+  margin-top: 1px;
     /* Mobile */
     width: 16px;
     height: 2px;
@@ -182,17 +189,18 @@ export const HamburgerIcon = styled.div`
     }
 
     &::before {
-      top: -6.1px;
+      top: -6.4px;
     }
 
     &::after {
-      top: 6.1px;
+      top: 6.4px;
     }
 
     ${({ isVisible }) =>
       isVisible &&
       `
     transform: rotate(45deg);
+    width: 20px;
 
     &::before, &::after {
       top: 0;
