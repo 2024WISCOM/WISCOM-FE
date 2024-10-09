@@ -148,7 +148,8 @@ const GuestBook = () => {
   return (
     <GuestBookContainer>
       {/* 상단 메시지 입력 섹션 */}
-      <MessageInputSection onSendMessage={addMessage} onViewGuestBook={handleViewGuestBook} /> {/* 스크롤 핸들러 추가 */}
+      <MessageInputSection onSendMessage={addMessage} onViewGuestBook={handleViewGuestBook} /> 스크롤 핸들러 추가
+      
 
       {loading ? (
         <p>로딩 중...</p>
@@ -164,7 +165,7 @@ const GuestBook = () => {
 
           {/* 메시지 목록 섹션 */}
           <div id="messageGrid" ref={messageGridRef} >
-            <MessageGrid messages={currentMessages} /> {/* 1페이지에 9개의 메시지 표시 */}
+            <MessageGrid messages={currentMessages} /> 1페이지에 9개의 메시지 표시
           </div>
            
            {/* 페이지네이션 표시 */}
