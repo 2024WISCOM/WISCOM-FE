@@ -114,9 +114,9 @@ export const FooterLogoMobile = styled.img `
   display: none;
 
   @media(max-width: 768px) {
-    height: 6vh;
-    width: 40vw;
-    margin: 3% 0;
+    height: 35px;
+    width: 150px;
+    margin: 10px 0;
     text-align: center;
     display:block;
     align-self: center;

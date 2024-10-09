@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SendMessageButton from './button/SendMessageButton.jsx'; 
 import ViewGuestBookButton from './button/ViewGuestBookButton.jsx';
-import { Container, TextSection, InputSection, Input, TextArea, ButtonContainer, Label, HighlightedText } from './MessageInputSection.style.js';
+import { Container, TextSection, Input, TextArea, ButtonContainer, Label,CDContainer2,CDImage2,SignText2,BarcodeImage2 ,HighlightedText } from './MessageInputSection.style.js';
 import SearchBar from './SearchBar.jsx';
+import cdImage2 from './img/CD1.png';
+import signText2 from './img/sign text.png'; 
+import barcodeImage2 from './img/barcode.png'; 
 
 const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
   const [newMessage, setNewMessage] = useState({ to: '', from: '', message: '' });
@@ -52,16 +55,17 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
       )}
     </TextSection>
    
+    <CDContainer2>
+      <CDImage2 src={cdImage2} alt="CD" />
 
-      <InputSection>
         <Label className='to-label'>
-          <HighlightedText>To.</HighlightedText> 
+          <HighlightedText>To.</HighlightedText>
           <Input 
           type="text" 
           placeholder="받는 사람" 
           value={newMessage.to}
           onChange={(e) => setNewMessage({ ...newMessage, to: e.target.value })}
-          maxLength={10}
+          maxLength={8}
         />
         </Label>
         
@@ -72,7 +76,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
          
         />
         <Label className='from-label'>
-          <HighlightedText>From.</HighlightedText> 
+          <HighlightedText>From.</HighlightedText>
           <Input className='from'
           type="text" 
           placeholder="보내는 사람" 
@@ -81,11 +85,17 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           maxLength={8}
         />
         </Label>
-      </InputSection>
+
+        <BarcodeImage2 src={barcodeImage2} alt="Barcode" />
+        <SignText2 src={signText2} alt="Sign" />
+
+      </CDContainer2>
+
       <ButtonContainer>
           <ViewGuestBookButton onClick={onViewGuestBook} />
           <SendMessageButton onClick={handleSendClick} />
       </ButtonContainer>
+
       {isMobile && <SearchBar />}
     </Container>
   );

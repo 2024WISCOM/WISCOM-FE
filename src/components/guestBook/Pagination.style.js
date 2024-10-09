@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const PaginationContainer = styled.div`
+  width:100%
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,12 +10,20 @@ export const PaginationContainer = styled.div`
   margin-bottom:4%;
 
 
-    @media (max-width: 767px) {
-      width :80vw;
-      margin-top:6%;
-  
-
+  @media (max-width: 768px) {
+    width :80vw;
+    margin-top:6%;
+    text-align:center;
   }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 90%;
+    margin:0 auto;
+    text-align:center;
+    justify-content:center;
+  }
+
+
 `;
 
 export const PageButton = styled.button.withConfig({
@@ -37,27 +46,13 @@ export const PageButton = styled.button.withConfig({
     cursor: not-allowed;
   }
 
-  img {
-
-    width: 10px; /* 이미지 크기 */
-    position:relative;
-    top:4px;
-    heigth: 30px; 
-    margin: 0 25px; /* 이미지와 페이지 숫자 사이 간격 */
-    
-  }
-
-   @media (max-width:767px){
+   @media (max-width:768px){
       padding:3%;
       font-size:0.7em;
-      
-
-      img {
-        bottom :10%;
-        width :2vw;
-        padding :0;
-        margin :0% 20px;
-    
-      }
    }
+
+   @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
 `;
