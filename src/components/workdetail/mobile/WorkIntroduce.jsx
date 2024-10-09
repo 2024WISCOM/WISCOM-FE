@@ -10,6 +10,8 @@ import RightButton from '../button/RightButton';
 import LeftButton from '../button/LeftButton';
 import ImageLeftButton from '../button/ImageLeftButton';
 import ImageRightButton from '../button/ImageRightButton';
+import ViewSite from '../button/ViewSite';
+
 
 export default function WorkIntroduce({ data }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,8 +38,6 @@ export default function WorkIntroduce({ data }) {
         <WorkTitle
           title={data.title}
           shortDescription={data.shortDescription}
-          deployUrl={data.deployUrl}
-          src={viewSiteImage}
         />
       </W.WorkTitleWrapper>
       <W.ImageWrapper>
@@ -55,6 +55,8 @@ export default function WorkIntroduce({ data }) {
             <a href={data.githubUrl}>
               <img src={Github} alt="github" />
             </a>
+
+            <ViewSite deployUrl={data.deployUrl} src={viewSiteImage}/>
           </W.LinkTo>
         </W.TeamItem>
         {data.developers.map((d) => (

@@ -66,8 +66,8 @@ export const VisitSite = styled.div`
 `;
 
 export const ViewSiteImage = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   position: relative;
   font-family: 'Pretendard-Medium';
@@ -114,9 +114,14 @@ export const TeamTitle = styled.div`
   font-size: 28px;
   margin: 0px;
   font-family: 'Pretendard-Bold';
+    text-align: left;
+
 
   @media (max-width: 1500px) {
-    font-size: 24px;
+    font-size: 20px;
+      line-height: 1.3;
+      word-wrap: break-word;
+      white-space: pre-line;
   }
 
 `;
