@@ -24,10 +24,39 @@ export const Container = styled.div`
   
 `;
 
+export const TextSection = styled.div`
+  
+  font-family: 'Pretendard', sans-serif;
+  font-size: ${(props) => (props.isMobile ? '3vw' : '3vw')}; 
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
+  width: ${(props) => (props.isMobile ? '100%' : '50%')}; /* 모바일에서는 전체 너비, 웹에서는 50% */
+  margin-top: ${(props) => (props.isMobile ? '-10px' : '15vh')}; /* 모바일에서는 20px, 웹에서는 90px */
+  position:relative;
+
+  @media (max-width: 768px) {
+    font-size: 4.5vw;
+    width: 100%;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom:10%;
+
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 2.0em; 
+    width: 50%;
+    text-align: left;
+    margin-top: 10vh;
+  }
+
+`;
+
 export const CDContainer2 = styled.div`
   display:flex;
   width:35vw;
-  height:70vh;
+  height:70%;
   position:relative;
   flex-direction: column;
 
@@ -71,13 +100,13 @@ export const SignText2 = styled.img`
 
   @media (max-width: 768px) {
     width:60vw;
-    top:30%;
+    top:50%;
     
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 35vw; 
-    top: 40%;
+    top: 42%;
 0
   }
   
@@ -86,56 +115,31 @@ export const SignText2 = styled.img`
 
 export const BarcodeImage2 = styled.img`
   position: absolute;
-  top: 6%;
-  right: 6%;
+  top: 5%;
+  right: 5%;
   width: 7%;
 
   @media (max-width: 768px) {
     width: 5vw; 
     top:3%;
-    right:-30%;
+    right:-40%;
 
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 6%; 
-    top: 4%;
-    right: 6%;
+    top:5%;
+    right:5%;
   }
 `;
 
-export const TextSection = styled.div`
-  
-  font-family: 'Pretendard', sans-serif;
-  font-size: ${(props) => (props.isMobile ? '3vw' : '3vw')}; 
-  line-height: 1.5;
-  color: #FFFFFF;
-  text-align: ${(props) => (props.isMobile ? 'center' : 'left')}; /* 모바일에서는 가운데 정렬, 웹에서는 왼쪽 정렬 */
-  width: ${(props) => (props.isMobile ? '100%' : '50%')}; /* 모바일에서는 전체 너비, 웹에서는 50% */
-  margin-top: ${(props) => (props.isMobile ? '-10px' : '15vh')}; /* 모바일에서는 20px, 웹에서는 90px */
 
-  @media (max-width: 768px) {
-    font-size: 4.5vw;
-    width: 100%;
-    text-align: center;
-    margin-top: 0%;
-    margin-bottom:10%;
-
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    font-size: 2.0em; 
-    width: 50%;
-    text-align: left;
-    margin-top: 10vh;
-  }
-
-`;
 
 
 export const Label = styled.label`
   display:flex;
   flex-direction:row;
+  height:1vh;
   align-items:center;
   position:absolute;
   font-weight: bold;
@@ -145,31 +149,32 @@ export const Label = styled.label`
  
   &.to-label {
     text-align: left;
-    top:5%;
-    left:15%;    
+    top:7%;
+    left:15%;   
+   
 
   }
 
   &.from-label {
-    width:18vw;
-    text-align:right;
-    bottom:5%;
-    left:48%;
+    width:60%;
+    bottom:7%;
+    right:0%;
   
 }
 
    @media (max-width: 768px) {
       width:35vw;
-      font-size:0.8em;
+      font-size:1.3em;
 
       &.to-label {
-        top:2%;
-        left:-20%;     
+        top:10%;
+        left:-20%;
+             
       } 
 
       &.from-label {
-        bottom:45%;
-        left:10%;
+        bottom:20%;
+        right:-20%;
       }
     }
 
@@ -179,12 +184,12 @@ export const Label = styled.label`
 
     &.to-label {
       top: 3%;
-      left: 15%;
+      auto:5%;
     }
 
     &.from-label {
-      bottom: 30%;
-      left:47%;
+      bottom: 50%;
+      left:50%;
     }
   }
 `;
@@ -216,12 +221,12 @@ export const Input = styled.input`
 
   @media (max-width: 768px) {
     font-size: 1em;
-    width: 90%;
-    
+    width: auto;    
   }
   
  @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 1.1em; 
+  
   }
 
 `;
@@ -258,13 +263,13 @@ export const TextArea = styled.textarea`
   }
 
   @media (max-width: 768px) {
-    width: 48vw;
-    height:22vh;
-    top: 10%;
-    left:-10%;
+    width: 122%;
+    height:40%;
+    top: 20%;
+    left:-20%;
     margin-top:0;
     align-items:center;
-    font-size:0.9em;
+    font-size:1.1em;
 
     &::placeholder {
       font-size:0.9em;
@@ -284,7 +289,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%; 
-  top:90%;
+  top:calc(100% - 100px); /* CD 케이스 아래 위치에 맞춰서 */
   left: 0;
   right: 0;
   margin : -3% 1%;
@@ -292,11 +297,11 @@ export const ButtonContainer = styled.div`
   
   @media (max-width:768px){
     width:100%;
-    top: 82%;
+    top: calc(100% - 0px); /* 모바일 화면에서 더 아래로 배치 */
   }
   
   @media (min-width: 769px) and (max-width: 1024px){
-    top: 60vh;
+    top:  calc(100% - 250px); /* 타블렛 크기에서 간격 더 확보 */
     gap:5%; 
   }
 `;
