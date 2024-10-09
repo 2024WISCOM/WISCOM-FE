@@ -6,7 +6,7 @@ export const VisitSite = styled.div`
   gap: 20px;
   margin: 0px;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1;
   word-wrap: break-word;
   text-align: left;

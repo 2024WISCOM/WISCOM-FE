@@ -7,7 +7,7 @@ export const WorkDetailContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 100px;
   overflow: hidden;
 `;
 
@@ -18,7 +18,7 @@ export const WorkDetaileRowContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
-  padding: 0 20px 30px;
+  padding: 0 20px 70px;
   overflow: hidden;
 `;
 

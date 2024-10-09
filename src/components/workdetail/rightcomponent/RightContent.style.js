@@ -102,15 +102,11 @@ export const TeamWrapper = styled.div`
 export const TeamItem = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 30px;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
   width: 100%;
-
-  @media (max-width: 1200px) {
-    gap: 30px;
-  }
 `;
 
 export const TeamTitle = styled.div`
@@ -119,30 +115,33 @@ export const TeamTitle = styled.div`
   margin: 0px;
   font-family: 'Pretendard-Bold';
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1500px) {
     font-size: 24px;
   }
+
 `;
 
 export const LinkTo = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   margin: 0px;
+
   img {
     width: auto;
-    height: 30px;
+    height: 25px;
     cursor: pointer;
   }
 
-  @media (max-width: 1200px) {
-    gap: 13px;
-
-    img {
+  @media (max-width: 1500px) {
+      img {
+      width: auto;
       height: 25px;
+      cursor: pointer;
     }
   }
+
 `;
 
 export const DeveloperWrapper = styled.div`
@@ -167,7 +166,7 @@ export const DetailDescription = styled.div`
   font-family: 'Pretendard-Regular';
   padding-top: 25px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1500px) {
     font-size: 20px;
   }
 `;
