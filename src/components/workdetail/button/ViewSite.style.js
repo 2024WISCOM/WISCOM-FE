@@ -4,17 +4,25 @@ export const VisitSite = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin: 0px;
+  margin: 0 auto;
   align-items: center;
   font-size: 20px;
   line-height: 1;
   word-wrap: break-word;
   text-align: left;
+  justify-content: center; 
+  align-items: center;  
+  
+  @media (max-width: 1500px) {
+    width: 95px;
+  }
+
 
   @media (max-width: 1024px) {
     /* Tablet */
     font-size: 20px;
     gap: 12px;
+      width: 110px;
   }
 
   @media (max-width: 768px) {
@@ -22,27 +30,58 @@ export const VisitSite = styled.div`
     font-size: 13px;
     gap: 3px;
     font-family: 'Pretendard-Regular';
+    width: 80px;
   }
 `;
 
+export const Text = styled.div`
+  margin-top: 4px;
+
+  @media (max-width: 1500px) {
+    font-size: 15px;
+    margin-top: 3.5px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    margin-top: 4.7px;
+
+  }
+
+  @media (max-width: 768px) {
+    /* Mobile */
+    margin-top: 4.7px;
+    font-size: 13px;
+
+  }
+`
 export const ViewSiteImage = styled.div`
-  width: 35px;
-  height: 35px;
+   width: 24px;
+  height: 24px;
   border-radius: 100%;
   position: relative;
   font-family: 'Pretendard-Medium';
   cursor: pointer;
 
+  @media (max-width: 1500px) {
+    width: 24px;
+    height: 24px;
+  }
+
+
   @media (max-width: 1024px) {
     /* Tablet */
-    width: 30px;
-    height: 30px;
+    margin-top: 2px;
+    width: 24px;
+    height: 24px;
   }
 
   @media (max-width: 768px) {
     /* Mobile */
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    margin-buttom: 3px;
   }
 
   img {

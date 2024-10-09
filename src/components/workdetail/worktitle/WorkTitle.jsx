@@ -6,7 +6,6 @@ export default function WorkTitle({ src, title, shortDescription, deployUrl }) {
     <W.WorkTitleContainer>
       <W.TitleWrapper>
         <W.WorkTitle>{title}</W.WorkTitle>
-        <ViewSite deployUrl={deployUrl} src={src} />
       </W.TitleWrapper>
       <W.Discription>{shortDescription}</W.Discription>
     </W.WorkTitleContainer>

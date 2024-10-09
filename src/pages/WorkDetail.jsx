@@ -11,9 +11,9 @@ import * as W from '../components/workdetail/WorkDetail.style';
 
 export default function WorkDetail() {
   const [data, setData] = useState(null);
-  const [isEnoughSpace, setIsEnoughSpace] = useState(false); // 초기값 false
-  const [isMobile, setIsMobile] = useState(false); // 초기값 false
-  const [imageLoaded, setImageLoaded] = useState(false); // 이미지 로드 상태
+  const [isEnoughSpace, setIsEnoughSpace] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); 
+  const [imageLoaded, setImageLoaded] = useState(false); 
   const imageContainerRef = useRef(null);
   const navigate = useNavigate();
 
@@ -42,26 +42,33 @@ export default function WorkDetail() {
       if (imageContainerRef.current) {
         const spaceBelow =
           window.innerHeight - imageContainerRef.current.getBoundingClientRect().bottom;
-        setIsEnoughSpace(spaceBelow > 120); // 공간 여부 설정
+  
+        if (window.innerWidth > 1024) {
+          // 데스크탑 모드에서는 충분한 공간 여부가 있는지 호가인 
+          setIsEnoughSpace(spaceBelow > 120); 
+        } else {
+          // 모바일 모드에서는 false로 기본 설정 
+          setIsEnoughSpace(false);
+        }
       }
+  
       setIsMobile(window.innerWidth <= 1024); // 모바일 여부 설정
     };
-
+  
     const image = new Image();
     image.src = cdCaseImage;
-
+  
     image.onload = () => {
-      setImageLoaded(true); // 이미지 로드 완료 상태 설정
-      
-      // 100ms 딜레이 후 handleResize 호출
+      setImageLoaded(true); 
+  
+      // 이미지 렌더링을 위하여 100ms 지연 
       setTimeout(() => {
         handleResize(); // 이미지 로드 후 handleResize 호출
-      }, 100); 
+      }, 100);
     };
-
+  
     window.addEventListener('resize', handleResize);
-
-    // cleanup 함수로 이벤트 리스너 제거
+  
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -73,20 +80,24 @@ export default function WorkDetail() {
   }
 
   // 이전 버튼 클릭 핸들러
-  const handlePrevClick = () => {
+  const handlePrevClick = (shouldScroll = true) => {
     if (data && data.prev) {
-      navigate(`/work-detail`, { state: { category, id: data.prev } });
-      window.scrollTo(0, 0);
+      if (shouldScroll) {
+        window.scrollTo(0, 0); // 스크롤 동작
+      }
+      navigate(`/work-detail`, { state: { category, id: data.prev } }); // 페이지 이동
     } else {
       console.error('이전 항목을 찾을 수 없습니다.');
     }
   };
 
   // 다음 버튼 클릭 핸들러
-  const handleNextClick = () => {
+  const handleNextClick = (shouldScroll = true) => {
     if (data && data.next) {
-      window.scrollTo(0, 0);
-      navigate(`/work-detail`, { state: { category, id: data.next } });
+      if (shouldScroll) {
+        window.scrollTo(0, 0); // 스크롤 동작
+      }
+      navigate(`/work-detail`, { state: { category, id: data.next } }); // 페이지 이동
     }
   };
 
@@ -119,11 +130,11 @@ export default function WorkDetail() {
           ) : ( // 충분한 공간이 없을 때
             <W.WorkDetaileRowContainer>
               <W.ButtonRowContainer>
-                <LeftButton onClick={handlePrevClick} />
+                <LeftButton onClick={() => handlePrevClick(false)} />
                 <W.CdCase ref={imageContainerRef}>
                   <CdCase cdCaseImage={cdCaseImage} data={data} />
                 </W.CdCase>
-                <RightButton onClick={handleNextClick} />
+                <RightButton onClick={() => handleNextClick(false)} />
               </W.ButtonRowContainer>
             </W.WorkDetaileRowContainer>
           )}

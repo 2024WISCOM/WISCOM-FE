@@ -202,7 +202,6 @@ export const HamburgerIcon = styled.div`
     transform: rotate(45deg);
     width: 20px;
 
-
     &::before, &::after {
       top: 0;
     }
