@@ -78,7 +78,8 @@ export const HamburgerIcon = styled.div`
   background-color: #ffffff;
   position: relative;
   transition: transform 0.3s ease;
-
+  margin-top: 1px;
+  
   &::before,
   &::after {
     content: '';
@@ -163,6 +164,7 @@ export const HamburgerIcon = styled.div`
   }
 
   @media (max-width: 768px) {
+  margin-top: 1px;
     /* Mobile */
     width: 16px;
     height: 2px;
@@ -182,7 +184,7 @@ export const HamburgerIcon = styled.div`
     }
 
     &::before {
-      top: -6.1px;
+      top: -6.4px;
     }
 
     &::after {
