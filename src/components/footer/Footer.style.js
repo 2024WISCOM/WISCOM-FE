@@ -3,16 +3,18 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   background-color: #2C2C2C;
   color: #fff;
-  padding: 20px;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     font-size: 0.8em;
+
   }
+
 `;
 
 export const FooterTop = styled.div`
@@ -20,12 +22,15 @@ export const FooterTop = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
+  max-width: 85vw;
   margin: 0 auto;
+  padding: 1% 5%;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     flex-direction: column;
+    margin-top:5%;
   }
+
 `;
 
 export const FooterLeft = styled.div`
@@ -35,28 +40,28 @@ export const FooterLeft = styled.div`
   align-items: flex-start;
   text-align: left;
   justify-content: flex-start;
-  font-size: 0.7em;
+  font-size: 0.9em;
   margin: 0;
   width: 100%;
-  max-width: 600px;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
     font-size: 0.8em;
     justify-content: space-between;
   }
+
 `;
 
 export const FooterInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  margin-left : 48px;
+  margin-bottom: 1%;
+  margin-left : 9%;
 
 
   div {
-    margin-bottom: 8px;
+    margin-bottom: 1.5%;
     width:100%;
     text-align:left;
   }
@@ -67,13 +72,11 @@ export const FooterInfo = styled.div`
 
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     align-items: flex-start;
     margin-left : 0;
-
- 
-  }
-
+    margin-bottom:5%;
+}
 
 `;
 
@@ -87,23 +90,22 @@ export const FooterRight = styled.div`
   margin-left :0;
   width:100%;
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     align-items: center;
     text-align: center;
   }
 `;
 
 export const FooterLogo = styled.img`
-  height: 50px;
+  height: 8vh;
   margin : 0;
   align-self: flex-end;
 
 
-  @media (max-width : 767px){
+  @media (max-width : 768px){
     display : none;
   
   }
-
 
 
 `;
@@ -111,14 +113,14 @@ export const FooterLogo = styled.img`
 export const FooterLogoMobile = styled.img `
   display: none;
 
-  @media(max-width: 767px) {
-    height: 35px;
-    width: 150px;
-    margin: 10px 0;
+  @media(max-width: 768px) {
+    height: 6vh;
+    width: 40vw;
+    margin: 3% 0;
     text-align: center;
     display:block;
     align-self: center;
-    
+ 
   }
 `;
 
@@ -126,7 +128,7 @@ export const FooterBottom = styled.div`
   font-size: 0.9em;
   color: #ccc;
   line-height: 1.5em;
-  margin-top: 20px;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
@@ -143,13 +145,12 @@ export const FooterBottom = styled.div`
     display: none;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     text-align:left;
-    // margin-left : 0;
 
     .webAddress {
       display: none;
@@ -157,20 +158,19 @@ export const FooterBottom = styled.div`
 
     .phoneAddress1 {
       display: block;
-      margin-bottom: 10px; 
+      margin-bottom: 0%; 
       width : 100%;
     }
 
     .phoneAddress2 {
       display: block;
-      margin-bottom: 20px; 
+      margin-bottom: 5%; 
       width : 100%;
       
     }
 
     .FooterLogoMobile  {
       display: block;
-      margin: 10px 0;
       width:100%;
       text-align:center;
     }
@@ -179,17 +179,19 @@ export const FooterBottom = styled.div`
       display: block;
       width : 100%;
       text-align:center;
+      margin-bottom:5%;
     }
   }
+
 `;
 
 export const UrlContainer = styled.div`
   display : flex;
   flex-direction: row;
   align-items:flex-start;
-  margin-top: 10px;
+  margin-top: 1.5%;
   text-align : left ;
-  margin-left :48px;
+  margin-left :9%;
    display : inline-block;
 
 
@@ -205,15 +207,17 @@ export const UrlContainer = styled.div`
     margin: 0;
   }
 
-  @media(max-width: 767px) {
+  @media(max-width: 768px) {
     display: flex;
     justify-content: flex-start;
-    margin-top: 5px;
-    margin-right: 1px;
+    margin-top: 0%;
 
     img{
-      height : 30px;
-      width: 30px;
+      height : 5vh;
+      width: 8vw;
       }
   }
+
+
+
 `;
