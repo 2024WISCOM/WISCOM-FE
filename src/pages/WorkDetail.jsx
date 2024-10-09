@@ -80,20 +80,24 @@ export default function WorkDetail() {
   }
 
   // 이전 버튼 클릭 핸들러
-  const handlePrevClick = () => {
+  const handlePrevClick = (shouldScroll = true) => {
     if (data && data.prev) {
-      navigate(`/work-detail`, { state: { category, id: data.prev } });
-      window.scrollTo(0, 0);
+      if (shouldScroll) {
+        window.scrollTo(0, 0); // 스크롤 동작
+      }
+      navigate(`/work-detail`, { state: { category, id: data.prev } }); // 페이지 이동
     } else {
       console.error('이전 항목을 찾을 수 없습니다.');
     }
   };
 
   // 다음 버튼 클릭 핸들러
-  const handleNextClick = () => {
+  const handleNextClick = (shouldScroll = true) => {
     if (data && data.next) {
-      window.scrollTo(0, 0);
-      navigate(`/work-detail`, { state: { category, id: data.next } });
+      if (shouldScroll) {
+        window.scrollTo(0, 0); // 스크롤 동작
+      }
+      navigate(`/work-detail`, { state: { category, id: data.next } }); // 페이지 이동
     }
   };
 
@@ -126,11 +130,11 @@ export default function WorkDetail() {
           ) : ( // 충분한 공간이 없을 때
             <W.WorkDetaileRowContainer>
               <W.ButtonRowContainer>
-                <LeftButton onClick={handlePrevClick} />
+                <LeftButton onClick={() => handlePrevClick(false)} />
                 <W.CdCase ref={imageContainerRef}>
                   <CdCase cdCaseImage={cdCaseImage} data={data} />
                 </W.CdCase>
-                <RightButton onClick={handleNextClick} />
+                <RightButton onClick={() => handleNextClick(false)} />
               </W.ButtonRowContainer>
             </W.WorkDetaileRowContainer>
           )}
