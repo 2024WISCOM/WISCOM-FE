@@ -35,10 +35,11 @@ export const VisitSite = styled.div`
 `;
 
 export const Text = styled.div`
+  margin-top: 4px;
 
   @media (max-width: 1500px) {
     font-size: 15px;
-    margin-top: 5px;
+    margin-top: 3.5px;
   }
 
   @media (max-width: 1024px) {
@@ -55,16 +56,16 @@ export const Text = styled.div`
   }
 `
 export const ViewSiteImage = styled.div`
-  width: 26px;
-  height: 26px;
+   width: 24px;
+  height: 24px;
   border-radius: 100%;
   position: relative;
   font-family: 'Pretendard-Medium';
   cursor: pointer;
 
   @media (max-width: 1500px) {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
   }
 
 
