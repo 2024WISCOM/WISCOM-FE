@@ -234,7 +234,7 @@ export const Inter3 = styled(Inter)`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
 
