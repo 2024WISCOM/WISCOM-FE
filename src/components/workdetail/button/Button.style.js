@@ -54,7 +54,9 @@ export const ButtonImage = styled.div`
     width: 23px;
     height: 22px;
     position: relative;
-    top: -2.5px;
+
+    top: ${({ right }) => (right === 'Y' ? '-3.9px' : '-3.4px')};
+    
   }
 
   @media (max-width: 768px) {
@@ -62,7 +64,9 @@ export const ButtonImage = styled.div`
     width: 15px;
     height: 15px;
     position: relative;
-    top: -3.2px;
+
+    top: ${({ right }) => (right === 'Y' ? '-3.5px' : '-3.4px')};
+
 
     padding-right: ${({ right }) => (right === 'Y' ? '2px' : '0px')};
     padding-left: ${({ right }) => (right === 'Y' ? '0px' : '2px')};

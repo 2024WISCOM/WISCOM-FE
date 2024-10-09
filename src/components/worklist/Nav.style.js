@@ -47,13 +47,13 @@ export const Circle = styled.div`
       case 'ALL':
         return '13px';
       case 'WEB & APP':
-        return '250px';
+        return '268px';
       case 'GAME':
-        return '495px';
+        return '527px';
       case 'AI':
-        return '685px';
-      case 'BIG DATA':
-        return '900px';
+        return '736px';
+      case 'IoT':
+        return '930px';
       default:
         return '13px';
     }
@@ -69,13 +69,13 @@ export const Circle = styled.div`
         case 'ALL':
           return '10px';
         case 'WEB & APP':
-          return '145px';
+          return '160px';
         case 'GAME':
-          return '285px';
+          return '313px';
         case 'AI':
-          return '383px';
-        case 'BIG DATA':
-          return '495px';
+          return '422px';
+        case 'IoT':
+          return '523px';
         default:
           return '10px';
       }
@@ -92,13 +92,13 @@ export const Circle = styled.div`
         case 'ALL':
           return '10px';
         case 'WEB & APP':
-          return '93px';
+          return '104px';
         case 'GAME':
-          return '180px';
+          return '201px';
         case 'AI':
-          return '233px';
-        case 'BIG DATA':
-          return '300px';
+          return '266px';
+        case 'IoT':
+          return '322px';
         default:
           return '10px';
       }
