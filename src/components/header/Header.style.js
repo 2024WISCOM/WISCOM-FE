@@ -103,6 +103,7 @@ export const HamburgerIcon = styled.div`
     isVisible &&
     `
     transform: rotate(45deg);
+    width: 36px;
 
     &::before, &::after {
       top: 0;
@@ -150,6 +151,7 @@ export const HamburgerIcon = styled.div`
       isVisible &&
       `
     transform: rotate(45deg);
+    width: 23px;
 
     &::before, &::after {
       top: 0;
@@ -198,6 +200,8 @@ export const HamburgerIcon = styled.div`
       isVisible &&
       `
     transform: rotate(45deg);
+    width: 20px;
+
 
     &::before, &::after {
       top: 0;
