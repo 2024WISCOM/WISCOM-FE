@@ -24,14 +24,14 @@ export const Container = styled.div`
   }
 
   .react-stacked-center-carousel {
-    height: 900px !important;
+    height: 960px !important;
 
     @media (max-width: 1920px) {
-      height: 730px !important;
+      height: 760px !important;
     }
 
     @media (max-width: 1280px) {
-      height: 530px !important;
+      height: 600px !important;
     }
   }
 `;
