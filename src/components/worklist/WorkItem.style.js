@@ -69,6 +69,7 @@ export const Title = styled.p`
   font-weight: 700;
   line-height: normal;
   margin-bottom: 5px;
+  white-space: pre;
 
   @media (max-width: 1920px) {
     font-size: 28px;
