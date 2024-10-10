@@ -27,8 +27,8 @@ export const SearchBarContainer = styled.div`
     justify-content: right;
     margin:0;
     padding:0;
-    top:-30vh;
-    right:-190%;
+    top:-35vh;
+    right:-15vw;
     margin-bottom:-2%;
   }
 
@@ -36,6 +36,7 @@ export const SearchBarContainer = styled.div`
 
 export const SearchInput = styled.input`
   width: 18vw;
+  outline: none; /* 포커스 시 외곽선 제거 */ 
   border: none; /* 테두리 제거 */
   border-bottom: 2px solid white; /* 아래쪽 테두리만 */
   background: transparent;
@@ -43,10 +44,13 @@ export const SearchInput = styled.input`
   font-size: 1.3em; 
   z-index: 1; /* 입력창을 위로 올리기 */
   margin:0;
+  position:absolute;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.5); /* placeholder 색상 설정 */
     font-size: 1.2em;
+    outline: none; /* 포커스 시 외곽선 제거 */
+
   }
 
   &:focus {
@@ -64,6 +68,7 @@ export const SearchInput = styled.input`
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 20vw;
     font-size: 1.2em;
+    outline: none;   
   }
     
 `;
@@ -73,6 +78,7 @@ export const SearchButton = styled.button`
   border: none; /* 테두리 없음 */
   cursor: pointer;
   margin:0;
+  position:absolute;
 
 
   img {
@@ -97,15 +103,14 @@ export const SearchButton = styled.button`
       width:auto;
       margin:0 0;
       padding:0;
-}
+      }
   
-
-      /* 버튼 눌렸을 때도 이상함 수정 */
-    
   }
     @media (min-width: 769px) and (max-width: 1024px) {
+
     img {
       width: 80%;
+      top:10%;
     }
   }
 

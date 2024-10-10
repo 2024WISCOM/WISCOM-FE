@@ -32,8 +32,8 @@ export const CDContainer = styled.div`
   margin:2% 5%;
 
   @media (max-width:768px) {
-    width:159px; //40vw
-    height:147px; //40vw
+    width:40vw;
+    height:40vh;
     margin:2%;
   }
 
@@ -56,7 +56,7 @@ export const ToText = styled.p`
 
   @media (max-width: 768px) {
     font-size: 0.7em; 
-    left:25px;
+    left:35px;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -79,7 +79,7 @@ export const FromText = styled.p`
   @media (max-width: 768px) {
     font-size: 0.7em; 
     margin-right: 2%; 
-    bottom: 10%;
+    bottom: 15%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -99,8 +99,8 @@ export const MessageText = styled.p`
   left:15%;
   max-height:33vh;
   width:16vw;
-  overflow:auto; // 스크롤 
-  z-index: 10; // 이미지 위에 텍스트 배치
+  overflow:auto; 
+  z-index: 10;
 
   /* 스크롤바 스타일링 (Webkit 기반 브라우저용) */
     &::-webkit-scrollbar {
@@ -119,7 +119,7 @@ export const MessageText = styled.p`
       width: 109px; 
       height: 82px;
       top: 35px;
-      left: 25px; /* 모바일에서 왼쪽 간격 조정 */
+      left: 35px; /* 모바일에서 왼쪽 간격 조정 */
       z-index: 10; // 이미지 위에 텍스트 배치
 
       &::-webkit-scrollbar {
@@ -163,9 +163,9 @@ export const SignText = styled.img`
   width: 21vw;
 
   @media (max-width: 768px) {
-    width: 130px;
+    width: 90%;
     bottom:30%;
-    left:50%;  
+    left:55%;  
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
