@@ -23,7 +23,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
 
   const handleSendClick = () => {
     if (!newMessage.to || !newMessage.from || !newMessage.message) {
-      alert('모든 필드를 채워주세요.');
+      alert('모든 칸을 작성해주세요.'); //이 메시지 ㄱㅊ한거 맞나 ?흐음 
       return;
     }
 
