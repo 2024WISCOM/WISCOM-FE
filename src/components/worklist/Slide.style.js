@@ -31,7 +31,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 1280px) {
-      height: 530px !important;
+      height: 600px !important;
     }
   }
 `;
