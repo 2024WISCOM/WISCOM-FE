@@ -16,9 +16,12 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
+    height:0%;
   }
+    
 
   @media (min-width: 769px) and (max-width: 1024px) {
+    width:100%;
     padding: 0 10%;
   }
 `;
@@ -37,7 +40,8 @@ export const TextSection = styled.div`
     font-size: 4.5vw;
     width: 100%;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 5%;
+    margin-bottom:5%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -87,7 +91,8 @@ export const SignText2 = styled.img`
 
   @media (max-width: 768px) {
     width: 50vw;
-    top: 50%;
+    top: 55%;
+    left:48%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -218,8 +223,8 @@ export const TextArea = styled.textarea`
   }
 
   @media (max-width: 768px) {
-    width: 48vw;
-    height: 45vh;
+    width: 65%;
+    height: 60%;
     top: 20%;
     left:15%;
     font-size: 1.1em;
@@ -245,6 +250,7 @@ export const ButtonContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     top: calc(100% - 0%);
+    margin-top:5%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {

@@ -18,7 +18,8 @@ export const SearchBarContainer = styled.div`
     justify-content:right;
     align-items:right;
     margin:5%;
-    margin-left:55vw;
+    margin-top:20%;
+    margin-left:50vw;
     display: ${({ isMobile }) => (isMobile ? 'flex' : 'none')}; /* 모바일에서만 보여주기 */
   }
 

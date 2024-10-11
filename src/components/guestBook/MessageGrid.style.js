@@ -15,6 +15,7 @@ export const MessageGridContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin:0;
+    margin-top:10%;
     padding :0;
   }
 

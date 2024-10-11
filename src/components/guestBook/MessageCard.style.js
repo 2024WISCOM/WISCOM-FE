@@ -5,13 +5,13 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
 
 
   @media (max-width:768px){
     width:100%;
-    height:auto;
+    height:50%;
     padding:0;
   }
 
@@ -33,7 +33,7 @@ export const CDContainer = styled.div`
 
   @media (max-width:768px) {
     width:40vw;
-    height:40vh;
+    height:25vh;
     margin:2%;
   }
 
@@ -79,7 +79,7 @@ export const FromText = styled.p`
   @media (max-width: 768px) {
     font-size: 0.7em; 
     margin-right: 2%; 
-    bottom: 15%;
+    bottom: -80%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -164,7 +164,7 @@ export const SignText = styled.img`
 
   @media (max-width: 768px) {
     width: 90%;
-    bottom:30%;
+    top:110%;
     left:55%;  
   }
 
