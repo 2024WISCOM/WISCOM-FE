@@ -16,7 +16,7 @@ export const Footer = () => {
         </FooterInfo>
         <UrlContainer>
         <a href="https://www.duksung.ac.kr/computer/main.do"><img src ={Home} alt ="Home"/></a>
-        <a href =""><img src = {Insta} alt="Insta"/></a>
+        <a href ="https://www.instagram.com/2024_wiscom?igsh=MWxtMHRibzJlMzczeg=="><img src = {Insta} alt="Insta"/></a>
         </UrlContainer>
       </FooterLeft>
       
