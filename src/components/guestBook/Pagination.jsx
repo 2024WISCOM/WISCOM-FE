@@ -1,5 +1,5 @@
 import React from 'react';
-import { PaginationContainer, PageButton } from './Pagination.style.js'; // Styled components 가져오기
+import { PaginationContainer, PageButton } from './Pagination.style.js'; 
 
 
 
@@ -8,9 +8,22 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     onPageChange(page);
   };
 
+
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++) {
+    const maxPagesToShow = 10;
+
+    //표시할 페이지 
+    const startPageGroup =   Math.floor((currentPage - 1) / maxPagesToShow) * maxPagesToShow + 1;
+    const endPageGroup = Math.min(startPageGroup + maxPagesToShow - 1, totalPages);
+
+    // 마지막 페이지가 범위보다 작을 때
+    // if (endPage > totalPages) {
+    //   endPage = totalPages;
+    //   startPage = Math.max(1, endPage - maxPagesToShow + 1);
+    // }
+
+    for (let i = startPageGroup; i <= endPageGroup; i++) {
       pageNumbers.push(
         <PageButton
           key={i}

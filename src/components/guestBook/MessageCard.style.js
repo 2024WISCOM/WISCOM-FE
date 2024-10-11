@@ -79,7 +79,7 @@ export const FromText = styled.p`
   @media (max-width: 768px) {
     font-size: 0.7em; 
     margin-right: 2%; 
-    bottom: -80%;
+    bottom: -50%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
