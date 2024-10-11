@@ -6,10 +6,9 @@ export const SearchBarContainer = styled.div`
   align-items:right;
   justify-content:right;
   flex-direction:row;
-  margin: 5% 0% 1% -18%;
+  margin: 5% 2% 2% -18%;
   position:relative;
   flex-direction:row;
-
 
   @media (max-width:768px){
     width:40%;
@@ -27,10 +26,11 @@ export const SearchBarContainer = styled.div`
     width: 60%;
     justify-content: right;
     margin:0;
+    margin-top:10%;
     padding:0;
     top:-35vh;
     right:-15vw;
-    margin-bottom:-2%;
+    margin-bottom:5%;
   }
 
 `;

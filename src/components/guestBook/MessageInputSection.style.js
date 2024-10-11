@@ -126,6 +126,7 @@ export const Label = styled.label`
   color: black;
   font-size: 1.1em;
 
+
   &.to-label {
     top: 5%;
     left: 15%;
@@ -138,6 +139,7 @@ export const Label = styled.label`
 
   @media (max-width: 768px) {
     font-size: 1em;
+    margin:0;
 
     &.to-label {
       top: 5%;
@@ -146,7 +148,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right: -17%;
+      right:-15%;
     }
   }
 
@@ -185,7 +187,9 @@ export const Input = styled.input`
 
   @media (max-width: 768px) {
     font-size: 1em;
-    width: auto;
+    width:40%;
+    padding:0px;
+    margin:0px;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -247,6 +251,7 @@ export const ButtonContainer = styled.div`
   right: 0;
   margin: 0 1%;
 
+
   @media (max-width: 768px) {
     width: 100%;
     top: calc(100% - 0%);
@@ -256,6 +261,8 @@ export const ButtonContainer = styled.div`
   @media (min-width: 769px) and (max-width: 1024px) {
     top: calc(100% - 250px);
     gap: 5%;
+  
+
   }
 `;
 
@@ -266,6 +273,8 @@ export const HighlightedText = styled.span`
 
   @media (max-width: 768px) {
     font-size: 1.1em;
+    width:auto;
+    margin:0;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {

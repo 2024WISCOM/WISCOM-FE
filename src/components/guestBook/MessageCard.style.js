@@ -56,7 +56,7 @@ export const ToText = styled.p`
 
   @media (max-width: 768px) {
     font-size: 0.7em; 
-    left:35px;
+    left:18%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -115,16 +115,16 @@ export const MessageText = styled.p`
     }
 
     @media (max-width: 768px) {
-      font-size: 9px; /* 모바일에서 텍스트 크기 조정 */
-      width: 109px; 
-      height: 82px;
-      top: 35px;
-      left: 35px; /* 모바일에서 왼쪽 간격 조정 */
+      font-size: 0.6em; /* 모바일에서 텍스트 크기 조정 */
+      width: 65%; 
+      height: 108%;
+      top: 40%;
+      left: 18%; /* 모바일에서 왼쪽 간격 조정 */
       z-index: 10; // 이미지 위에 텍스트 배치
 
       &::-webkit-scrollbar {
         width: 1.5vw; /* 스크롤바 너비 */
-      }
+      
     }
   
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -182,9 +182,9 @@ export const BarcodeImage = styled.img`
   width: 2vw;
 
   @media (max-width: 768px) {
-    width: 13px; /* 모바일에서 크기 조정 */
-    top:10px;
-    right:10px;
+    width: 8%; /* 모바일에서 크기 조정 */
+    top:12%;
+    right:5%;
   }
 
    @media (min-width: 769px) and (max-width: 1024px) {
