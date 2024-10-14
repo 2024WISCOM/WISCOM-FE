@@ -675,7 +675,7 @@ export const ExhibitionMap = styled.img`
 export const StudioWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
   margin: 0;
 
   @media (max-width: 480px) {
