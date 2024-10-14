@@ -130,7 +130,7 @@ export const MenuText = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 13px;
+    font-size: 14px;
   }
 `;
 
@@ -258,7 +258,7 @@ export const Part = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
 
@@ -290,7 +290,7 @@ export const People = styled.div`
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 2.2fr 7fr;
+    grid-template-columns: 2.6fr 7fr;
   }
 `;
 
@@ -496,11 +496,11 @@ export const Student = styled.div`
 
 export const MapContainer = styled.div`
   width: 100%;
-  padding: 0 6vw;
+  padding: 0 1vw 0 5vw;
   margin-bottom: 10vh;
 
   @media (max-width: 480px) {
-    padding: 0 2vw;
+    padding: 0 1.5vw;
   }
 `;
 
@@ -677,6 +677,10 @@ export const StudioWrap = styled.div`
   flex-direction: column;
   gap: 15px;
   margin: 0;
+
+  @media (max-width: 480px) {
+    padding-left: 10px;
+  }
 `;
 
 export const TeamWrap = styled.div`
