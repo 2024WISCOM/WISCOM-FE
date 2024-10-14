@@ -24,7 +24,7 @@ export const Inter = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 9px;
+    font-size: 12px;
   }
 `;
 
@@ -46,7 +46,7 @@ export const Wiscom = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 32px;
+    font-size: 40px;
   }
 `;
 
@@ -130,7 +130,7 @@ export const MenuText = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 `;
 
@@ -354,6 +354,7 @@ export const MainChoiWrap = styled.div`
 
   @media (max-width: 480px) {
     flex-direction: column;
+    gap: 10vw;
   }
 `;
 
@@ -362,7 +363,6 @@ export const ProfChoiWrap = styled.div`
   flex-direction: column;
   justify-content: start;
   gap: 2vw;
-  cursor: pointer;
 `;
 
 export const ProfWrap = styled.div`
@@ -378,6 +378,10 @@ export const Prof = styled.img`
   width: 16vw;
   flex-shrink: 0;
   margin: 0;
+
+  @media (max-width: 480px) {
+    width: 30vw;
+  }
 `;
 
 export const ProfName = styled.div`
@@ -400,7 +404,8 @@ export const ProfName = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 9px;
+    width: 30vw;
+    font-size: 15px;
   }
 `;
 
@@ -424,8 +429,8 @@ export const ProfMsg = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 20px;
   }
 `;
 
@@ -504,6 +509,7 @@ export const MapWrap = styled.div`
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin-bottom: 50px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -539,7 +545,7 @@ export const MapTitle = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 12px;
   }
 `;
