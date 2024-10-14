@@ -142,7 +142,7 @@ export const MenuLine = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 0 30px;
+  padding: 0 5vw;
   margin-bottom: 10vh;
 `;
 
@@ -168,7 +168,7 @@ export const Inter2 = styled(Inter)`
 export const Identity = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 3vw;
   margin-bottom: 128px;
 
   @media (max-width: 1024px) {
@@ -186,7 +186,7 @@ export const Identity = styled.div`
 `;
 
 export const Poster = styled.img`
-  width: 30%;
+  width: 25vw;
   flex-shrink: 0;
   margin: 0;
 
@@ -245,7 +245,7 @@ export const Part = styled.div`
   font-family: Inter;
   font-size: 25px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
   flex-wrap: nowrap;
 
@@ -286,11 +286,31 @@ export const People = styled.div`
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 2.5fr 7fr;
+    grid-template-columns: 2.2fr 7fr;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 2.2fr 7fr;
+  }
+`;
+
+export const People1 = styled.div`
+  display: grid;
+
+  @media (max-width: 1920px) {
+    grid-template-columns: 1.2fr 8fr;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1.2fr 8fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1.5fr 7fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1.6fr 7fr;
   }
 `;
 
@@ -473,6 +493,10 @@ export const MapContainer = styled.div`
   width: 100%;
   padding: 0 6vw;
   margin-bottom: 10vh;
+
+  @media (max-width: 480px) {
+    padding: 0 2vw;
+  }
 `;
 
 export const MapWrap = styled.div`
@@ -488,7 +512,7 @@ export const MapWrap = styled.div`
 
 export const Kakaomap = styled.div`
   width: 35vw;
-  height: 40vw;
+  height: 37vw;
   margin: 0;
 
   @media (max-width: 768px) {
@@ -523,7 +547,7 @@ export const MapTitle = styled.div`
 export const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0;
 
   & div:nth-child(3) {
