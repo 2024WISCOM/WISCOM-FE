@@ -655,6 +655,125 @@ export const Bar = styled(MapText)`
   color: #fff;
 `;
 
+export const ExhibitionMap = styled.img`
+  width: 35vw;
+  height: 15vw;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 30vw;
+  }
+`;
+
+export const StudioWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+`;
+
+export const TeamWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+`;
+
+export const SubTeamWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  gap: 10px;
+`;
+
+export const Studio01 = styled.div`
+  width: 34px;
+  height: 26px;
+  background: #ffc164;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: content-box;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    font-weight: 500;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    width: 25px;
+    height: 22px;
+  }
+`;
+
+export const Studio02 = styled(Studio01)`
+  background: #ff7f7f;
+`;
+
+export const Studio03 = styled(Studio01)`
+  background: #89c7ad;
+`;
+
+export const Studio04 = styled(Studio01)`
+  background: #295f98;
+`;
+
+export const Studio05 = styled(Studio01)`
+  background: #efbc9b;
+`;
+
+export const Studio06 = styled(Studio01)`
+  background: #a7727d;
+`;
+
+export const Studio10 = styled(Studio01)`
+  background: #0097b2;
+`;
+
+export const Team = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 3px 0;
+  word-break: keep-all;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-weight: 500;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
+`;
+
+export const TeamMember = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
+`;
+
 export const ModalContainer = styled.div`
   width: 60vw;
   height: auto;
