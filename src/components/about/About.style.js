@@ -707,10 +707,6 @@ export const Studio01 = styled.div`
 
   flex-shrink: 0;
 
-  @media (max-width: 768px) {
-    font-weight: 500;
-  }
-
   @media (max-width: 480px) {
     font-size: 13px;
     width: 25px;
@@ -751,10 +747,6 @@ export const Team = styled.div`
   padding: 3px 0;
   word-break: keep-all;
   margin: 0;
-
-  @media (max-width: 768px) {
-    font-weight: 500;
-  }
 
   @media (max-width: 480px) {
     font-size: 13px;
