@@ -493,6 +493,10 @@ export const MapContainer = styled.div`
   width: 100%;
   padding: 0 6vw;
   margin-bottom: 10vh;
+
+  @media (max-width: 480px) {
+    padding: 0 2vw;
+  }
 `;
 
 export const MapWrap = styled.div`
@@ -508,7 +512,7 @@ export const MapWrap = styled.div`
 
 export const Kakaomap = styled.div`
   width: 35vw;
-  height: 40vw;
+  height: 37vw;
   margin: 0;
 
   @media (max-width: 768px) {
@@ -543,7 +547,7 @@ export const MapTitle = styled.div`
 export const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0;
 
   & div:nth-child(3) {
