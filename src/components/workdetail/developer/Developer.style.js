@@ -68,6 +68,7 @@ export const DeveloperPosition = styled.div`
   font-family: 'Pretendard-Regular';
   color: #696969;
   margin: 0px;
+  flex: 1;
 
     @media (max-width: 1500px) {
     font-size: 20px;
