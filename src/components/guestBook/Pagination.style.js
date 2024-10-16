@@ -12,7 +12,7 @@ export const PaginationContainer = styled.div`
 
   @media (max-width: 768px) {
     width :80vw;
-    margin-top:6%;
+    margin-top:20%;
     text-align:center;
   }
 
