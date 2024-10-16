@@ -25,12 +25,12 @@ export const FooterTop = styled.div`
   width: 100%;
   max-width: 85vw;
   margin: 0 auto;
-  padding: 1% 5%;
+  padding: 0% 5%;
 
   @media(max-width: 768px) {
     flex-direction: column;
     margin-top:5%;
-    padding:5% 0;
+    padding :0;
   }
 
 `;
