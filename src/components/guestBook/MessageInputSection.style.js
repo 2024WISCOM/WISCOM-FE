@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
-  height: 100vh;
+  height: 90vh;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -23,6 +23,7 @@ export const Container = styled.div`
   @media (min-width: 769px) and (max-width: 1024px) {
     width:100%;
     padding: 0 10%;
+    max-height: 90vh;
   }
 `;
 
@@ -198,8 +199,8 @@ export const TextArea = styled.textarea`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  width: 24vw;
-  height: 42vh;
+  width: 70%;
+  height: 58%;
   border: none;
   color: black;
   background: transparent;
@@ -231,9 +232,9 @@ export const TextArea = styled.textarea`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 27vw;
-    height: 31vh;
-    top: 14%;
+    width: 70%;
+    height: 63%;
+    top: 20%;
   }
 `;
 

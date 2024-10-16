@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 //cd 이미지 및 관련 내용 
 export const CDContainer = styled.div`
   width: 24vw;
-  height: 50vh;
+  height: 24vw;
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
@@ -33,13 +33,13 @@ export const CDContainer = styled.div`
 
   @media (max-width:768px) {
     width:40vw;
-    height:25vh;
+    height:40vw;
     margin:2%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 30vw; /* 아이패드에서 이미지 크기 조정 */
-    height: 40vh;
+    height: 30vw;
     margin:0 auto ;
   }
 `;
@@ -97,14 +97,15 @@ export const MessageText = styled.p`
   position: absolute;
   top: 18%; 
   left:15%;
-  max-height:33vh;
-  width:16vw;
+  max-height:95%;
+  width:70%;
+  height:60%;
   overflow:auto; 
   z-index: 10;
 
   /* 스크롤바 스타일링 (Webkit 기반 브라우저용) */
     &::-webkit-scrollbar {
-      width: 0.7vw; /* 스크롤바 너비 */
+      width: 0.6vw; /* 스크롤바 너비 */
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 색상 */
@@ -129,8 +130,8 @@ export const MessageText = styled.p`
   
   @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 1em;
-    width: 20vw;
-    height:23vh;
+    width: 40%;
+    height:50%;  
     top: 18%;
   }
   
