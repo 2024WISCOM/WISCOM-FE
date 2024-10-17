@@ -75,7 +75,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           onChange={(e) => setNewMessage({ ...newMessage, message: e.target.value })}
          
         />
-        <Label className='from-label'>
+        <Label className='from-label'length={newMessage.from.length}>
           <HighlightedText>From.</HighlightedText>
           <Input className='from'
           type="text" 
