@@ -136,7 +136,7 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: -30%;
+    right: -15%;
   }
 
   @media (max-width: 768px) {
@@ -149,7 +149,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right: -17%;
+      right: -5%;
     }
   }
 
@@ -206,7 +206,7 @@ export const TextArea = styled.textarea`
   border: none;
   color: black;
   background: transparent;
-  font-size: 1.4em;
+  font-size: 1.1em;
   resize: none;
   text-align: left;
   z-index: 10;
@@ -230,7 +230,7 @@ export const TextArea = styled.textarea`
     height: 60%;
     top: 20%;
     left:15%;
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {

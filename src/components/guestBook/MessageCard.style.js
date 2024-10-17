@@ -46,7 +46,7 @@ export const CDContainer = styled.div`
 
 export const ToText = styled.p`
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: left;
   position: absolute;
   top: 5%;
@@ -68,7 +68,7 @@ export const ToText = styled.p`
 
 export const FromText = styled.p`
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: right; 
   position: absolute; 
   bottom: 5%;
@@ -83,7 +83,7 @@ export const FromText = styled.p`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    font-size: 1.2em;
+    font-size: 1.1em;
     right: 8%;
     bottom:15%;
   }
