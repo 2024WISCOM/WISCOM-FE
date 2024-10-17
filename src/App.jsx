@@ -8,6 +8,7 @@ import WorkList from './pages/WorkList';
 import WorkDetail from './pages/WorkDetail';
 import GuestBook from './pages/GuestBook';
 import HiddenAbout from './pages/HiddenAbout';
+import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,6 +40,7 @@ function App() {
       />
       {!isVisible && animationCompleted && (
         <>
+          <GlobalStyle />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />

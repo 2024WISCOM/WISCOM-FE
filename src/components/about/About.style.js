@@ -24,7 +24,7 @@ export const Inter = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 9px;
+    font-size: 12px;
   }
 `;
 
@@ -46,7 +46,7 @@ export const Wiscom = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 32px;
+    font-size: 40px;
   }
 `;
 
@@ -130,7 +130,7 @@ export const MenuText = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
@@ -142,7 +142,7 @@ export const MenuLine = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 0 30px;
+  padding: 0 5vw;
   margin-bottom: 10vh;
 `;
 
@@ -168,7 +168,7 @@ export const Inter2 = styled(Inter)`
 export const Identity = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 3vw;
   margin-bottom: 128px;
 
   @media (max-width: 1024px) {
@@ -186,7 +186,7 @@ export const Identity = styled.div`
 `;
 
 export const Poster = styled.img`
-  width: 30%;
+  width: 25vw;
   flex-shrink: 0;
   margin: 0;
 
@@ -245,7 +245,7 @@ export const Part = styled.div`
   font-family: Inter;
   font-size: 25px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
   flex-wrap: nowrap;
 
@@ -258,7 +258,7 @@ export const Part = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
 
@@ -286,11 +286,31 @@ export const People = styled.div`
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 2.5fr 7fr;
+    grid-template-columns: 2.2fr 7fr;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 2.6fr 7fr;
+  }
+`;
+
+export const People1 = styled.div`
+  display: grid;
+
+  @media (max-width: 1920px) {
+    grid-template-columns: 1.2fr 8fr;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1.2fr 8fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1.5fr 7fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1.6fr 7fr;
   }
 `;
 
@@ -334,6 +354,7 @@ export const MainChoiWrap = styled.div`
 
   @media (max-width: 480px) {
     flex-direction: column;
+    gap: 10vw;
   }
 `;
 
@@ -342,7 +363,6 @@ export const ProfChoiWrap = styled.div`
   flex-direction: column;
   justify-content: start;
   gap: 2vw;
-  cursor: pointer;
 `;
 
 export const ProfWrap = styled.div`
@@ -358,6 +378,10 @@ export const Prof = styled.img`
   width: 16vw;
   flex-shrink: 0;
   margin: 0;
+
+  @media (max-width: 480px) {
+    width: 30vw;
+  }
 `;
 
 export const ProfName = styled.div`
@@ -380,7 +404,8 @@ export const ProfName = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 9px;
+    width: 30vw;
+    font-size: 15px;
   }
 `;
 
@@ -404,8 +429,8 @@ export const ProfMsg = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 20px;
   }
 `;
 
@@ -471,8 +496,12 @@ export const Student = styled.div`
 
 export const MapContainer = styled.div`
   width: 100%;
-  padding: 0 6vw;
+  padding: 0 1vw 0 5vw;
   margin-bottom: 10vh;
+
+  @media (max-width: 480px) {
+    padding: 0 1.5vw;
+  }
 `;
 
 export const MapWrap = styled.div`
@@ -480,6 +509,7 @@ export const MapWrap = styled.div`
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin-bottom: 50px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -488,7 +518,7 @@ export const MapWrap = styled.div`
 
 export const Kakaomap = styled.div`
   width: 35vw;
-  height: 40vw;
+  height: 37vw;
   margin: 0;
 
   @media (max-width: 768px) {
@@ -515,7 +545,7 @@ export const MapTitle = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 12px;
   }
 `;
@@ -523,7 +553,7 @@ export const MapTitle = styled.div`
 export const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 0;
 
   & div:nth-child(3) {
@@ -629,6 +659,121 @@ export const Bar = styled(MapText)`
   padding: 0 2px;
   margin: 0;
   color: #fff;
+`;
+
+export const ExhibitionMap = styled.img`
+  width: 35vw;
+  height: 15vw;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 30vw;
+  }
+`;
+
+export const StudioWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    padding-left: 10px;
+  }
+`;
+
+export const TeamWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+`;
+
+export const SubTeamWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  gap: 10px;
+`;
+
+export const Studio01 = styled.div`
+  width: 34px;
+  height: 26px;
+  background: #ffc164;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: content-box;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    width: 25px;
+    height: 22px;
+  }
+`;
+
+export const Studio02 = styled(Studio01)`
+  background: #ff7f7f;
+`;
+
+export const Studio03 = styled(Studio01)`
+  background: #89c7ad;
+`;
+
+export const Studio04 = styled(Studio01)`
+  background: #295f98;
+`;
+
+export const Studio05 = styled(Studio01)`
+  background: #efbc9b;
+`;
+
+export const Studio06 = styled(Studio01)`
+  background: #a7727d;
+`;
+
+export const Studio10 = styled(Studio01)`
+  background: #0097b2;
+`;
+
+export const Team = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 3px 0;
+  word-break: keep-all;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
+`;
+
+export const TeamMember = styled.div`
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
 `;
 
 export const ModalContainer = styled.div`
