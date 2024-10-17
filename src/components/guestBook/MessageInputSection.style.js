@@ -135,7 +135,8 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: -15%;
+    right: ${({ length }) => `calc(-35% + ${length * 0.5}em)`}; /* 입력된 글자의 길이에 따라 위치 조정 */
+
   }
 
   @media (max-width: 768px) {
@@ -148,7 +149,8 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right: -5%;
+      right:${({ length }) => `calc(-20% + ${length * 0.35}em)`};
+     
     }
   }
 
@@ -161,6 +163,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
+      right:${({ length }) => `calc(-25% + ${length * 0.35}em)`};
     }
   }
 `;
