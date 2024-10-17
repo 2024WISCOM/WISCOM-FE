@@ -11,7 +11,6 @@ export const Container = styled.div`
   padding: 0 10%;
   position: relative;
 
-
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -24,8 +23,8 @@ export const Container = styled.div`
   @media (min-width: 769px) and (max-width: 1024px) {
     width:100%;
     padding: 0 10%;
-    min-height: 110vh; 
 
+    min-height: 110vh;
   }
 `;
 
