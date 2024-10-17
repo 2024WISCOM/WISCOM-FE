@@ -8,19 +8,23 @@ export const PaginationContainer = styled.div`
   margin: 20px;
   color: #ffffff; 
   margin-bottom:4%;
+  flex-wrap: nowrap; 
 
 
   @media (max-width: 768px) {
-    width :80vw;
-    margin-top:20%;
+    width :100%;
+    margin-top:6%;
     text-align:center;
+    flex-wrap: nowrap; 
+
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 90%;
+    width: 100%;
     margin:0 auto;
     text-align:center;
     justify-content:center;
+    flex-wrap: nowrap; 
   }
 
 
@@ -47,12 +51,12 @@ export const PageButton = styled.button.withConfig({
   }
 
    @media (max-width:768px){
-      padding:3%;
+      padding:2%;
       font-size:0.7em;
    }
 
    @media (min-width: 769px) and (max-width: 1024px) {
-    padding: 0 10px;
+    padding: 0 1%;
     font-size: 1.2em;
   }
 `;
