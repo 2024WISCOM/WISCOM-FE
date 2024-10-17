@@ -5,25 +5,27 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  height:85vh;
   color: white;
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
-  height: 90vh;
+
 
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
-    height:0%;
+    height:50%;
   }
     
 
   @media (min-width: 769px) and (max-width: 1024px) {
     width:100%;
     padding: 0 10%;
-    max-height: 90vh;
+    min-height: 110vh; 
+
   }
 `;
 
