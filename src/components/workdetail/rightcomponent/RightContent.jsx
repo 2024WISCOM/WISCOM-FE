@@ -20,13 +20,21 @@ export default function RightContent({ data }) {
         <R.TeamItem>
           <R.TeamTitle>{data.teamName}</R.TeamTitle>
           <R.LinkTo>
-            <a href={data.instagramUrl}>
-              <img src={Instagram} alt="instagram" />
-            </a>
-            <a href={data.githubUrl}>
-              <img src={Github} alt="github" />
-            </a>
-            <ViewSite deployUrl={data.deployUrl} src={viewSiteImage}/>
+            {data.instagramUrl && (
+                <a href={data.instagramUrl}>
+                  <img src={Instagram} alt="instagram" />
+                </a>
+              )}
+              
+              {data.githubUrl && (
+                <a href={data.githubUrl}>
+                  <img src={Github} alt="github" />
+                </a>
+              )}
+
+              {data.deployUrl && (
+                <ViewSite deployUrl={data.deployUrl} src={viewSiteImage} />
+              )}
           </R.LinkTo>
         </R.TeamItem>
         <R.DeveloperWrapper>

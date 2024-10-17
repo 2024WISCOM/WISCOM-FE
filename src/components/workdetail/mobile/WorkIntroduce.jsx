@@ -49,14 +49,21 @@ export default function WorkIntroduce({ data }) {
         <W.TeamItem>
           <W.TeamTitle>{data.teamName}</W.TeamTitle>
           <W.LinkTo>
-            <a href={data.instagramUrl}>
-              <img src={Instagram} alt="instagram" />
-            </a>
-            <a href={data.githubUrl}>
-              <img src={Github} alt="github" />
-            </a>
+            {data.instagramUrl && (
+              <a href={data.instagramUrl}>
+                <img src={Instagram} alt="instagram" />
+              </a>
+            )}
+            
+            {data.githubUrl && (
+              <a href={data.githubUrl}>
+                <img src={Github} alt="github" />
+              </a>
+            )}
 
-            <ViewSite deployUrl={data.deployUrl} src={viewSiteImage}/>
+            {data.deployUrl && (
+              <ViewSite deployUrl={data.deployUrl} src={viewSiteImage} />
+            )}
           </W.LinkTo>
         </W.TeamItem>
         {data.developers.map((d) => (
