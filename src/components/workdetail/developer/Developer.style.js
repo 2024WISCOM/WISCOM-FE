@@ -24,6 +24,7 @@ export const DeveloperName = styled.div`
   font-size: 22px;
   font-family: 'Pretendard-Medium';
   margin: 0px;
+  line-height: initial;
 
   ${({ isTwoCharacters }) =>
     isTwoCharacters &&
@@ -69,6 +70,7 @@ export const DeveloperPosition = styled.div`
   color: #696969;
   margin: 0px;
   flex: 1;
+  line-height: initial;
 
     @media (max-width: 1500px) {
     font-size: 20px;
