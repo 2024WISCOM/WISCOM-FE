@@ -42,7 +42,10 @@ export default function WorkIntroduce({ data }) {
       </W.WorkTitleWrapper>
       <W.ImageWrapper>
         <LeftButton position="top" onClick={handlePrevClick} />
-        <Image src={data.images[currentImageIndex].url} />
+          {/* 이미지가 있는 경우에만 Image 컴포넌트를 렌더링 */}
+            {data.images && data.images[currentImageIndex] && (
+              <Image src={data.images[currentImageIndex].url} />
+          )}
         <RightButton style={{padding: "0px"}} position="top" onClick={handleNextClick} />
       </W.ImageWrapper>
       <W.DeveloperWrapper>

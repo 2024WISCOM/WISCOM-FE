@@ -45,7 +45,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />
             <Route path="/work-list" element={<WorkList />} />
-            <Route path="/work-detail" element={<WorkDetail />} />
+            <Route path="/:id" element={<WorkDetail />} />  {/* id를 URL 파라미터로 사용 */}
             <Route path="/guestbook" element={<GuestBook />} />
             <Route path="/about-hidden" element={<HiddenAbout />} />
           </Routes>
