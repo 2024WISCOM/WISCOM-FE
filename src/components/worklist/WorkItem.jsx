@@ -33,7 +33,7 @@ const WorkItem = React.memo(function ({
 
   const handleItemClick = () => {
     if (isCenterSlide) {
-      navigate(`/work-detail`, { state: { category: type, id } });
+      navigate(`/${id}`, { state: { category: type } });
       console.log(`type: ${type}, id: ${id}`);
     }
   };
