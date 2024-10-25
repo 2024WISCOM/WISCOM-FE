@@ -60,17 +60,14 @@ export const Card = styled.div`
   }
 `;
 
-export const titleContainer = styled.div`
+export const TitleContainer = styled.div`
   width: 100%;
   overflow: hidden;
 `;
 
-const animate = keyframes`
-  0% {
-    transform: translateX(0);
-  }
+const animate = (widthScroll) => keyframes`
   100% {
-    transform: translateX(-250%);
+    transform: translateX(-${widthScroll / 2}px);
   }
 `;
 
@@ -87,9 +84,9 @@ export const Title = styled.p`
   white-space: nowrap;
   display: inline-block;
 
-  padding-left: ${(props) => (props.isOverflow ? '100%' : '0')};
-  animation: ${(props) => (props.isOverflow ? animate : 'none')} 10s linear
-    infinite;
+  animation: ${(props) =>
+      props.isOverflow ? animate(props.widthScroll) : 'none'}
+    ${(props) => props.widthScroll / 130}s 1s linear infinite;
 
   @media (max-width: 1920px) {
     font-size: 28px;

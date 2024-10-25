@@ -12,15 +12,19 @@ const WorkItem = React.memo(function ({
   const navigate = useNavigate();
   const titleRef = useRef(null);
   const [isOverflow, setIsOverflow] = useState(false);
+  const [widthScroll, setWidthScroll] = useState(0);
 
   // overflow 여부 체크
   useEffect(() => {
     if (titleRef.current) {
-      setIsOverflow(
-        titleRef.current.scrollWidth > titleRef.current.clientWidth,
-      );
+      const currentScrollWidth = titleRef.current.scrollWidth;
+      setIsOverflow(currentScrollWidth > titleRef.current.clientWidth);
+      setWidthScroll(currentScrollWidth);
+
+      // widthScroll이 업데이트된 후에 콘솔 출력
+      console.log(currentScrollWidth, widthScroll);
     }
-  }, [slideIndex]); // dataIndex가 변경될 때마다 확인
+  }, [dataIndex, slideIndex, widthScroll]); // dataIndex가 변경될 때마다 확인
 
   // 슬라이드가 변경될 때마다 애니메이션을 재시작하기 위해 key를 변경
   const titleKey = `${dataIndex}-${isOverflow}`; // 고유 키 생성
@@ -49,13 +53,25 @@ const WorkItem = React.memo(function ({
       </div>
       <W.Card>
         <img alt={title} src={image} />
-        <W.titleContainer>
-          {isCenterSlide && (
-            <W.Title key={titleKey} ref={titleRef} isOverflow={isOverflow}>
+        {isCenterSlide && (
+          <W.TitleContainer>
+            <W.Title
+              key={`${titleKey}-1`}
+              ref={titleRef}
+              isOverflow={isOverflow}
+              widthScroll={widthScroll}
+            >
               {title}
+              {isOverflow && (
+                <span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {title}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              )}
             </W.Title>
-          )}
-        </W.titleContainer>
+          </W.TitleContainer>
+        )}
         {isCenterSlide && <W.Team>{team}</W.Team>}
       </W.Card>
     </W.Container>
