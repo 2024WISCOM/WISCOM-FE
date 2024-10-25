@@ -5,24 +5,26 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  height:85vh;
   color: white;
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
-  height: 100vh;
 
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
-    height:0%;
+    height:50%;
   }
     
 
   @media (min-width: 769px) and (max-width: 1024px) {
     width:100%;
     padding: 0 10%;
+
+    min-height: 110vh;
   }
 `;
 
@@ -133,7 +135,8 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: -30%;
+    right: ${({ length }) => `calc(-35% + ${length * 0.5}em)`}; /* 입력된 글자의 길이에 따라 위치 조정 */
+
   }
 
   @media (max-width: 768px) {
@@ -146,7 +149,8 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right: -17%;
+      right:${({ length }) => `calc(-20% + ${length * 0.35}em)`};
+     
     }
   }
 
@@ -159,6 +163,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
+      right:${({ length }) => `calc(-25% + ${length * 0.35}em)`};
     }
   }
 `;
@@ -198,12 +203,12 @@ export const TextArea = styled.textarea`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  width: 24vw;
-  height: 42vh;
+  width: 70%;
+  height: 58%;
   border: none;
   color: black;
   background: transparent;
-  font-size: 1.4em;
+  font-size: 1.1em;
   resize: none;
   text-align: left;
   z-index: 10;
@@ -227,13 +232,13 @@ export const TextArea = styled.textarea`
     height: 60%;
     top: 20%;
     left:15%;
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 27vw;
-    height: 31vh;
-    top: 14%;
+    width: 70%;
+    height: 63%;
+    top: 20%;
   }
 `;
 
