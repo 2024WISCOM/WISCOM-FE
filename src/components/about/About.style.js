@@ -175,6 +175,11 @@ export const Identity = styled.div`
     margin-bottom: 80px;
   }
 
+  @media (max-width: 880px) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
   @media (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 50px;
@@ -186,15 +191,17 @@ export const Identity = styled.div`
 `;
 
 export const Poster = styled.object`
-  width: 25vw;
-  height: 25vw;
+  height: 36vw;
   flex-shrink: 0;
   margin: 0;
   display: block;
 
+  @media (max-width: 880px) {
+    height: 80vw;
+  }
+
   @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
+    height: 110vw;
   }
 `;
 
@@ -207,9 +214,19 @@ export const Text = styled.div`
   font-weight: 400;
   line-height: 40px;
 
+  @media (max-width: 1280px) {
+    font-size: 20px;
+    line-height: 38px;
+  }
+
   @media (max-width: 1024px) {
     font-size: 18px;
-    line-height: 36px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 920px) {
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (max-width: 768px) {
