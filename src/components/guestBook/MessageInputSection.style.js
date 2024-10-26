@@ -261,7 +261,7 @@ export const ButtonContainer = styled.div`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    top: calc(100% - 250px);
+    top: calc(100% - 230px);
     gap: 5%;
   }
 `;
