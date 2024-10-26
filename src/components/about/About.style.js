@@ -187,12 +187,14 @@ export const Identity = styled.div`
 
 export const Poster = styled.object`
   width: 25vw;
+  height: 25vw;
   flex-shrink: 0;
   margin: 0;
   display: block;
 
   @media (max-width: 768px) {
     width: 100%;
+    height: 100%;
   }
 `;
 
@@ -377,12 +379,14 @@ export const ProfWrap = styled.div`
 
 export const Prof = styled.object`
   width: 16vw;
+  height: 16vw;
   flex-shrink: 0;
   margin: 0;
   display: block;
 
   @media (max-width: 480px) {
     width: 30vw;
+    height: 30vw;
   }
 `;
 
