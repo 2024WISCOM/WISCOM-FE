@@ -37,7 +37,7 @@ export const TextSection = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    font-size: 2.0em;
+    font-size: 1.5em;
     width: 100%;
     text-align: center;
     margin-top: 5%;
