@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import * as R from './RightContent.style';
 import viewSiteImage from '../../../assets/img/viewsite_black.png';
 import WorkTitle from '../worktitle/WorkTitle';
@@ -8,9 +9,16 @@ import ViewSite from '../button/ViewSite';
 
 
 export default function RightContent({ data }) {
-  console.log(data);
+  const containerRef = useRef(null); 
+  
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0; 
+    }
+  }, [data]); 
+
   return (
-    <R.RightContentContainer>
+    <R.RightContentContainer ref={containerRef}>
       <WorkTitle
         title={data.title}
         shortDescription={data.shortDescription}
