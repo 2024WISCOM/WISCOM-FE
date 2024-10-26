@@ -135,7 +135,7 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: ${({ length }) => `calc(-35% + ${length * 0.5}em)`}; /* 입력된 글자의 길이에 따라 위치 조정 */
+    right: ${({ length }) => `calc(-28% + ${length * 0.5}em)`}; 
 
   }
 
@@ -259,7 +259,7 @@ export const ButtonContainer = styled.div`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    top: calc(100% - 250px);
+    top: calc(100% - 300px);
     gap: 5%;
   }
 `;
