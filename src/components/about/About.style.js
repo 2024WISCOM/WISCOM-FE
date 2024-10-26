@@ -189,6 +189,7 @@ export const Poster = styled.object`
   width: 25vw;
   flex-shrink: 0;
   margin: 0;
+  display: block;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -378,6 +379,7 @@ export const Prof = styled.object`
   width: 16vw;
   flex-shrink: 0;
   margin: 0;
+  display: block;
 
   @media (max-width: 480px) {
     width: 30vw;
