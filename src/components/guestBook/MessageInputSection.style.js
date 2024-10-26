@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
-  height:90vh;
+  height:85vh;
 
 
   @media (max-width: 768px) {
@@ -24,7 +24,7 @@ export const Container = styled.div`
   @media (min-width: 769px) and (max-width: 1237px) {
     width:100%;
     padding: 0 10%;
-    height:105vh;
+    height:100vh;
   }
 
     @media (min-width: 1025px) and (max-width: 1236px) {
