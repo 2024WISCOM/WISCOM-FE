@@ -148,6 +148,7 @@ const GuestBook = () => {
   return (
     <GuestBookContainer>
       {/* 상단 메시지 입력 섹션 */}
+      
       <MessageInputSection onSendMessage={addMessage} onViewGuestBook={handleViewGuestBook} /> 스크롤 핸들러 추가
       
 
