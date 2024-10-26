@@ -16,8 +16,8 @@ export default function Home() {
         </H.Description>
       </H.TextContainer>
       <H.ImageContainer>
-        <H.Case src={cdCaseImage} />
-        <H.Cd src={mainCdImage} />
+        <H.Case data={cdCaseImage} />
+        <H.Cd data={mainCdImage} />
       </H.ImageContainer>
     </H.Container>
   );

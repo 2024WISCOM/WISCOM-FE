@@ -194,7 +194,7 @@ export const ImageContainer = styled.div`
   margin: 0;
 `;
 
-export const Case = styled.img`
+export const Case = styled.object`
   width: 831px;
 
   @media (max-width: 1920px) {
@@ -220,7 +220,7 @@ const rotateImage = keyframes`
   }
 `;
 
-export const Cd = styled.img`
+export const Cd = styled.object`
   background-color: transparent;
   width: 814px;
   position: absolute;
