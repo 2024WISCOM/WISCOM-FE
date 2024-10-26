@@ -185,7 +185,7 @@ export const Identity = styled.div`
   }
 `;
 
-export const Poster = styled.img`
+export const Poster = styled.object`
   width: 25vw;
   flex-shrink: 0;
   margin: 0;
@@ -374,7 +374,7 @@ export const ProfWrap = styled.div`
   cursor: pointer;
 `;
 
-export const Prof = styled.img`
+export const Prof = styled.object`
   width: 16vw;
   flex-shrink: 0;
   margin: 0;

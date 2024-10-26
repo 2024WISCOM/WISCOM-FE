@@ -21,7 +21,7 @@ export default function NewCongratulation() {
       <A.CongratWrapper>
         <A.MainChoiWrap>
           <A.ProfChoiWrap>
-            <A.Prof src={seunghoon} />
+            <A.Prof data={seunghoon} />
             <A.ProfName>최승훈 교수님</A.ProfName>
           </A.ProfChoiWrap>
           {windowWidth > 480 ? (
