@@ -1,5 +1,5 @@
 import * as A from './About.style';
-import poster from '../../assets/img/final_poster.svg';
+import poster from '../../assets/img/poster.svg';
 
 export default function Introduction() {
   return (
