@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
 
   @media(max-width: 768px) {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin : 0;
 
   }
@@ -23,15 +23,22 @@ export const FooterTop = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: 85vw;
+  max-width:80%;
   margin: 0 auto;
-  padding: 0% 5%;
+  padding: 0% 2%;
+  margin-top:1%;
 
   @media(max-width: 768px) {
     flex-direction: column;
     margin-top:5%;
-    padding :0;
+    padding:0;
   }
+
+   @media (min-width: 769px) and (max-width: 1024px) { 
+    width: 100%;
+     max-width:90%;
+  }
+
 
 `;
 
@@ -42,14 +49,14 @@ export const FooterLeft = styled.div`
   align-items: flex-start;
   text-align: left;
   justify-content: flex-start;
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin: 0;
   width: 100%;
 
   @media(max-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
-    font-size: 0.8em;
+    font-size: 0.7em;
     justify-content: space-between;
   }
 
@@ -215,7 +222,7 @@ export const UrlContainer = styled.div`
     margin-top: 0%;
 
     img{
-      height : 5vh;
+      height : 30%;
       }
   }
 
