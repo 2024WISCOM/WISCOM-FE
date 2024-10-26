@@ -152,14 +152,14 @@ export const LinkTo = styled.div`
 export const DeveloperWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
   margin: 0px;
 
   @media (max-width: 1200px) {
-    gap: 40px;
+    gap: 18px;
   }
 `;
 

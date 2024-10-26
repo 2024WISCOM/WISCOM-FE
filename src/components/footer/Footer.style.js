@@ -12,6 +12,7 @@ export const FooterContainer = styled.footer`
 
   @media(max-width: 768px) {
     font-size: 0.8em;
+    margin : 0;
 
   }
 
@@ -24,11 +25,12 @@ export const FooterTop = styled.div`
   width: 100%;
   max-width: 85vw;
   margin: 0 auto;
-  padding: 1% 5%;
+  padding: 0% 5%;
 
   @media(max-width: 768px) {
     flex-direction: column;
     margin-top:5%;
+    padding :0;
   }
 
 `;
@@ -214,7 +216,6 @@ export const UrlContainer = styled.div`
 
     img{
       height : 5vh;
-      width: 8vw;
       }
   }
 

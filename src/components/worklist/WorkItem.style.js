@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   transition: all 300ms ease;
@@ -60,7 +60,19 @@ export const Card = styled.div`
   }
 `;
 
+export const TitleContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
+
+const animate = (widthScroll) => keyframes`
+  100% {
+    transform: translateX(-${widthScroll / 2}px);
+  }
+`;
+
 export const Title = styled.p`
+  width: 100%;
   color: white;
   text-align: center;
   font-family: Pretendard;
@@ -69,7 +81,12 @@ export const Title = styled.p`
   font-weight: 700;
   line-height: normal;
   margin-bottom: 5px;
-  white-space: pre;
+  white-space: nowrap;
+  display: inline-block;
+
+  animation: ${(props) =>
+      props.isOverflow ? animate(props.widthScroll) : 'none'}
+    ${(props) => props.widthScroll / 130}s 1s linear infinite;
 
   @media (max-width: 1920px) {
     font-size: 28px;

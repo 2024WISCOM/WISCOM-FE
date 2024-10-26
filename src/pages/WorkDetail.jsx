@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams  } from 'react-router-dom';
 import axios from 'axios';
 import cdCaseImage from '../assets/img/detail_cd_case.svg';
 import RightButton from '../components/workdetail/button/RightButton';
@@ -17,8 +17,9 @@ export default function WorkDetail() {
   const imageContainerRef = useRef(null);
   const navigate = useNavigate();
 
+  const { id } = useParams();  // URL의 id 파라미터를 받아옴
   const location = useLocation();
-  const { category, id } = location.state || { category: 'big_data', id: 2 };
+  const { category = 'all' } = location.state || {};
   console.log(category);
 
   // API 데이터 fetch
@@ -79,17 +80,17 @@ export default function WorkDetail() {
     return <div>Loading...</div>;
   }
 
-  // 이전 버튼 클릭 핸들러
-  const handlePrevClick = (shouldScroll = true) => {
-    if (data && data.prev) {
-      if (shouldScroll) {
-        window.scrollTo(0, 0); // 스크롤 동작
-      }
-      navigate(`/work-detail`, { state: { category, id: data.prev } }); // 페이지 이동
-    } else {
-      console.error('이전 항목을 찾을 수 없습니다.');
+// 이전 버튼 클릭 핸들러
+const handlePrevClick = (shouldScroll = true) => {
+  if (data && data.prev) {
+    if (shouldScroll) {
+      window.scrollTo(0, 0); // 스크롤 동작
     }
-  };
+    navigate(`/${data.prev}`, { state: { category } }); // 이전 항목의 id를 경로에 포함하여 페이지 이동
+  } else {
+    console.error('이전 항목을 찾을 수 없습니다.');
+  }
+};
 
   // 다음 버튼 클릭 핸들러
   const handleNextClick = (shouldScroll = true) => {
@@ -97,7 +98,9 @@ export default function WorkDetail() {
       if (shouldScroll) {
         window.scrollTo(0, 0); // 스크롤 동작
       }
-      navigate(`/work-detail`, { state: { category, id: data.next } }); // 페이지 이동
+      navigate(`/${data.next}`, { state: { category } }); // 다음 항목의 id를 경로에 포함하여 페이지 이동
+    } else {
+      console.error('다음 항목을 찾을 수 없습니다.');
     }
   };
 
