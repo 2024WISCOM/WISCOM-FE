@@ -5,26 +5,30 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height:85vh;
   color: white;
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
+  height:90vh;
+
 
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
-    height:50%;
+    height:0%;
   }
     
 
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1237px) {
     width:100%;
     padding: 0 10%;
+    height:105vh;
+  }
 
-    min-height: 110vh;
+    @media (min-width: 1025px) and (max-width: 1236px) {
+      height:80vh;
   }
 `;
 
@@ -52,6 +56,7 @@ export const TextSection = styled.div`
     text-align: left;
     margin-top: 10vh;
   }
+
 `;
 
 export const CDContainer2 = styled.div`
@@ -135,8 +140,7 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: ${({ length }) => `calc(-28% + ${length * 0.5}em)`}; 
-
+    right: -30%;
   }
 
   @media (max-width: 768px) {
@@ -149,8 +153,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right:${({ length }) => `calc(-20% + ${length * 0.35}em)`};
-     
+      right: -17%;
     }
   }
 
@@ -163,7 +166,6 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right:${({ length }) => `calc(-25% + ${length * 0.35}em)`};
     }
   }
 `;
@@ -203,12 +205,12 @@ export const TextArea = styled.textarea`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  width: 70%;
-  height: 58%;
+  width: 24vw;
+  height: 42vh;
   border: none;
   color: black;
   background: transparent;
-  font-size: 1.1em;
+  font-size: 1.4em;
   resize: none;
   text-align: left;
   z-index: 10;
@@ -232,13 +234,13 @@ export const TextArea = styled.textarea`
     height: 60%;
     top: 20%;
     left:15%;
-    font-size: 0.8em;
+    font-size: 1.1em;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 70%;
-    height: 63%;
-    top: 20%;
+    width: 27vw;
+    height: 31vh;
+    top: 14%;
   }
 `;
 
@@ -259,7 +261,7 @@ export const ButtonContainer = styled.div`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    top: calc(100% - 300px);
+    top: calc(100% - 250px);
     gap: 5%;
   }
 `;
