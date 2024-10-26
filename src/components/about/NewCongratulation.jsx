@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as A from './About.style';
-import seunghoon from '../../assets/img/professor/seunghoon2.svg';
+import seunghoon from '../../assets/img/professor/seunghoon.svg';
 
 export default function NewCongratulation() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
