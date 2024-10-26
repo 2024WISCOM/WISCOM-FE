@@ -20,7 +20,6 @@ export default function WorkDetail() {
   const { id } = useParams();  // URL의 id 파라미터를 받아옴
   const location = useLocation();
   const { category = 'all' } = location.state || {};
-  console.log(category);
 
   // API 데이터 fetch
   const fetchWorkDetail = async (category, id) => {
