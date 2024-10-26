@@ -100,7 +100,7 @@ export const FooterRight = styled.div`
 `;
 
 export const FooterLogo = styled.img`
-  height: 8vh;
+  height: 60px;
   margin : 0;
   align-self: flex-end;
 
