@@ -236,7 +236,7 @@ export const TextArea = styled.textarea`
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 27vw;
     height: 31vh;
-    top: 14%;
+    top: 17%;
   }
 `;
 
@@ -254,11 +254,11 @@ export const ButtonContainer = styled.div`
   position: relative;
     width: 100%;
     top: 50px;
-    // margin-top:20px;
+
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    top: 400px;
+    top: 420px;
     gap: 5%;
   }
 `;
