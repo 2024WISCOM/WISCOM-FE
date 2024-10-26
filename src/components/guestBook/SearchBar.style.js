@@ -17,20 +17,21 @@ export const SearchBarContainer = styled.div`
     justify-content:right;
     align-items:right;
     margin:5%;
-    margin-top:20%;
-    margin-left:50vw;
+    margin-left:50%;
     display: ${({ isMobile }) => (isMobile ? 'flex' : 'none')}; /* 모바일에서만 보여주기 */
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 60%;
+    width: 100%;
     justify-content: right;
     margin:0;
     margin-top:10%;
     padding:0;
-    top:-35vh;
-    right:-15vw;
-    margin-bottom:1%;
+    top:-200px;
+
+    right:5%;
+
+    margin-bottom:5%;
   }
 
 `;

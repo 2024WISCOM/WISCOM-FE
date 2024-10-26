@@ -60,7 +60,7 @@ export const ToText = styled.p`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    font-size: 1.2em; 
+    font-size: 1.0em; 
     left: 15%;
   }
 
@@ -79,11 +79,11 @@ export const FromText = styled.p`
   @media (max-width: 768px) {
     font-size: 0.7em; 
     margin-right: 2%; 
-    bottom: -55%;
+    bottom: -65%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    font-size: 1.1em;
+    font-size: 1.0em;
     right: 8%;
     bottom:12%;
   }
@@ -116,12 +116,12 @@ export const MessageText = styled.p`
     }
 
     @media (max-width: 768px) {
-      font-size: 0.6em; /* 모바일에서 텍스트 크기 조정 */
+      font-size: 0.6em; 
       width: 65%; 
       height: 108%;
       top: 40%;
-      left: 18%; /* 모바일에서 왼쪽 간격 조정 */
-      z-index: 10; // 이미지 위에 텍스트 배치
+      left: 18%; 
+      z-index: 10; 
 
       &::-webkit-scrollbar {
         width: 1.5vw; /* 스크롤바 너비 */
