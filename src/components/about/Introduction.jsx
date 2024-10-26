@@ -6,7 +6,7 @@ export default function Introduction() {
     <A.Wrapper>
       <A.Inter2>아이덴티티</A.Inter2>
       <A.Identity>
-        <A.Poster src={poster} />
+        <A.Poster data={poster} />
         <A.Text>
           모든 이야기가 그렇듯, 시작이 있다면 끝이 다가오기 마련입니다. 다만,
           마지막은 항상 아쉬움을 남기기에 우리는 순간순간을 기록합니다. 꿈과
