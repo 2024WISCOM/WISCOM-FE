@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
 
   @media(max-width: 768px) {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin : 0;
 
   }
@@ -23,20 +23,14 @@ export const FooterTop = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width:80%;
+  max-width: 85vw;
   margin: 0 auto;
   padding: 0% 2%;
-  margin-top:1%;
 
   @media(max-width: 768px) {
     flex-direction: column;
     margin-top:5%;
     padding:0;
-  }
-
-   @media (min-width: 769px) and (max-width: 1024px) { 
-    width: 100%;
-     max-width:90%;
   }
 
 
@@ -220,6 +214,7 @@ export const UrlContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-top: 0%;
+    margin-right:0;
 
     img{
       height : 30%;
