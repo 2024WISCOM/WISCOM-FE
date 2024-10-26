@@ -30,7 +30,7 @@ export const SearchBarContainer = styled.div`
     padding:0;
     top:-35vh;
     right:-15vw;
-    margin-bottom:5%;
+    margin-bottom:1%;
   }
 
 `;
