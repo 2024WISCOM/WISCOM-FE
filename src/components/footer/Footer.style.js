@@ -5,15 +5,24 @@ export const FooterContainer = styled.footer`
   color: #fff;
   padding: 1%;
   display: flex;
+  margin:0 auto;
   flex-direction: column;
   align-items: flex-start;
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
+  white-space: nowrap;
 
   @media(max-width: 768px) {
-    font-size: 0.8em;
-    margin : 0;
+    width:100%;
+    font-size: 0.6em;
+    margin : 0 auto;
 
+  }
+
+   @media (min-width: 769px) and (max-width: 1114px) {
+     width:100%;
+     font-size: 0.7em;
+     
   }
 
 `;
@@ -31,6 +40,11 @@ export const FooterTop = styled.div`
     flex-direction: column;
     margin-top:5%;
     padding:0;
+  }
+
+     @media (min-width: 769px) and (max-width: 1114px) {
+     margin-top:1%;
+     
   }
 
 
@@ -108,6 +122,9 @@ export const FooterLogo = styled.img`
   @media (max-width : 768px){
     display : none;
   
+  }
+  @media (min-width: 769px) and (max-width: 1114px) {
+    height:40px;
   }
 
 
