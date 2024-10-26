@@ -10,7 +10,7 @@ import barcodeImage2 from './img/barcode.png';
 const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
   const [newMessage, setNewMessage] = useState({ to: '', from: '', message: '' });
 
-  const [isMobile,setIsMobile] = useState(window.innerWidth <= 767); // 모바일 여부를 확인
+  const [isMobile,setIsMobile] = useState(window.innerWidth <= 768); // 모바일 여부를 확인
   
   useEffect(()=> {
     const handleResize =() => {

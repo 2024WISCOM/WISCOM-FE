@@ -37,7 +37,7 @@ export const TextSection = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    font-size: 4.5vw;
+    font-size: 2.0em;
     width: 100%;
     text-align: center;
     margin-top: 5%;
@@ -126,6 +126,8 @@ export const Label = styled.label`
   font-weight: bold;
   color: black;
   font-size: 1.1em;
+  padding:0;
+  margin:0;
 
   &.to-label {
     top: 5%;
@@ -139,6 +141,7 @@ export const Label = styled.label`
 
   @media (max-width: 768px) {
     font-size: 1em;
+     
 
     &.to-label {
       top: 5%;
@@ -153,29 +156,33 @@ export const Label = styled.label`
 
   @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 1.1em;
+    margin:0;
+    padding:0;
+    
 
     &.to-label {
       top: 5%;
     }
 
     &.from-label {
-    
-      bottom:5%;
+      margin:0;
       right:${({ length }) => `${-90+Math.min(length * 4, 25)}px`}; 
     }
   }
 `;
 
 export const Input = styled.input`
-  height: 5vh;
-  width: 80%;
+  height: 5%;
+  width: 50%;
   border: none;
   color: black;
   background: transparent;
   font-size: 1.5em;
-  padding: 2%;
+  padding: 0%;
+  margin:0;
   text-align: left;
   z-index: 10;
+  
 
   &::placeholder {
     color: #D9D9D9;
@@ -193,6 +200,10 @@ export const Input = styled.input`
 
   @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 1.1em;
+    width:33%;
+    margin:0;
+    padding:0;
+    
   }
 `;
 
@@ -201,8 +212,8 @@ export const TextArea = styled.textarea`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  width: 24vw;
-  height: 42vh;
+  width: 70%;
+  height: 60%;
   border: none;
   color: black;
   background: transparent;
@@ -234,9 +245,10 @@ export const TextArea = styled.textarea`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    width: 27vw;
-    height: 31vh;
-    top: 17%;
+    width: 70%;
+    height: 60%;
+    top: 22%;
+    font-size:1.3em;
   }
 `;
 
@@ -245,7 +257,7 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: -10%;
   left: 0;
   right: 0;
   margin: 0 1%;
@@ -254,6 +266,8 @@ export const ButtonContainer = styled.div`
   position: relative;
     width: 100%;
     top: 50px;
+    margin-bottom:15%;
+
 
   }
 
@@ -267,6 +281,8 @@ export const HighlightedText = styled.span`
   font-weight: bold;
   color: black;
   font-size: 1.8em;
+  margin:0;
+  padding:0;
 
   @media (max-width: 768px) {
     font-size: 1.1em;
