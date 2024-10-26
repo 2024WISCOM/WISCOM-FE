@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 10%;
   position: relative;
-  height:85vh;
+  height:600px;
 
 
   @media (max-width: 768px) {
@@ -17,18 +17,12 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 2%;
-    height:0%;
+    height:auto;
   }
     
 
-  @media (min-width: 769px) and (max-width: 1237px) {
-    width:100%;
-    padding: 0 10%;
-    height:100vh;
-  }
-
     @media (min-width: 1025px) and (max-width: 1236px) {
-      height:75vh;
+      height:500px;
   }
 `;
 
@@ -140,7 +134,7 @@ export const Label = styled.label`
 
   &.from-label {
     bottom: 5%;
-    right: -30%;
+    right: ${({ length }) => `${Math.min(-130+length * 5, 30)}px`};
   }
 
   @media (max-width: 768px) {
@@ -153,7 +147,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right: -17%;
+      right:${({ length }) => `${-60+Math.min(length * 3, 20)}px`};
     }
   }
 
@@ -165,7 +159,9 @@ export const Label = styled.label`
     }
 
     &.from-label {
-      bottom: 5%;
+    
+      bottom:5%;
+      right:${({ length }) => `${-90+Math.min(length * 4, 25)}px`}; 
     }
   }
 `;
@@ -249,19 +245,20 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   position: absolute;
-  bottom: 3%;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: 0 1%;
 
   @media (max-width: 768px) {
+  position: relative;
     width: 100%;
-    top: calc(100% - 0%);
-    margin-top:5%;
+    top: 50px;
+    // margin-top:20px;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    top: calc(100% - 230px);
+    top: 400px;
     gap: 5%;
   }
 `;

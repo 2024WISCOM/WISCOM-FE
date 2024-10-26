@@ -79,13 +79,13 @@ export const FromText = styled.p`
   @media (max-width: 768px) {
     font-size: 0.7em; 
     margin-right: 2%; 
-    bottom: -50%;
+    bottom: -55%;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 1.1em;
     right: 8%;
-    bottom:15%;
+    bottom:12%;
   }
 
 `;
