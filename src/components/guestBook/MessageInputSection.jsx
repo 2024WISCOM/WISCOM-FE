@@ -14,7 +14,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
   
   useEffect(()=> {
     const handleResize =() => {
-      setIsMobile(window.innerWidth <=767);
+      setIsMobile(window.innerWidth <=768);
     };
 
     window.addEventListener('resize', handleResize);
@@ -29,6 +29,13 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
 
     onSendMessage(newMessage);
     setNewMessage({ to: '', from: '', message: '' });
+  };
+
+  const maxLengthCheck = (e) =>{
+    const {maxLength, value} = e.target;
+    if(value.length>maxLength){
+      e.target.value = value.slice(0,maxLength);
+    }
   };
 
   const handleViewGuestBook = () => {
@@ -65,6 +72,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="받는 사람" 
           value={newMessage.to}
           onChange={(e) => setNewMessage({ ...newMessage, to: e.target.value })}
+          onInput={maxLengthCheck}
           maxLength={8}
         />
         </Label>
@@ -82,6 +90,7 @@ const MessageInputSection = ({ onSendMessage, onViewGuestBook }) => {
           placeholder="보내는 사람" 
           value={newMessage.from}
           onChange={(e) => setNewMessage({ ...newMessage, from: e.target.value })}
+          onInput={maxLengthCheck}
           maxLength={8}
         />
         </Label>
