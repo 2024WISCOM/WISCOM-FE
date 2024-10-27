@@ -150,7 +150,7 @@ export const Label = styled.label`
 
     &.from-label {
       bottom: 5%;
-      right:${({ length }) => `${-60+Math.min(length * 3, 20)}px`};
+      right:${({ length }) => `${-80+Math.min(length * 3, 20)}px`};
     }
   }
 
@@ -166,7 +166,7 @@ export const Label = styled.label`
 
     &.from-label {
       margin:0;
-      right:${({ length }) => `${-90+Math.min(length * 4, 25)}px`}; 
+      right:${({ length }) => `${-100+Math.min(length * 4, 25)}px`}; 
     }
   }
 `;
